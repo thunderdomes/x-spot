@@ -19,6 +19,10 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
+		netraTable.backgroundColor=[UIColor whiteColor];
+		
+		[self.view addSubview:netraTable];
     }
     return self;
 }
