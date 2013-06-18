@@ -7,7 +7,8 @@
 //
 
 #import "netraAppDelegate.h"
-
+#import "netraViewController.h"
+#import "netraViewControllerRight.h"
 @implementation netraAppDelegate
 
 - (void)dealloc
@@ -18,9 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+	self.viewController = [[JASidePanelController alloc] init];
+    self.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
+	self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[netraViewController alloc] init]];
+	self.viewController.rightPanel = [[netraViewControllerRight alloc] init];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

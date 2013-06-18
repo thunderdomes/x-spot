@@ -11,5 +11,5 @@
 @interface netraAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) JASidePanelController *viewController;
 @end
