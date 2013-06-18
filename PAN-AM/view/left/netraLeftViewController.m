@@ -1,25 +1,24 @@
 //
-//  netraViewController.m
+//  netraLeftViewController.m
 //  PAN-AM
 //
 //  Created by Arie on 6/18/13.
 //  Copyright (c) 2013 vootobox. All rights reserved.
 //
 
-#import "netraViewController.h"
+#import "netraLeftViewController.h"
 
-@interface netraViewController ()
+@interface netraLeftViewController ()
 
 @end
 
-@implementation netraViewController
+@implementation netraLeftViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-		self.view.backgroundColor=[UIColor whiteColor];
     }
     return self;
 }

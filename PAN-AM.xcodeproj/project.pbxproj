@@ -32,6 +32,7 @@
 		D042526C1770B9B8000C348B /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D04252611770B9B8000C348B /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D042526F1770BAA9000C348B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042526D1770BA9E000C348B /* QuartzCore.framework */; };
 		D04252721770BC81000C348B /* netraViewControllerRight.m in Sources */ = {isa = PBXBuildFile; fileRef = D04252711770BC81000C348B /* netraViewControllerRight.m */; };
+		D04252751770BDDF000C348B /* netraLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04252741770BDDF000C348B /* netraLeftViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		D042526D1770BA9E000C348B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D04252701770BC81000C348B /* netraViewControllerRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraViewControllerRight.h; sourceTree = "<group>"; };
 		D04252711770BC81000C348B /* netraViewControllerRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraViewControllerRight.m; sourceTree = "<group>"; };
+		D04252731770BDDF000C348B /* netraLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraLeftViewController.h; sourceTree = "<group>"; };
+		D04252741770BDDF000C348B /* netraLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraLeftViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 		D042523B1770B801000C348B /* left */ = {
 			isa = PBXGroup;
 			children = (
+				D04252731770BDDF000C348B /* netraLeftViewController.h */,
+				D04252741770BDDF000C348B /* netraLeftViewController.m */,
 			);
 			name = left;
 			path = view/left;
@@ -330,6 +335,7 @@
 				D042526B1770B9B8000C348B /* JSONKit.m in Sources */,
 				D042526C1770B9B8000C348B /* UIImageView+AFNetworking.m in Sources */,
 				D04252721770BC81000C348B /* netraViewControllerRight.m in Sources */,
+				D04252751770BDDF000C348B /* netraLeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

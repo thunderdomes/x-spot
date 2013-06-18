@@ -9,6 +9,7 @@
 #import "netraAppDelegate.h"
 #import "netraViewController.h"
 #import "netraViewControllerRight.h"
+#import "netraLeftViewController.h"
 @implementation netraAppDelegate
 
 - (void)dealloc
@@ -26,6 +27,7 @@
     self.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
 	self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[netraViewController alloc] init]];
 	self.viewController.rightPanel = [[netraViewControllerRight alloc] init];
+	self.viewController.leftPanel = [[netraLeftViewController alloc] init];
     // Override point for customization after application launch.
 	self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
