@@ -24,7 +24,7 @@
 		netraTable.backgroundColor=[UIColor clearColor];
 		netraTable.delegate=self;
 		netraTable.dataSource=self;
-		netraTable.separatorColor=[UIColor colorWithRed:0.663 green:0.663 blue:0.663 alpha:1];
+		netraTable.separatorColor=[UIColor colorWithRed:0.263 green:0.263 blue:0.263 alpha:1];
 		[self.view addSubview:netraTable];
 		netraMutableArray=[[NSMutableArray alloc]init];
     }
@@ -33,6 +33,38 @@
 -(void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:YES];
 	[self fetchData];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+{
+    return 44;
+}
+- (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
+{
+	/* assumes your tableview is 320 wide, makes a section header 80 pixels high */
+	UIView *customView = [[[UIView alloc] initWithFrame: CGRectMake(0.0, 0.0, 320.0, 60)] autorelease];
+	
+	
+	customView.backgroundColor = [UIColor colorWithRed:0.118 green:0.125 blue:0.125 alpha:1];
+	
+	UIView *border=[[UIView alloc]initWithFrame:CGRectMake(0, 44, 320,1)];
+	border.backgroundColor=[UIColor colorWithRed:0.976 green:0.675 blue:0.09 alpha:1];
+	
+	UIView *border_top=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320,1)];
+	border_top.backgroundColor=[UIColor blackColor];
+	
+	UILabel *reksa=[[UILabel alloc]initWithFrame:CGRectMake(80, 5, 130, 36)];
+	reksa.backgroundColor=[UIColor clearColor];
+	reksa.numberOfLines=2;
+	reksa.lineBreakMode=NSLineBreakByCharWrapping;
+	reksa.textColor=[UIColor whiteColor];
+	reksa.font=[UIFont fontWithName:@"AvenirNext-Medium" size:15];
+	reksa.text=@"Reksa Dana Panin";
+	
+	[customView addSubview:reksa];
+	[customView addSubview: border];
+	[customView addSubview: border_top];
+	
+	return customView;
 }
 - (void)viewDidLoad
 {

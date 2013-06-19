@@ -48,6 +48,7 @@
 		D09CD12D1772265B000CD39D /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD12A1772265B000CD39D /* 2@2x.png */; };
 		D09CD12E1772265B000CD39D /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD12B1772265B000CD39D /* 4@2x.png */; };
 		D09CD13017722670000CD39D /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD12F17722670000CD39D /* 3@2x.png */; };
+		D09CD1321772310A000CD39D /* leftWindow.plist in Resources */ = {isa = PBXBuildFile; fileRef = D09CD1311772310A000CD39D /* leftWindow.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		D09CD12A1772265B000CD39D /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		D09CD12B1772265B000CD39D /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
 		D09CD12F17722670000CD39D /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
+		D09CD1311772310A000CD39D /* leftWindow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = leftWindow.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		D042523C1770B801000C348B /* right */ = {
 			isa = PBXGroup;
 			children = (
+				D09CD1311772310A000CD39D /* leftWindow.plist */,
 				D04252701770BC81000C348B /* netraViewControllerRight.h */,
 				D04252711770BC81000C348B /* netraViewControllerRight.m */,
 				D09CD1201771EA6B000CD39D /* rightCell.h */,
@@ -404,6 +407,7 @@
 				D09CD12D1772265B000CD39D /* 2@2x.png in Resources */,
 				D09CD12E1772265B000CD39D /* 4@2x.png in Resources */,
 				D09CD13017722670000CD39D /* 3@2x.png in Resources */,
+				D09CD1321772310A000CD39D /* leftWindow.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

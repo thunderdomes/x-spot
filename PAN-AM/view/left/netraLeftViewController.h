@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface netraLeftViewController : UIViewController
-
+@interface netraLeftViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+	UITableView *netraTable;
+	NSMutableArray *netraMutableArray;
+}
+@property (nonatomic, retain) NSArray *arrayOriginal;
+@property (nonatomic, retain) NSMutableArray *arForTable;
 @end
