@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=[UIColor colorWithRed:0.118 green:0.125 blue:0.125 alpha:1];
-		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)];
+		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-200)];
 		netraTable.backgroundColor=[UIColor clearColor];
 		netraTable.separatorColor=[UIColor colorWithRed:0.263 green:0.263 blue:0.263 alpha:1];
 		netraTable.delegate=self;
@@ -96,17 +96,9 @@
 	cell.textLabel.font=[UIFont fontWithName:@"AvenirNext-Medium" size:14];
     NSString * myTag;
     myTag = [[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"tag"];
-    switch ([myTag intValue]) {
-        case 0:
-			cell.textLabel.font=[UIFont fontWithName:@"AvenirNext-Medium" size:14];
-            break;
-            
-        default:
-            break;
-    }
-	
+  
 	UIView *selectionColor = [[UIView alloc] init];
-	selectionColor.backgroundColor =[UIColor colorWithRed:0.976 green:0.675 blue:0.09 alpha:1];
+	selectionColor.backgroundColor =[UIColor colorWithRed:0 green:0.486 blue:0.557 alpha:1] ;
     cell.selectedBackgroundView = selectionColor;
 	
 	
@@ -117,19 +109,29 @@
     return [UIView new];
 	
 }
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	if(cell.tag==0){
+		cell.backgroundColor=[UIColor clearColor];
+		
+	}
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	//UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-	NSString *cellValue = [[self.arForTable objectAtIndex:indexPath.row]objectForKey:@"name"];
+	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 	//[self jumper:cell.textLabel.text];
+	BOOL isAlreadyInserted=NO;
 	NSDictionary *d=[self.arForTable objectAtIndex:indexPath.row];
 	
-	
+	if(cell.tag==0){
+		cell.backgroundColor=[UIColor colorWithRed:0 green:0.486 blue:0.557 alpha:1];
+		
+	}
 	
 	
 	if([d valueForKey:@"Object"]) {
 		NSArray *ar=[d valueForKey:@"Object"];
 		
-		BOOL isAlreadyInserted=NO;
+		isAlreadyInserted=NO;
 		
 		for(NSDictionary *dInner in ar ){
 			NSInteger index=[self.arForTable indexOfObjectIdenticalTo:dInner];
@@ -143,7 +145,6 @@
 		if(isAlreadyInserted) {
 			[self miniMizeThisRows:ar];
 		} else {
-			NSLog(@"123");
 			NSUInteger count=indexPath.row+1;
 			NSMutableArray *arCells=[NSMutableArray array];
 			for(NSDictionary *dInner in ar ) {
@@ -152,7 +153,7 @@
 				[self.arForTable insertObject:dInner atIndex:count++];
 				
 			}
-			[tableView insertRowsAtIndexPaths:arCells withRowAnimation:UITableViewRowAnimationLeft];
+			[tableView insertRowsAtIndexPaths:arCells withRowAnimation:UITableViewRowAnimationFade];
 			tableView.tag=[arCells objectAtIndex:0];
 			
 			
@@ -164,7 +165,6 @@
 	
 }
 -(void)miniMizeThisRows:(NSArray*)ar{
-	NSLog(@"ar-->%@",ar);
 	for(NSDictionary *dInner in ar ) {
 		NSUInteger indexToRemove=[self.arForTable indexOfObjectIdenticalTo:dInner];
 		NSArray *arInner=[dInner valueForKey:@"Objects"];
@@ -177,7 +177,7 @@
 			[netraTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:
 											  [NSIndexPath indexPathForRow:indexToRemove inSection:0]
 											  ]
-							withRowAnimation:UITableViewRowAnimationRight];
+							withRowAnimation:UITableViewRowAnimationFade];
 		}
 	}
 }

@@ -121,7 +121,7 @@
 		D09CD12A1772265B000CD39D /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		D09CD12B1772265B000CD39D /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
 		D09CD12F17722670000CD39D /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
-		D09CD1311772310A000CD39D /* leftWindow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = leftWindow.plist; sourceTree = "<group>"; };
+		D09CD1311772310A000CD39D /* leftWindow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = leftWindow.plist; path = view/right/leftWindow.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +186,7 @@
 		D04252241770B7DD000C348B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D09CD1311772310A000CD39D /* leftWindow.plist */,
 				D04252251770B7DD000C348B /* PAN-AM-Info.plist */,
 				D04252261770B7DD000C348B /* InfoPlist.strings */,
 				D04252291770B7DD000C348B /* main.m */,
@@ -219,7 +220,6 @@
 		D042523C1770B801000C348B /* right */ = {
 			isa = PBXGroup;
 			children = (
-				D09CD1311772310A000CD39D /* leftWindow.plist */,
 				D04252701770BC81000C348B /* netraViewControllerRight.h */,
 				D04252711770BC81000C348B /* netraViewControllerRight.m */,
 				D09CD1201771EA6B000CD39D /* rightCell.h */,
