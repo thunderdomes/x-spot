@@ -7,7 +7,7 @@
 //
 
 #import "netraViewControllerRight.h"
-
+#import "rightCell.h"
 @interface netraViewControllerRight ()
 
 @end
@@ -74,7 +74,7 @@
     return 1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return  90;
+	return  70;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -85,12 +85,12 @@
 	netraTrading  *object_draw=[netraMutableArray objectAtIndex:indexPath.row];
     static NSString *CellIdentifier = @"CountryCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    rightCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[rightCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
  	
-	cell.textLabel.text=object_draw.NABValue;
+	cell.product.text=object_draw.ProductName;
 
 	
 	cell.detailTextLabel.backgroundColor=[UIColor clearColor];

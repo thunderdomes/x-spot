@@ -15,7 +15,13 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-		self.product=[[UILabel alloc]initWithFrame:CGRectMake(40, 5, 200, 20)];
+		self.product=[[UILabel alloc]initWithFrame:CGRectMake(80, 5, 130, 40)];
+		self.product.backgroundColor=[UIColor clearColor];
+		self.product.numberOfLines=2;
+		self.product.lineBreakMode=NSLineBreakByCharWrapping;
+		self.product.textColor=[UIColor colorWithRed:0.624 green:0.71 blue:0.722 alpha:1];
+		self.product.font=[UIFont fontWithName:@"AvenirNext-Medium" size:13];
+		[self.contentView addSubview:self.product];
 		
     }
     return self;
