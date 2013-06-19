@@ -16,5 +16,7 @@
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
 #import "AFNetworking.h"
+#import "netraGlobal.h"
+#import "netraNewsObject.h"
 
 #endif

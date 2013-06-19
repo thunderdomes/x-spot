@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface netraViewController : UIViewController
-
+@interface netraViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+{
+	UITableView *newsViewController;
+	NSMutableArray *netraMutableArray;
+}
 @end
