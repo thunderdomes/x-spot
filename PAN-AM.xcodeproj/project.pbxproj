@@ -36,6 +36,10 @@
 		D09CD10817715718000CD39D /* netraGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10717715718000CD39D /* netraGlobal.m */; };
 		D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10E17719187000CD39D /* netraNewsObject.m */; };
 		D09CD113177191A9000CD39D /* netraTrading.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD112177191A9000CD39D /* netraTrading.m */; };
+		D09CD1161771B3FA000CD39D /* newsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD1151771B3FA000CD39D /* newsCell.m */; };
+		D09CD1191771D72F000CD39D /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD1181771D72F000CD39D /* navbar@2x.png */; };
+		D09CD11B1771D97E000CD39D /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD11A1771D97E000CD39D /* left@2x.png */; };
+		D09CD11D1771DB3F000CD39D /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD11C1771DB3F000CD39D /* right@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,11 @@
 		D09CD10E17719187000CD39D /* netraNewsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraNewsObject.m; sourceTree = "<group>"; };
 		D09CD111177191A9000CD39D /* netraTrading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraTrading.h; sourceTree = "<group>"; };
 		D09CD112177191A9000CD39D /* netraTrading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraTrading.m; sourceTree = "<group>"; };
+		D09CD1141771B3FA000CD39D /* newsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newsCell.h; sourceTree = "<group>"; };
+		D09CD1151771B3FA000CD39D /* newsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newsCell.m; sourceTree = "<group>"; };
+		D09CD1181771D72F000CD39D /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
+		D09CD11A1771D97E000CD39D /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		D09CD11C1771DB3F000CD39D /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,7 @@
 		D04252111770B7DD000C348B = {
 			isa = PBXGroup;
 			children = (
+				D09CD1171771D72E000CD39D /* images */,
 				D04252231770B7DD000C348B /* PAN-AM */,
 				D042521C1770B7DD000C348B /* Frameworks */,
 				D042521B1770B7DD000C348B /* Products */,
@@ -200,6 +210,8 @@
 			children = (
 				D042523E1770B834000C348B /* netraViewController.h */,
 				D042523F1770B834000C348B /* netraViewController.m */,
+				D09CD1141771B3FA000CD39D /* newsCell.h */,
+				D09CD1151771B3FA000CD39D /* newsCell.m */,
 			);
 			path = news;
 			sourceTree = "<group>";
@@ -285,6 +297,17 @@
 			path = ../view/center/tradingObj;
 			sourceTree = "<group>";
 		};
+		D09CD1171771D72E000CD39D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D09CD11A1771D97E000CD39D /* left@2x.png */,
+				D09CD11C1771DB3F000CD39D /* right@2x.png */,
+				D09CD1181771D72F000CD39D /* navbar@2x.png */,
+			);
+			name = images;
+			path = "PAN-AM/images";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,6 +364,9 @@
 				D04252301770B7DD000C348B /* Default.png in Resources */,
 				D04252321770B7DD000C348B /* Default@2x.png in Resources */,
 				D04252341770B7DD000C348B /* Default-568h@2x.png in Resources */,
+				D09CD1191771D72F000CD39D /* navbar@2x.png in Resources */,
+				D09CD11B1771D97E000CD39D /* left@2x.png in Resources */,
+				D09CD11D1771DB3F000CD39D /* right@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +398,7 @@
 				D09CD10817715718000CD39D /* netraGlobal.m in Sources */,
 				D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */,
 				D09CD113177191A9000CD39D /* netraTrading.m in Sources */,
+				D09CD1161771B3FA000CD39D /* newsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

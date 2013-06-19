@@ -30,6 +30,14 @@
 	self.viewController.leftPanel = [[netraLeftViewController alloc] init];
     // Override point for customization after application launch.
 	self.window.rootViewController = self.viewController;
+	UINavigationBar *navBar = [self.viewController.centerPanel navigationBar];
+	if ([navBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
+	{
+		// right here, you could condition bg image based on properties of this instance
+		// of the navBar or any other condition.
+		
+		[navBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+	}
     [self.window makeKeyAndVisible];
     return YES;
 }
