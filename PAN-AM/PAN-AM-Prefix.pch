@@ -18,5 +18,6 @@
 #import "AFNetworking.h"
 #import "netraGlobal.h"
 #import "netraNewsObject.h"
+#import "netraTrading.h"
 
 #endif

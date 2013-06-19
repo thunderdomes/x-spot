@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface netraGlobal : NSObject
-	extern NSString *newsUrl;
+extern NSString *newsUrl;
+extern NSString *tradeUrl;
 
 @end

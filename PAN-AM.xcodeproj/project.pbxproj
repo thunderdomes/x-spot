@@ -40,6 +40,7 @@
 		D09CD1191771D72F000CD39D /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD1181771D72F000CD39D /* navbar@2x.png */; };
 		D09CD11B1771D97E000CD39D /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD11A1771D97E000CD39D /* left@2x.png */; };
 		D09CD11D1771DB3F000CD39D /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD11C1771DB3F000CD39D /* right@2x.png */; };
+		D09CD1221771EA6B000CD39D /* rightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD1211771EA6B000CD39D /* rightCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,10 @@
 		D09CD1181771D72F000CD39D /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		D09CD11A1771D97E000CD39D /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
 		D09CD11C1771DB3F000CD39D /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
+		D09CD11E1771DE2D000CD39D /* Netra.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Netra.m; sourceTree = "<group>"; };
+		D09CD11F1771DE2D000CD39D /* Netra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Netra.h; sourceTree = "<group>"; };
+		D09CD1201771EA6B000CD39D /* rightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightCell.h; sourceTree = "<group>"; };
+		D09CD1211771EA6B000CD39D /* rightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +205,8 @@
 			children = (
 				D04252701770BC81000C348B /* netraViewControllerRight.h */,
 				D04252711770BC81000C348B /* netraViewControllerRight.m */,
+				D09CD1201771EA6B000CD39D /* rightCell.h */,
+				D09CD1211771EA6B000CD39D /* rightCell.m */,
 			);
 			name = right;
 			path = view/right;
@@ -219,6 +226,8 @@
 		D04252411770B847000C348B /* library */ = {
 			isa = PBXGroup;
 			children = (
+				D09CD11E1771DE2D000CD39D /* Netra.m */,
+				D09CD11F1771DE2D000CD39D /* Netra.h */,
 				D042524A1770B9B8000C348B /* netraAfn */,
 				D04252431770B9A3000C348B /* SidePanel */,
 			);
@@ -399,6 +408,7 @@
 				D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */,
 				D09CD113177191A9000CD39D /* netraTrading.m in Sources */,
 				D09CD1161771B3FA000CD39D /* newsCell.m in Sources */,
+				D09CD1221771EA6B000CD39D /* rightCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
