@@ -24,6 +24,7 @@
 		netraTable.backgroundColor=[UIColor clearColor];
 		netraTable.delegate=self;
 		netraTable.dataSource=self;
+		netraTable.separatorColor=[UIColor colorWithRed:0.663 green:0.663 blue:0.663 alpha:1];
 		[self.view addSubview:netraTable];
 		netraMutableArray=[[NSMutableArray alloc]init];
     }
@@ -51,7 +52,7 @@
     //AFHTTPRequestOperation * operation =[[AFHTTPRequestOperation alloc] initWithRequest:request];
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 
-		
+		[netraMutableArray removeAllObjects];
 		for(id newsObjct in [responseObject objectForKey:@"products"]){
 			netraTrading *tradings=[[netraTrading alloc] initWithDictionary:newsObjct];
 			[netraMutableArray addObject:tradings];
@@ -102,6 +103,7 @@
 		[cell.status setImage:[UIImage imageNamed:@"up"]];
 	}
 	cell.valueofData.text=object_draw.NABValue;
+	[cell.star setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",object_draw.Star]]];
 
 	
 	cell.detailTextLabel.backgroundColor=[UIColor clearColor];
