@@ -89,8 +89,19 @@
     if (cell == nil) {
         cell = [[[rightCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
- 	
-	cell.product.text=object_draw.ProductName;
+	cell.product.text=[NSString stringWithFormat:@"%@",object_draw.ProductName];
+	
+	cell.precentage.text=[NSString stringWithFormat:@"%0.2f%%", [object_draw.OneD floatValue]];
+	if([object_draw.OneD floatValue]<0)
+	{
+		cell.precentage.textColor=[UIColor redColor];
+		[cell.status setImage:[UIImage imageNamed:@"down"]];
+	}
+	else{
+	cell.precentage.textColor=[UIColor greenColor];
+		[cell.status setImage:[UIImage imageNamed:@"up"]];
+	}
+	cell.valueofData.text=object_draw.NABValue;
 
 	
 	cell.detailTextLabel.backgroundColor=[UIColor clearColor];
