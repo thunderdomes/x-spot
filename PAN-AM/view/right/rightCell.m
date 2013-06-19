@@ -40,7 +40,7 @@
 		self.status=[[UIImageView alloc]initWithFrame:CGRectMake(320-75, 10, 12.5, 10.5)];
 		self.status.backgroundColor=[UIColor clearColor];
 		
-		self.star=[[UIImageView alloc]initWithFrame:CGRectMake(80, 45, 72, 13)];
+		self.star=[[UIImageView alloc]initWithFrame:CGRectMake(80, 45, 68, 11)];
 		self.star.backgroundColor=[UIColor clearColor];
 		
 		[self.contentView addSubview:self.precentage];
