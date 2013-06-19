@@ -34,7 +34,8 @@
 		D04252721770BC81000C348B /* netraViewControllerRight.m in Sources */ = {isa = PBXBuildFile; fileRef = D04252711770BC81000C348B /* netraViewControllerRight.m */; };
 		D04252751770BDDF000C348B /* netraLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04252741770BDDF000C348B /* netraLeftViewController.m */; };
 		D09CD10817715718000CD39D /* netraGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10717715718000CD39D /* netraGlobal.m */; };
-		D09CD10B17717F3B000CD39D /* netraNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10A17717F3B000CD39D /* netraNewsObject.m */; };
+		D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10E17719187000CD39D /* netraNewsObject.m */; };
+		D09CD113177191A9000CD39D /* netraTrading.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD112177191A9000CD39D /* netraTrading.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,8 +88,10 @@
 		D04252741770BDDF000C348B /* netraLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraLeftViewController.m; sourceTree = "<group>"; };
 		D09CD10617715718000CD39D /* netraGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netraGlobal.h; path = netraObject/netraGlobal.h; sourceTree = "<group>"; };
 		D09CD10717715718000CD39D /* netraGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = netraGlobal.m; path = netraObject/netraGlobal.m; sourceTree = "<group>"; };
-		D09CD10917717F3B000CD39D /* netraNewsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netraNewsObject.h; path = netraObject/newsObj/netraNewsObject.h; sourceTree = "<group>"; };
-		D09CD10A17717F3B000CD39D /* netraNewsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = netraNewsObject.m; path = netraObject/newsObj/netraNewsObject.m; sourceTree = "<group>"; };
+		D09CD10D17719187000CD39D /* netraNewsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraNewsObject.h; sourceTree = "<group>"; };
+		D09CD10E17719187000CD39D /* netraNewsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraNewsObject.m; sourceTree = "<group>"; };
+		D09CD111177191A9000CD39D /* netraTrading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraTrading.h; sourceTree = "<group>"; };
+		D09CD112177191A9000CD39D /* netraTrading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraTrading.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,10 +216,10 @@
 		D04252421770B847000C348B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D09CD1101771919C000CD39D /* tradingObj */,
+				D09CD10C17719187000CD39D /* newsObj */,
 				D09CD10617715718000CD39D /* netraGlobal.h */,
 				D09CD10717715718000CD39D /* netraGlobal.m */,
-				D09CD10917717F3B000CD39D /* netraNewsObject.h */,
-				D09CD10A17717F3B000CD39D /* netraNewsObject.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -260,6 +263,26 @@
 				D04252611770B9B8000C348B /* UIImageView+AFNetworking.m */,
 			);
 			path = netraAfn;
+			sourceTree = "<group>";
+		};
+		D09CD10C17719187000CD39D /* newsObj */ = {
+			isa = PBXGroup;
+			children = (
+				D09CD10D17719187000CD39D /* netraNewsObject.h */,
+				D09CD10E17719187000CD39D /* netraNewsObject.m */,
+			);
+			name = newsObj;
+			path = netraObject/newsObj;
+			sourceTree = "<group>";
+		};
+		D09CD1101771919C000CD39D /* tradingObj */ = {
+			isa = PBXGroup;
+			children = (
+				D09CD111177191A9000CD39D /* netraTrading.h */,
+				D09CD112177191A9000CD39D /* netraTrading.m */,
+			);
+			name = tradingObj;
+			path = ../view/center/tradingObj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +370,8 @@
 				D04252721770BC81000C348B /* netraViewControllerRight.m in Sources */,
 				D04252751770BDDF000C348B /* netraLeftViewController.m in Sources */,
 				D09CD10817715718000CD39D /* netraGlobal.m in Sources */,
-				D09CD10B17717F3B000CD39D /* netraNewsObject.m in Sources */,
+				D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */,
+				D09CD113177191A9000CD39D /* netraTrading.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

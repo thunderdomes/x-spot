@@ -73,6 +73,9 @@
 {
     return 1;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+	return  63;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return netraMutableArray.count;
@@ -92,8 +95,8 @@
 	else{
 		cell.contentView.backgroundColor=[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1];
 	}
-	
 	cell.textLabel.text=object_draw.title;
+	cell.textLabel.backgroundColor=[UIColor clearColor];
 	cell.selectionStyle=UITableViewCellEditingStyleNone;
 	
 	
