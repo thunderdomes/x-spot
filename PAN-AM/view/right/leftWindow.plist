@@ -7,6 +7,16 @@
 		<dict>
 			<key>tag</key>
 			<string>0</string>
+			<key>name</key>
+			<string>Berita</string>
+			<key>level</key>
+			<integer>0</integer>
+			<key>img</key>
+			<string>myprofile</string>
+		</dict>
+		<dict>
+			<key>tag</key>
+			<string>0</string>
 			<key>Object</key>
 			<array>
 				<dict>

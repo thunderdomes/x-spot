@@ -162,7 +162,45 @@
 			
 		}
 	}
+	NSMutableArray *dataPass=[[NSMutableArray alloc]init];
 	
+	/////passing calculator
+	if([cell.textLabel.text isEqualToString:@"Berita"]){
+		[dataPass addObject:@"netraViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+		[dataPass release];
+		
+	}
+	else if([cell.textLabel.text isEqualToString:@"Hasil Investasi"]){
+		[dataPass addObject:@"netraHasilInvestasiViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+		[dataPass release];
+
+	}
+	else if([cell.textLabel.text isEqualToString:@"Investasi Berkala"]){
+		[dataPass addObject:@"netraBerkalaViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+		[dataPass release];
+		
+	}
+	else if([cell.textLabel.text isEqualToString:@"Investasi Kebutuhan"]){
+		[dataPass addObject:@"netraKebutuhanViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+		[dataPass release];
+		
+	}
 	
 	
 	

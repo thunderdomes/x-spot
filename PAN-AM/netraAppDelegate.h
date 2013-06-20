@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) JASidePanelController *viewController;
+@property (strong, nonatomic) NSString *lastController;
+@property (strong, nonatomic) UINavigationBar *navBar;
 @end

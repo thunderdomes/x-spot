@@ -21,27 +21,42 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-
+	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(setCenter:)
+												name:@"dealNotification"
+											  object:nil];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
 	self.viewController = [[JASidePanelController alloc] init];
     self.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
-	self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[netraViewController alloc] init]];
+	[self setCenter:nil];
 	self.viewController.rightPanel = [[netraViewControllerRight alloc] init];
 	self.viewController.leftPanel = [[netraLeftViewController alloc] init];
     // Override point for customization after application launch.
 	self.window.rootViewController = self.viewController;
-	UINavigationBar *navBar = [self.viewController.centerPanel navigationBar];
-	if ([navBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
-	{
-		// right here, you could condition bg image based on properties of this instance
-		// of the navBar or any other condition.
-		
-		[navBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
-	}
     [self.window makeKeyAndVisible];
     return YES;
 }
+-(void)setCenter:(NSNotification *)notification{
+	
+	NSMutableArray *dict = (NSMutableArray*)notification.object;
+	if(notification==nil){
+		//	self.mainViewController.centerPanel =nil;
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[netraViewController alloc] init]];;
+		self.lastController=@"netraViewController";
+	}
+	
+	else if([[dict objectAtIndex:0] isEqualToString:self.lastController]){
+		
+		NSLog(@"do nothing");
+	}
+	else{
+		
+		NSLog(@"[dict objectAtIndex:0]===>%@",[dict objectAtIndex:0]);
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString([dict objectAtIndex:0]) alloc] init]];
+		self.lastController=[dict objectAtIndex:0];
+		
+	}
 
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
