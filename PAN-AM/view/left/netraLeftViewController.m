@@ -183,16 +183,15 @@
 		[dataPass release];
 
 	}
-	else if([cell.textLabel.text isEqualToString:@"Investasi Berkala"]){
+	else if([cell.textLabel.text isEqualToString:@"Hasil Investasi Berkala"]){
 		[dataPass addObject:@"netraBerkalaViewController"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
 		[self.sidePanelController showCenterPanel:YES];
 		[dataPass removeAllObjects];
 		[dataPass release];
 		
 	}
-	else if([cell.textLabel.text isEqualToString:@"Investasi Kebutuhan"]){
+	else if([cell.textLabel.text isEqualToString:@"Kebutuhan Investasi"]){
 		[dataPass addObject:@"netraKebutuhanViewController"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
 		

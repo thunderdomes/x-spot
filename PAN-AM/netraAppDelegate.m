@@ -10,6 +10,9 @@
 #import "netraViewController.h"
 #import "netraViewControllerRight.h"
 #import "netraLeftViewController.h"
+#import "netraBerkalaViewController.h"
+#import "netraHasilInvestasiViewController.h"
+#import "netraKebutuhanViewController.h"
 @implementation netraAppDelegate
 
 - (void)dealloc

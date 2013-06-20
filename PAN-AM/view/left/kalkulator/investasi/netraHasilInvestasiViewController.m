@@ -76,7 +76,7 @@
 	[rightbarButton release];
 	[leftbarbutton release];
 	
-	self.title=@"Berita Investasi";
+	self.title=@"Hasil Investasi";
 	
 }
 -(void)lefbuttonPush{

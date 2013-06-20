@@ -76,7 +76,7 @@
 	[rightbarButton release];
 	[leftbarbutton release];
 	
-	self.title=@"Berita Investasi";
+	self.title=@"Kebutuhan Investasi";
 	
 }
 -(void)lefbuttonPush{
