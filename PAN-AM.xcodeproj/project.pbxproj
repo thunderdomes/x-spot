@@ -49,6 +49,9 @@
 		D09CD12E1772265B000CD39D /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD12B1772265B000CD39D /* 4@2x.png */; };
 		D09CD13017722670000CD39D /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D09CD12F17722670000CD39D /* 3@2x.png */; };
 		D09CD1321772310A000CD39D /* leftWindow.plist in Resources */ = {isa = PBXBuildFile; fileRef = D09CD1311772310A000CD39D /* leftWindow.plist */; };
+		D09CD13E17735533000CD39D /* netraBerkalaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD13D17735533000CD39D /* netraBerkalaViewController.m */; };
+		D09CD14117735542000CD39D /* netraKebutuhanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD14017735542000CD39D /* netraKebutuhanViewController.m */; };
+		D09CD14417735551000CD39D /* netraHasilInvestasiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD14317735551000CD39D /* netraHasilInvestasiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +125,12 @@
 		D09CD12B1772265B000CD39D /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4@2x.png"; sourceTree = "<group>"; };
 		D09CD12F17722670000CD39D /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3@2x.png"; sourceTree = "<group>"; };
 		D09CD1311772310A000CD39D /* leftWindow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = leftWindow.plist; path = view/right/leftWindow.plist; sourceTree = "<group>"; };
+		D09CD13C17735533000CD39D /* netraBerkalaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraBerkalaViewController.h; sourceTree = "<group>"; };
+		D09CD13D17735533000CD39D /* netraBerkalaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraBerkalaViewController.m; sourceTree = "<group>"; };
+		D09CD13F17735542000CD39D /* netraKebutuhanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraKebutuhanViewController.h; sourceTree = "<group>"; };
+		D09CD14017735542000CD39D /* netraKebutuhanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraKebutuhanViewController.m; sourceTree = "<group>"; };
+		D09CD14217735551000CD39D /* netraHasilInvestasiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraHasilInvestasiViewController.h; sourceTree = "<group>"; };
+		D09CD14317735551000CD39D /* netraHasilInvestasiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraHasilInvestasiViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,8 +370,38 @@
 		D09CD13817734400000CD39D /* kalkulator */ = {
 			isa = PBXGroup;
 			children = (
+				D09CD13917735523000CD39D /* berkala */,
+				D09CD13A17735523000CD39D /* investasi */,
+				D09CD13B17735523000CD39D /* kebutuhan */,
 			);
 			path = kalkulator;
+			sourceTree = "<group>";
+		};
+		D09CD13917735523000CD39D /* berkala */ = {
+			isa = PBXGroup;
+			children = (
+				D09CD13C17735533000CD39D /* netraBerkalaViewController.h */,
+				D09CD13D17735533000CD39D /* netraBerkalaViewController.m */,
+			);
+			path = berkala;
+			sourceTree = "<group>";
+		};
+		D09CD13A17735523000CD39D /* investasi */ = {
+			isa = PBXGroup;
+			children = (
+				D09CD14217735551000CD39D /* netraHasilInvestasiViewController.h */,
+				D09CD14317735551000CD39D /* netraHasilInvestasiViewController.m */,
+			);
+			path = investasi;
+			sourceTree = "<group>";
+		};
+		D09CD13B17735523000CD39D /* kebutuhan */ = {
+			isa = PBXGroup;
+			children = (
+				D09CD13F17735542000CD39D /* netraKebutuhanViewController.h */,
+				D09CD14017735542000CD39D /* netraKebutuhanViewController.m */,
+			);
+			path = kebutuhan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +504,9 @@
 				D09CD113177191A9000CD39D /* netraTrading.m in Sources */,
 				D09CD1161771B3FA000CD39D /* newsCell.m in Sources */,
 				D09CD1221771EA6B000CD39D /* rightCell.m in Sources */,
+				D09CD13E17735533000CD39D /* netraBerkalaViewController.m in Sources */,
+				D09CD14117735542000CD39D /* netraKebutuhanViewController.m in Sources */,
+				D09CD14417735551000CD39D /* netraHasilInvestasiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
