@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=[UIColor colorWithRed:0.118 green:0.125 blue:0.125 alpha:1];
-		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-200)];
+		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-100)];
 		netraTable.backgroundColor=[UIColor clearColor];
 		netraTable.separatorColor=[UIColor colorWithRed:0.263 green:0.263 blue:0.263 alpha:1];
 		netraTable.delegate=self;
@@ -94,9 +94,12 @@
 	cell.textLabel.textAlignment=NSTextAlignmentLeft;
 	cell.textLabel.textColor=[UIColor whiteColor];
 	cell.textLabel.font=[UIFont fontWithName:@"AvenirNext-Medium" size:14];
-    NSString * myTag;
-    myTag = [[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"tag"];
-  
+    //myTag = [[[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"tag"]integerValue];
+	cell.indentationLevel=[[[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"level"]integerValue];
+	NSLog(@"level->%d",[[[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"level"]integerValue]);
+	if([[[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"level"]integerValue]>0){
+		cell.textLabel.textColor=[UIColor redColor];
+	}
 	UIView *selectionColor = [[UIView alloc] init];
 	selectionColor.backgroundColor =[UIColor colorWithRed:0 green:0.486 blue:0.557 alpha:1] ;
     cell.selectedBackgroundView = selectionColor;

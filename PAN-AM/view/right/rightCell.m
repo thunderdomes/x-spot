@@ -15,10 +15,10 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-		self.product=[[UILabel alloc]initWithFrame:CGRectMake(80, 5, 130, 36)];
+		self.product=[[UILabel alloc]initWithFrame:CGRectMake(80, 5, 152, 36)];
 		self.product.backgroundColor=[UIColor clearColor];
 		self.product.numberOfLines=2;
-		self.product.lineBreakMode=NSLineBreakByCharWrapping;
+		self.product.lineBreakMode=NSLineBreakByWordWrapping;
 		self.product.textColor=[UIColor whiteColor];
 		self.product.font=[UIFont fontWithName:@"AvenirNext-Medium" size:15];
 		
