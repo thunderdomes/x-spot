@@ -12,6 +12,8 @@
 {
 	UITableView *netraTable;
 	NSMutableArray *netraMutableArray;
+	UIButton *pam_login_Nasabah;
+	UIButton *pam_login_mitra;
 }
 @property (nonatomic, retain) NSArray *arrayOriginal;
 @property (nonatomic, retain) NSMutableArray *arForTable;

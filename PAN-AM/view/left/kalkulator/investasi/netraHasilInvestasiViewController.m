@@ -76,7 +76,18 @@
 	[rightbarButton release];
 	[leftbarbutton release];
 	
-	self.title=@"Hasil Investasi";
+	UIView *top_label=[[[UIView alloc]initWithFrame:CGRectMake(45, 0, 230, 44)] autorelease];
+	top_label.backgroundColor=[UIColor clearColor];
+	
+	UILabel *TitleBig=[[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 230, 44)] autorelease];
+	TitleBig.text=@"Hasil Investasi";
+	TitleBig.textAlignment=NSTextAlignmentCenter;
+	TitleBig.backgroundColor=[UIColor clearColor];
+	[TitleBig setFont:[UIFont fontWithName:@"AvenirNext-DemiBold" size:19]];
+	TitleBig.textColor = [UIColor whiteColor];
+	TitleBig.hidden=NO;
+	[top_label addSubview:TitleBig];
+	[self.navigationController.navigationBar addSubview:top_label];
 	
 }
 -(void)lefbuttonPush{

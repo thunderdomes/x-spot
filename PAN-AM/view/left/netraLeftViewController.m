@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=[UIColor colorWithRed:0.118 green:0.125 blue:0.125 alpha:1];
-		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-100)];
+		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-210)];
 		netraTable.backgroundColor=[UIColor clearColor];
 		netraTable.separatorColor=[UIColor colorWithRed:0.263 green:0.263 blue:0.263 alpha:1];
 		netraTable.delegate=self;
@@ -32,6 +32,19 @@
 		
 		self.arForTable=[[NSMutableArray alloc] init];
 		[self.arForTable addObjectsFromArray:self.arrayOriginal];
+		
+		pam_login_Nasabah=[UIButton buttonWithType:UIButtonTypeCustom];
+		[pam_login_Nasabah setFrame:CGRectMake(10, self.view.frame.size.height-180, 223, 82)];
+		[pam_login_Nasabah addTarget:self action:@selector(nasabah) forControlEvents:UIControlEventTouchUpInside];
+		[pam_login_Nasabah setBackgroundImage:[UIImage imageNamed:@"login_nasabah"] forState:UIControlStateNormal];
+		[self.view addSubview:pam_login_Nasabah];
+		
+		pam_login_mitra=[UIButton buttonWithType:UIButtonTypeCustom];
+		[pam_login_mitra addTarget:self action:@selector(mitra) forControlEvents:UIControlEventTouchUpInside];
+		[pam_login_mitra setFrame:CGRectMake(10, self.view.frame.size.height-90, 223, 82)];
+		[pam_login_mitra setBackgroundImage:[UIImage imageNamed:@"login_mitra"] forState:UIControlStateNormal];
+		[self.view addSubview:pam_login_mitra];
+
 
         // Custom initialization
     }
