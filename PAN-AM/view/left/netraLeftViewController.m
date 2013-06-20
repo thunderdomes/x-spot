@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=[UIColor colorWithRed:0.118 green:0.125 blue:0.125 alpha:1];
-		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-210)];
+		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-180)];
 		netraTable.backgroundColor=[UIColor clearColor];
 		netraTable.separatorColor=[UIColor colorWithRed:0.263 green:0.263 blue:0.263 alpha:1];
 		netraTable.delegate=self;
@@ -27,21 +27,18 @@
 		[self.view addSubview:netraTable];
 		netraMutableArray=[[NSMutableArray alloc]init];
 		
-		NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
-		self.arrayOriginal=[dTmp valueForKey:@"Object"];
-		
-		self.arForTable=[[NSMutableArray alloc] init];
-		[self.arForTable addObjectsFromArray:self.arrayOriginal];
+		[self setMenu:Nil];
+		dataPass=[[NSMutableArray alloc]init];
 		
 		pam_login_Nasabah=[UIButton buttonWithType:UIButtonTypeCustom];
-		[pam_login_Nasabah setFrame:CGRectMake(10, self.view.frame.size.height-180, 223, 82)];
-		[pam_login_Nasabah addTarget:self action:@selector(nasabah) forControlEvents:UIControlEventTouchUpInside];
+		[pam_login_Nasabah setFrame:CGRectMake(10, self.view.frame.size.height-160, 223, 82)];
+		[pam_login_Nasabah addTarget:self action:@selector(LoginNasabah) forControlEvents:UIControlEventTouchUpInside];
 		[pam_login_Nasabah setBackgroundImage:[UIImage imageNamed:@"login_nasabah"] forState:UIControlStateNormal];
 		[self.view addSubview:pam_login_Nasabah];
 		
 		pam_login_mitra=[UIButton buttonWithType:UIButtonTypeCustom];
-		[pam_login_mitra addTarget:self action:@selector(mitra) forControlEvents:UIControlEventTouchUpInside];
-		[pam_login_mitra setFrame:CGRectMake(10, self.view.frame.size.height-90, 223, 82)];
+		[pam_login_mitra addTarget:self action:@selector(loginMitra) forControlEvents:UIControlEventTouchUpInside];
+		[pam_login_mitra setFrame:CGRectMake(10, self.view.frame.size.height-85, 223, 82)];
 		[pam_login_mitra setBackgroundImage:[UIImage imageNamed:@"login_mitra"] forState:UIControlStateNormal];
 		[self.view addSubview:pam_login_mitra];
 
@@ -50,9 +47,33 @@
     }
     return self;
 }
+-(void)setMenu:(NSNotification*)object{
+	NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
+	self.arrayOriginal=[dTmp valueForKey:@"Object"];
+	
+	self.arForTable=[[NSMutableArray alloc] init];
+	[self.arForTable addObjectsFromArray:self.arrayOriginal];
+	[netraTable reloadData];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 {
     return 44;
+}
+-(void)LoginNasabah{
+	[dataPass addObject:@"netraNasabahViewController"];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+	[self.sidePanelController showCenterPanel:YES];
+	[dataPass removeAllObjects];
+	
+}
+-(void)loginMitra{
+	[dataPass addObject:@"netraMitraViewController"];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+	
+	[self.sidePanelController showCenterPanel:YES];
+	[dataPass removeAllObjects];
+	
+
 }
 - (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
 {
@@ -175,7 +196,7 @@
 			
 		}
 	}
-	NSMutableArray *dataPass=[[NSMutableArray alloc]init];
+
 	
 	/////passing calculator
 	if([cell.textLabel.text isEqualToString:@"Berita"]){
@@ -184,7 +205,7 @@
 		
 		[self.sidePanelController showCenterPanel:YES];
 		[dataPass removeAllObjects];
-		[dataPass release];
+		
 		
 	}
 	else if([cell.textLabel.text isEqualToString:@"Hasil Investasi"]){
@@ -193,7 +214,7 @@
 		
 		[self.sidePanelController showCenterPanel:YES];
 		[dataPass removeAllObjects];
-		[dataPass release];
+		
 
 	}
 	else if([cell.textLabel.text isEqualToString:@"Hasil Investasi Berkala"]){
@@ -201,7 +222,7 @@
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
 		[self.sidePanelController showCenterPanel:YES];
 		[dataPass removeAllObjects];
-		[dataPass release];
+		
 		
 	}
 	else if([cell.textLabel.text isEqualToString:@"Kebutuhan Investasi"]){
@@ -210,7 +231,7 @@
 		
 		[self.sidePanelController showCenterPanel:YES];
 		[dataPass removeAllObjects];
-		[dataPass release];
+		
 		
 	}
 	
@@ -238,6 +259,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	[dataPass release];
 	// Do any additional setup after loading the view.
 }
 
