@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface netraGLobalLoginViewController : UIViewController
-
+@interface netraGLobalLoginViewController : UIViewController<UITextFieldDelegate>
+{
+	UILabel *Title;
+	UITextField *username;
+	UITextField *password;
+}
+@property (nonatomic,strong) NSString *Status;
 @end

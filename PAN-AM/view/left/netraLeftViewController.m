@@ -61,11 +61,13 @@
 }
 -(void)LoginNasabah{
 	loginWindow=[[netraGLobalLoginViewController alloc]init];
+	loginWindow.Status=@"Login Nasabah";
 	[self presentPopupViewController:loginWindow animationType:MJPopupViewAnimationSlideBottomBottom];
 
 }
 -(void)loginMitra{
 	loginWindow=[[netraGLobalLoginViewController alloc]init];
+	loginWindow.Status=@"Login Mitra";
 	[self presentPopupViewController:loginWindow animationType:MJPopupViewAnimationSlideBottomBottom];
 }
 - (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
