@@ -7,7 +7,7 @@
 //
 
 #import "netraLeftViewController.h"
-
+#import "netraGLobalLoginViewController.h"
 @interface netraLeftViewController ()
 
 @end
@@ -42,7 +42,7 @@
 		[pam_login_mitra setBackgroundImage:[UIImage imageNamed:@"login_mitra"] forState:UIControlStateNormal];
 		[self.view addSubview:pam_login_mitra];
 
-
+		
         // Custom initialization
     }
     return self;
@@ -60,20 +60,13 @@
     return 44;
 }
 -(void)LoginNasabah{
-	[dataPass addObject:@"netraNasabahViewController"];
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-	[self.sidePanelController showCenterPanel:YES];
-	[dataPass removeAllObjects];
-	
+	loginWindow=[[netraGLobalLoginViewController alloc]init];
+	[self presentPopupViewController:loginWindow animationType:MJPopupViewAnimationSlideBottomBottom];
+
 }
 -(void)loginMitra{
-	[dataPass addObject:@"netraMitraViewController"];
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-	
-	[self.sidePanelController showCenterPanel:YES];
-	[dataPass removeAllObjects];
-	
-
+	loginWindow=[[netraGLobalLoginViewController alloc]init];
+	[self presentPopupViewController:loginWindow animationType:MJPopupViewAnimationSlideBottomBottom];
 }
 - (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
 {

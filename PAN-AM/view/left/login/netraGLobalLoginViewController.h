@@ -1,5 +1,5 @@
 //
-//  netraMitraViewController.h
+//  netraGLobalLoginViewController.h
 //  PAN-AM
 //
 //  Created by Arie on 6/21/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface netraMitraViewController : UIViewController
+@interface netraGLobalLoginViewController : UIViewController
 
 @end

@@ -19,5 +19,7 @@
 #import "netraGlobal.h"
 #import "netraNewsObject.h"
 #import "netraTrading.h"
+#import "UIViewController+MJPopupViewController.h"
+#import "netraGLobalLoginViewController.h"
 
 #endif
