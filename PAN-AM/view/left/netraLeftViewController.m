@@ -47,6 +47,9 @@
     }
     return self;
 }
+-(void)ifLoginTrue{
+	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
+}
 -(void)setMenu:(NSNotification*)object{
 	NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
 	self.arrayOriginal=[dTmp valueForKey:@"Object"];

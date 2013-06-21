@@ -129,12 +129,39 @@
 	}
 }
 -(void)loginNasabah{
-	NSLog(@"status---->%@",username.text);
-	NSLog(@"status---->%@",password.text);
+	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+							username.text, @"userName",
+							password.text, @"password",
+							nil];
+	
+	AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:
+							[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
+	
+	[client postPath:@"/jsonLoginUser.aspx" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+		NSLog(@"Response: %@", text);
+		[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideTopBottom];
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		NSLog(@"%@", [error localizedDescription]);
+	}];
 }
 -(void)loginMitra{
-	NSLog(@"status---->%@",username.text);
-	NSLog(@"status---->%@",password.text);
+	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+							username.text, @"userName",
+							password.text, @"password",
+							nil];
+	
+	AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:
+							[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
+	
+	[client postPath:@"/jsonLoginUserMarketing.aspx" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+		NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+		NSLog(@"Response: %@", text);
+		[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideTopBottom];
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+		NSLog(@"%@", [error localizedDescription]);
+	}];
+
 }
 
 @end
