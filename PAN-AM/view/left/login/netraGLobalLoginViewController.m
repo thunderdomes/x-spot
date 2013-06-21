@@ -22,8 +22,16 @@
 		self.view.frame=CGRectMake(0, 0,280, 280);
 		self.view.backgroundColor=[UIColor whiteColor];
 		Title=[[UILabel alloc]initWithFrame:CGRectMake(20,20, 240,44)];
+		Title.font=[UIFont fontWithName:@"AvenirNext-Medium" size:25];
+		Title.backgroundColor=[UIColor clearColor];
+		Title.textColor=[UIColor colorWithRed:0.424 green:0.424 blue:0.424 alpha:1.0];
+		Title.textAlignment=NSTextAlignmentCenter;
 		
-		username=[[UITextField alloc]initWithFrame:CGRectMake(20,100, 240,44)];
+		separators=[[UIView alloc]initWithFrame:CGRectMake(20, 64, 240, 1)];
+		separators.backgroundColor=[UIColor colorWithRed:0.863 green:0.863 blue:0.863 alpha:1] /*#dcdcdc*/;
+		
+		
+		username=[[UITextField alloc]initWithFrame:CGRectMake(20,80, 240,44)];
 		username.tag=1;
 		username.placeholder=@"Username";
 		password.returnKeyType=UIReturnKeyNext;
@@ -35,7 +43,7 @@
 		username.textColor=[UIColor colorWithRed:0.424 green:0.424 blue:0.424 alpha:1.0];
 		username.delegate=self;
 		
-		password=[[UITextField alloc]initWithFrame:CGRectMake(20,160, 240,44)];
+		password=[[UITextField alloc]initWithFrame:CGRectMake(20,140, 240,44)];
 		password.backgroundColor=[UIColor colorWithRed:0.988 green:0.988 blue:0.988 alpha:1];
 		password.secureTextEntry=YES;
 		password.placeholder=@"Password";
@@ -47,9 +55,21 @@
 		password.returnKeyType=UIReturnKeyDone;
 		password.delegate=self;
 		
+		submit=[UIButton buttonWithType:UIButtonTypeCustom];
+		submit.layer.cornerRadius = 3; // this value vary as per your desire
+		submit.clipsToBounds = YES;
+		submit.frame=CGRectMake(20,200, 240,44);
+		[submit setBackgroundImage:[UIImage imageNamed:@"login"]
+						  forState:UIControlStateNormal];
+		[submit setBackgroundImage:[UIImage imageNamed:@"login_push"]
+						  forState:UIControlStateHighlighted];
+		[submit addTarget:self action:@selector(loginTo) forControlEvents:UIControlEventTouchUpInside];
+		
 		[self.view addSubview:username];
 		[self.view addSubview:password];
+		[self.view addSubview:separators];
 		[self.view addSubview:Title];
+		[self.view addSubview:submit];
 		
     }
     return self;
@@ -91,13 +111,30 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:YES];
-		NSLog(@"status---->%@",self.Status);
+		
 	Title.text=self.Status;
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)loginTo{
+	if ([self.Status isEqualToString:@"Login Nasabah"]){
+		[self loginNasabah];
+	}
+	else{
+		[self loginMitra];
+	
+	}
+}
+-(void)loginNasabah{
+	NSLog(@"status---->%@",username.text);
+	NSLog(@"status---->%@",password.text);
+}
+-(void)loginMitra{
+	NSLog(@"status---->%@",username.text);
+	NSLog(@"status---->%@",password.text);
 }
 
 @end

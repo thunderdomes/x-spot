@@ -41,6 +41,8 @@
 		D075C3561773FC6C00C775CB /* MJPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = D075C3531773FC6C00C775CB /* MJPopupBackgroundView.m */; };
 		D075C3571773FC6C00C775CB /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D075C3551773FC6C00C775CB /* UIViewController+MJPopupViewController.m */; };
 		D075C35B1773FD5100C775CB /* netraGLobalLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D075C35A1773FD5100C775CB /* netraGLobalLoginViewController.m */; };
+		D08801E217742D9000D8311A /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D08801E117742D9000D8311A /* login@2x.png */; };
+		D08801E417742EE900D8311A /* login_push@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D08801E317742EE900D8311A /* login_push@2x.png */; };
 		D09CD10817715718000CD39D /* netraGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10717715718000CD39D /* netraGlobal.m */; };
 		D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10E17719187000CD39D /* netraNewsObject.m */; };
 		D09CD113177191A9000CD39D /* netraTrading.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD112177191A9000CD39D /* netraTrading.m */; };
@@ -120,6 +122,8 @@
 		D075C3551773FC6C00C775CB /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
 		D075C3591773FD5100C775CB /* netraGLobalLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraGLobalLoginViewController.h; sourceTree = "<group>"; };
 		D075C35A1773FD5100C775CB /* netraGLobalLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraGLobalLoginViewController.m; sourceTree = "<group>"; };
+		D08801E117742D9000D8311A /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
+		D08801E317742EE900D8311A /* login_push@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_push@2x.png"; sourceTree = "<group>"; };
 		D09CD10617715718000CD39D /* netraGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netraGlobal.h; path = netraObject/netraGlobal.h; sourceTree = "<group>"; };
 		D09CD10717715718000CD39D /* netraGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = netraGlobal.m; path = netraObject/netraGlobal.m; sourceTree = "<group>"; };
 		D09CD10D17719187000CD39D /* netraNewsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraNewsObject.h; sourceTree = "<group>"; };
@@ -393,6 +397,8 @@
 				D09CD12417721AB0000CD39D /* down@2x.png */,
 				D09CD12517721AB0000CD39D /* up@2x.png */,
 				D075C33E17736BDC00C775CB /* login_mitra@2x.png */,
+				D08801E117742D9000D8311A /* login@2x.png */,
+				D08801E317742EE900D8311A /* login_push@2x.png */,
 				D075C33F17736BDC00C775CB /* login_nasabah@2x.png */,
 				D09CD1291772265B000CD39D /* 1@2x.png */,
 				D09CD12A1772265B000CD39D /* 2@2x.png */,
@@ -527,6 +533,8 @@
 				D075C3441773773D00C775CB /* leftWindow.plist in Resources */,
 				D075C3471773776800C775CB /* mitra.plist in Resources */,
 				D075C3481773776800C775CB /* nasabah.plist in Resources */,
+				D08801E217742D9000D8311A /* login@2x.png in Resources */,
+				D08801E417742EE900D8311A /* login_push@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

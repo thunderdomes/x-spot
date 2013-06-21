@@ -13,6 +13,8 @@
 	UILabel *Title;
 	UITextField *username;
 	UITextField *password;
+	UIView *separators;
+	UIButton *submit;
 }
 @property (nonatomic,strong) NSString *Status;
 @end
