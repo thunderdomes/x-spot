@@ -170,8 +170,8 @@
 	AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id responseObject) {
 		if([[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]!= [NSNull null]){
 		
-		[datapass addObject:[[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]];
 		[datapass addObject:@"mitra"];
+			[common setSessionId:[[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"AfterLogin" object:datapass];
 		
 		[self.sidePanelController showCenterPanel:YES];

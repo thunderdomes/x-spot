@@ -23,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[common setSessionId:@""];
 [MagicalRecord setupCoreDataStackWithStoreNamed:@"netra.sqlite"];
 	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(setCenter:)
 												name:@"dealNotification"
@@ -49,7 +50,6 @@
 	
 	else if([[dict objectAtIndex:0] isEqualToString:self.lastController]){
 		
-		NSLog(@"do nothing");
 	}
 	else{
 		

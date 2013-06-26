@@ -22,5 +22,6 @@
 #import "UIViewController+MJPopupViewController.h"
 #import "netraGLobalLoginViewController.h"
 #import "CoreData+MagicalRecord.h"
+#import "common.h"
 
 #endif

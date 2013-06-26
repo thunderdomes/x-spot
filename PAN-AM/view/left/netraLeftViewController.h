@@ -16,7 +16,6 @@
 	UIButton *pam_login_mitra;
 	NSMutableArray *dataPass;
 	netraGLobalLoginViewController *loginWindow;
-	NSString *sessionId;
 }
 @property (nonatomic, retain) NSArray *arrayOriginal;
 @property (nonatomic, retain) NSMutableArray *arForTable;

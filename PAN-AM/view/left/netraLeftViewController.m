@@ -224,6 +224,15 @@
 		
 		
 	}
+	else if([cell.textLabel.text isEqualToString:@"Home"]){
+		[dataPass addObject:@"netraViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+		
+		
+	}
 	else if([cell.textLabel.text isEqualToString:@"Hasil Investasi"]){
 		[dataPass addObject:@"netraHasilInvestasiViewController"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
@@ -287,11 +296,9 @@
 }
 -(void)afterLogin:(NSNotification*)notification{
 	NSMutableArray *dict = (NSMutableArray*)notification.object;
-	NSLog(@"dict-->%@",[dict objectAtIndex:0]);
-	sessionId=[dict objectAtIndex:0];
-	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
+	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
 	[loginWindow release];
-	[self setMenu:[dict objectAtIndex:1]];
+	[self setMenu:[dict objectAtIndex:0]];
 }
 -(void)dealloc{
 	[super dealloc];
