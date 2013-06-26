@@ -43,7 +43,7 @@
 		nasabah_total.textAlignment=NSTextAlignmentCenter;
 		nasabah_total.textColor=[UIColor colorWithRed:0.482 green:0.482 blue:0.482 alpha:1];
 		
-		investment_total=[[UILabel alloc]initWithFrame:CGRectMake(0, 22, nasabah.frame.size.width, 90)];
+		investment_total=[[UILabel alloc]initWithFrame:CGRectMake(0, 22, nasabah.frame.size.width, 80)];
 		investment_total.backgroundColor=[UIColor clearColor];
 		investment_total.font=[UIFont fontWithName:@"HelveticaNeue" size:18];
 		investment_total.numberOfLines = 1;
