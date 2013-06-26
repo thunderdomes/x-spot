@@ -66,6 +66,7 @@
 	}
 	else if([object isEqualToString:@"mitra"]){
 		[self.arForTable removeAllObjects];
+		[self setCenter:@"Customer Portfolio"];
 		NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
 		self.arrayOriginal=[dTmp valueForKey:object];
 		pam_login_mitra.hidden=YES;
@@ -212,10 +213,25 @@
 			
 		}
 	}
-
+	[self setCenter:cell.textLabel.text];
 	
+	
+	
+}
+-(void)setCenter:(NSString*)centerWindow{
+	
+	if([centerWindow isEqualToString:@"Home"]){
+		[dataPass addObject:@"netraViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+		
+		
+	}
 	/////passing calculator
-	if([cell.textLabel.text isEqualToString:@"Berita"]){
+	
+	else if([centerWindow isEqualToString:@"Berita"]){
 		[dataPass addObject:@"netraViewController"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
 		
@@ -224,25 +240,16 @@
 		
 		
 	}
-	else if([cell.textLabel.text isEqualToString:@"Home"]){
-		[dataPass addObject:@"netraViewController"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-		
-	}
-	else if([cell.textLabel.text isEqualToString:@"Hasil Investasi"]){
+	else if([centerWindow isEqualToString:@"Hasil Investasi"]){
 		[dataPass addObject:@"netraHasilInvestasiViewController"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
 		
 		[self.sidePanelController showCenterPanel:YES];
 		[dataPass removeAllObjects];
 		
-
+		
 	}
-	else if([cell.textLabel.text isEqualToString:@"Hasil Investasi Berkala"]){
+	else if([centerWindow isEqualToString:@"Hasil Investasi Berkala"]){
 		[dataPass addObject:@"netraBerkalaViewController"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
 		[self.sidePanelController showCenterPanel:YES];
@@ -250,7 +257,7 @@
 		
 		
 	}
-	else if([cell.textLabel.text isEqualToString:@"Kebutuhan Investasi"]){
+	else if([centerWindow isEqualToString:@"Kebutuhan Investasi"]){
 		[dataPass addObject:@"netraKebutuhanViewController"];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
 		
@@ -259,13 +266,20 @@
 		
 		
 	}
-	else if([cell.textLabel.text isEqualToString:@"Logout"]){
+	else if([centerWindow isEqualToString:@"Customer Portfolio"]){
+		[dataPass addObject:@"customerPortfolio"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+		
+		
+	}
+	else if([centerWindow isEqualToString:@"Logout"]){
 		[self setMenu:nil];
 		
 	}
-	
-	
-	
+
 }
 -(void)miniMizeThisRows:(NSArray*)ar{
 	for(NSDictionary *dInner in ar ) {
@@ -297,8 +311,8 @@
 -(void)afterLogin:(NSNotification*)notification{
 	NSMutableArray *dict = (NSMutableArray*)notification.object;
 	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
-	[loginWindow release];
 	[self setMenu:[dict objectAtIndex:0]];
+	[loginWindow release];
 }
 -(void)dealloc{
 	[super dealloc];

@@ -87,6 +87,7 @@
 		D09CD14117735542000CD39D /* netraKebutuhanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD14017735542000CD39D /* netraKebutuhanViewController.m */; };
 		D09CD14417735551000CD39D /* netraHasilInvestasiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD14317735551000CD39D /* netraHasilInvestasiViewController.m */; };
 		D0D41C1E177B734D00362F13 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C1D177B734D00362F13 /* common.m */; };
+		D0D41C25177B781D00362F13 /* customerPortfolio.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C24177B781D00362F13 /* customerPortfolio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -233,6 +234,8 @@
 		D09CD14317735551000CD39D /* netraHasilInvestasiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraHasilInvestasiViewController.m; sourceTree = "<group>"; };
 		D0D41C1C177B734D00362F13 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		D0D41C1D177B734D00362F13 /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
+		D0D41C23177B781D00362F13 /* customerPortfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customerPortfolio.h; sourceTree = "<group>"; };
+		D0D41C24177B781D00362F13 /* customerPortfolio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customerPortfolio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +326,7 @@
 		D042523B1770B801000C348B /* left */ = {
 			isa = PBXGroup;
 			children = (
+				D0D41C22177B781D00362F13 /* customerPortfolio */,
 				D075C3581773FD3A00C775CB /* login */,
 				D09CD13617734400000CD39D /* cycle */,
 				D09CD13717734400000CD39D /* investor */,
@@ -655,6 +659,15 @@
 			path = common;
 			sourceTree = "<group>";
 		};
+		D0D41C22177B781D00362F13 /* customerPortfolio */ = {
+			isa = PBXGroup;
+			children = (
+				D0D41C23177B781D00362F13 /* customerPortfolio.h */,
+				D0D41C24177B781D00362F13 /* customerPortfolio.m */,
+			);
+			path = customerPortfolio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -792,6 +805,7 @@
 				D08802391774B55400D8311A /* MagicalRecord+ShorthandSupport.m in Sources */,
 				D088023A1774B55400D8311A /* MagicalRecord.m in Sources */,
 				D0D41C1E177B734D00362F13 /* common.m in Sources */,
+				D0D41C25177B781D00362F13 /* customerPortfolio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
