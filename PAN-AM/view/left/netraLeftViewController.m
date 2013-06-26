@@ -19,7 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		self.view.backgroundColor=[UIColor colorWithRed:0.118 green:0.125 blue:0.125 alpha:1];
-		netraTable=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-180)];
+		netraTable=[[UITableView alloc]init];
 		netraTable.backgroundColor=[UIColor clearColor];
 		netraTable.separatorColor=[UIColor colorWithRed:0.263 green:0.263 blue:0.263 alpha:1];
 		netraTable.delegate=self;
@@ -50,13 +50,31 @@
 -(void)ifLoginTrue{
 	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
 }
--(void)setMenu:(NSNotification*)object{
-	NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
-	self.arrayOriginal=[dTmp valueForKey:@"Object"];
-	
-	self.arForTable=[[NSMutableArray alloc] init];
-	[self.arForTable addObjectsFromArray:self.arrayOriginal];
-	[netraTable reloadData];
+-(void)setMenu:(NSString*)object{
+	if(object==nil){
+		[self.arForTable removeAllObjects];
+		NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
+		self.arrayOriginal=[dTmp valueForKey:@"biasa"];
+		pam_login_mitra.hidden=NO;
+		pam_login_Nasabah.hidden=NO;
+		self.arForTable=[[NSMutableArray alloc] init];
+		[self.arForTable addObjectsFromArray:self.arrayOriginal];
+		netraTable.frame=CGRectMake(0, 0, 320, self.view.frame.size.height-180);
+		[netraTable reloadData];
+
+		
+	}
+	else if([object isEqualToString:@"mitra"]){
+		[self.arForTable removeAllObjects];
+		NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
+		self.arrayOriginal=[dTmp valueForKey:object];
+		pam_login_mitra.hidden=YES;
+		pam_login_Nasabah.hidden=YES;
+		self.arForTable=[[NSMutableArray alloc] init];
+		[self.arForTable addObjectsFromArray:self.arrayOriginal];
+		netraTable.frame=CGRectMake(0, 0, 320, self.view.frame.size.height);
+		[netraTable reloadData];
+	}
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 {
@@ -232,6 +250,10 @@
 		
 		
 	}
+	else if([cell.textLabel.text isEqualToString:@"Logout"]){
+		[self setMenu:nil];
+		
+	}
 	
 	
 	
@@ -257,10 +279,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(afterLogin:)
+												name:@"AfterLogin"
+											  object:nil];
 	[dataPass release];
 	// Do any additional setup after loading the view.
 }
-
+-(void)afterLogin:(NSNotification*)notification{
+	NSMutableArray *dict = (NSMutableArray*)notification.object;
+	NSLog(@"dict-->%@",[dict objectAtIndex:0]);
+	sessionId=[dict objectAtIndex:0];
+	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
+	[loginWindow release];
+	[self setMenu:[dict objectAtIndex:1]];
+}
+-(void)dealloc{
+	[super dealloc];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -23,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+[MagicalRecord setupCoreDataStackWithStoreNamed:@"netra.sqlite"];
 	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(setCenter:)
 												name:@"dealNotification"
 											  object:nil];
@@ -53,7 +53,6 @@
 	}
 	else{
 		
-		NSLog(@"[dict objectAtIndex:0]===>%@",[dict objectAtIndex:0]);
 		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString([dict objectAtIndex:0]) alloc] init]];
 		self.lastController=[dict objectAtIndex:0];
 		
@@ -84,6 +83,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+	[MagicalRecord cleanUp];
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

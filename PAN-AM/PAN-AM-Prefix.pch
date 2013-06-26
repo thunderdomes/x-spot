@@ -21,5 +21,6 @@
 #import "netraTrading.h"
 #import "UIViewController+MJPopupViewController.h"
 #import "netraGLobalLoginViewController.h"
+#import "CoreData+MagicalRecord.h"
 
 #endif

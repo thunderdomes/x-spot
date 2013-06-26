@@ -64,7 +64,7 @@
 		[submit setBackgroundImage:[UIImage imageNamed:@"login_push"]
 						  forState:UIControlStateHighlighted];
 		[submit addTarget:self action:@selector(loginTo) forControlEvents:UIControlEventTouchUpInside];
-		
+		datapass=[[NSMutableArray alloc]init];
 		[self.view addSubview:username];
 		[self.view addSubview:password];
 		[self.view addSubview:separators];
@@ -134,16 +134,25 @@
 							password.text, @"password",
 							nil];
 	
-	AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:
-							[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
-	
-	[client postPath:@"/jsonLoginUser.aspx" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-		NSLog(@"Response: %@", text);
-		[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideTopBottom];
-	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-		NSLog(@"%@", [error localizedDescription]);
-	}];
+	AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
+	[httpClient setParameterEncoding:AFFormURLParameterEncoding];
+	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+	NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
+															path:@"jsonLoginUser.aspx"
+													  parameters:params];
+	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+	AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id responseObject) {
+		NSLog(@"responseObject-->%@",responseObject);
+	} failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        // code for failed request goes here
+        [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+		if(error){
+			NSLog(@"error-->%@",error);
+		}
+        // do something on failure
+    }];
+	[operation start];
+
 }
 -(void)loginMitra{
 	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -151,17 +160,46 @@
 							password.text, @"password",
 							nil];
 	
-	AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:
-							[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
+	AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
+	[httpClient setParameterEncoding:AFFormURLParameterEncoding];
+	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+	NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
+															path:@"jsonLoginUserMarketing.aspx"
+													  parameters:params];
+	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+	AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id responseObject) {
+		if([[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]!= [NSNull null]){
+		
+		[datapass addObject:[[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]];
+		[datapass addObject:@"mitra"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"AfterLogin" object:datapass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[datapass removeAllObjects];
+		}
+		else{
+			[self error];
+		}
+		
+	} failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        // code for failed request goes here
+        [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+		if(error){
+			NSLog(@"error-->%@",error);
+		}
+        // do something on failure
+    }];
+	[operation start];
+}
+-(void)error{
+	UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ERROR!"
+													  message:@"Username atau Password Salah!"
+													 delegate:nil
+											cancelButtonTitle:@"OK"
+											otherButtonTitles:nil];
+	[message show];
+	[message release];
 	
-	[client postPath:@"/jsonLoginUserMarketing.aspx" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-		NSString *text = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-		NSLog(@"Response: %@", text);
-		[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideTopBottom];
-	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-		NSLog(@"%@", [error localizedDescription]);
-	}];
 
 }
-
 @end

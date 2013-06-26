@@ -15,6 +15,7 @@
 	UITextField *password;
 	UIView *separators;
 	UIButton *submit;
+	NSMutableArray *datapass;
 }
 @property (nonatomic,strong) NSString *Status;
 @end
