@@ -92,6 +92,7 @@
 		D0D41C2F177C25BE00362F13 /* PAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C2D177C25BE00362F13 /* PAN.xcdatamodeld */; };
 		D0D41C33177C260900362F13 /* Mitra.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C32177C260900362F13 /* Mitra.m */; };
 		D0D41C37177C269F00362F13 /* customer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C36177C269F00362F13 /* customer.m */; };
+		D0D41C3A177C7B7700362F13 /* customerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C39177C7B7700362F13 /* customerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -246,6 +247,8 @@
 		D0D41C32177C260900362F13 /* Mitra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mitra.m; sourceTree = "<group>"; };
 		D0D41C35177C269F00362F13 /* customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customer.h; sourceTree = "<group>"; };
 		D0D41C36177C269F00362F13 /* customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customer.m; sourceTree = "<group>"; };
+		D0D41C38177C7B7700362F13 /* customerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customerCell.h; sourceTree = "<group>"; };
+		D0D41C39177C7B7700362F13 /* customerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -677,6 +680,8 @@
 			children = (
 				D0D41C23177B781D00362F13 /* customerPortfolio.h */,
 				D0D41C24177B781D00362F13 /* customerPortfolio.m */,
+				D0D41C38177C7B7700362F13 /* customerCell.h */,
+				D0D41C39177C7B7700362F13 /* customerCell.m */,
 			);
 			path = customerPortfolio;
 			sourceTree = "<group>";
@@ -858,6 +863,7 @@
 				D0D41C2F177C25BE00362F13 /* PAN.xcdatamodeld in Sources */,
 				D0D41C33177C260900362F13 /* Mitra.m in Sources */,
 				D0D41C37177C269F00362F13 /* customer.m in Sources */,
+				D0D41C3A177C7B7700362F13 /* customerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "customerPortfolio.h"
-
+#import "customerCell.h"
 @interface customerPortfolio ()
 
 @end
@@ -116,7 +116,7 @@
     return 1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return  50;
+	return  60;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -127,15 +127,27 @@
 
     static NSString *CellIdentifier = @"CountryCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    customerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[customerCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 	if(!isFiltered){
-		
 		customer  *object_draw=[netrax objectAtIndex:indexPath.row];
-		cell.textLabel.text=object_draw.CustomerName;
-		cell.detailTextLabel.text=object_draw.Fund;
+		NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setGroupingSeparator:@","];
+        [numberFormatter setGroupingSize:3];
+        [numberFormatter setUsesGroupingSeparator:YES];
+        [numberFormatter setDecimalSeparator:@"."];
+        [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        [numberFormatter setMaximumFractionDigits:2];
+        
+        NSString *ar = [NSString stringWithFormat:@"%@", object_draw.TotalAmountNonUSD];
+        CGFloat myNumber = (CGFloat)[ar floatValue];
+
+		cell.nama.text=object_draw.CustomerName;
+		NSLog(@"ar----->%@",ar);
+		cell.balance.text=[NSString stringWithFormat:@"Rp %@",[numberFormatter stringFromNumber:[NSNumber numberWithFloat:myNumber]]];
+		//cell.detailTextLabel.text=object_draw.Fund;
 		
 	}
 	else{
@@ -174,6 +186,7 @@
     
 	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
 	AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id responseObject) {
+		NSLog(@"response-->%@",responseObject);
 		[nasabah_total setText:[NSString stringWithFormat:@"%d",[[responseObject objectForKey:@"ListCustomerPortfolio"] count]]];
 		
 		total_investment=0.0;
