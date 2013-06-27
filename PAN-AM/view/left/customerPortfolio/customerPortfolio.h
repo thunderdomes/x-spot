@@ -11,10 +11,11 @@
 @interface customerPortfolio : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
 	UITableView *customerTable;
-	NSMutableArray *fetchData;
+	NSMutableArray *netrax;
+	NSMutableArray *coreData;
 	NSMutableArray *filteredData;
 	UIView *wrapper;
-	
+
 	UIView *wrapper_atas;
 	UIView *nasabah;
 	UILabel *nasabah_atas;

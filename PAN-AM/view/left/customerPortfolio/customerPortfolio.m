@@ -11,7 +11,7 @@
 @interface customerPortfolio ()
 
 @end
-
+	bool isFiltered=false;
 @implementation customerPortfolio
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -19,6 +19,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+		
+		netrax=[[NSMutableArray alloc]init];
+		//coreData=[[NSMutableArray alloc]init];
 		self.view.backgroundColor=[UIColor whiteColor];
 		wrapper=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 		wrapper.backgroundColor=[UIColor colorWithRed:0.976 green:0.976 blue:0.976 alpha:1];
@@ -35,7 +38,6 @@
 		nasabah_atas.textAlignment=NSTextAlignmentCenter;
 		nasabah_atas.textColor=[UIColor colorWithRed:0 green:0.431 blue:0.514 alpha:1.0];
 		nasabah_atas.text=@"Jumlah Nasabah";
-		
 		nasabah_total=[[UILabel alloc]initWithFrame:CGRectMake(0, 22, nasabah.frame.size.width, 90)];
 		nasabah_total.backgroundColor=[UIColor clearColor];
 		nasabah_total.font=[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:80];
@@ -93,8 +95,10 @@
 		searchForm.returnKeyType=UIReturnKeyDone;
 		
 		[searchbarContainer addSubview:searchForm];
-		[self.view addSubview:searchbarContainer];
-		[self.view addSubview:customerTable];
+		[self.view addSubview:wrapper];
+		
+		[wrapper addSubview:searchbarContainer];
+		[wrapper  addSubview:customerTable];
 		[wrapper_atas addSubview:nasabah];
 		[wrapper_atas addSubview:investment];
 		[nasabah addSubview:nasabah_atas];
@@ -116,18 +120,29 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 10;
+	return netrax.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
+
     static NSString *CellIdentifier = @"CountryCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
-	cell.textLabel.text=@"A";
+	if(!isFiltered){
+		
+		customer  *object_draw=[netrax objectAtIndex:indexPath.row];
+		cell.textLabel.text=object_draw.CustomerName;
+		cell.detailTextLabel.text=object_draw.Fund;
+		
+	}
+	else{
+		NSLog(@"dataKosong");
+	}
+	
+
     return cell;
 }
 
@@ -145,8 +160,9 @@
 -(void)viewWillAppear:(BOOL)animated{
 	
 	[super viewWillAppear:YES];
-	[self initNavBar];
 	[self fetchData];
+	[self initNavBar];
+	
 }
 -(void)fetchData{
     
@@ -170,27 +186,47 @@
 		for(id objectData in [responseObject objectForKey:@"ListCustomerPortfolio"]){
 			
 			customer *objectDatax=[[customer alloc] initWithDictionary:objectData];
-			
+			[netrax addObject:objectDatax];
 		}
-		/*
+	///lakukan insert ke Coredata
 		if([[responseObject objectForKey:@"ListCustomerPortfolio"] count] ==netrax.count){
-			[self insertIntoArrayScope];
-			NSMutableArray *dataPass=[[NSMutableArray alloc]init];
-			[dataPass addObject:@"mitra"];
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"hideButton" object:dataPass];
-			[self.sidePanelController showCenterPanel:YES];
-			[dataPass removeAllObjects];
+			NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
+			Mitra *nasabahData;
+			[Mitra MR_truncateAll];
+			for (int i=0; i<netrax.count; i++) {
+				
+				nasabahData = [Mitra MR_createInContext:localContext];
+				customer *object_draw = [netrax objectAtIndex:i];
+				nasabahData.date=[NSDate date];
+				nasabahData.customerNo=[NSString stringWithFormat:@"%@",object_draw.CustomerNo];
+				nasabahData.customerName=[NSString stringWithFormat:@"%@",object_draw.CustomerName];
+				if([object_draw.BirthDate hasPrefix:@"/"]){
+					nasabahData.birthDate = [NSString stringWithFormat:@"-"];
+				}else {
+					nasabahData.birthDate = [NSString stringWithFormat:@"%@", object_draw.BirthDate];
+				}
+				
+				if([object_draw.LastTransDate hasPrefix:@"/"]){
+					nasabahData.LastTransDate = [NSString stringWithFormat:@"-"];
+				}else {
+					nasabahData.LastTransDate = [NSString stringWithFormat:@"%@", object_draw.LastTransDate];
+				}
+				nasabahData.fund=[NSString stringWithFormat:@"%@", object_draw.Fund];
+				nasabahData.totalAmountUSD=[NSString stringWithFormat:@"%@", object_draw.TotalAmountNonUSD];
+				nasabahData.totalAmountNonUSD=[NSString stringWithFormat:@"%@", object_draw.TotalAmountUSD];
+				
+				
+				
+			}
+			[localContext MR_saveNestedContexts];
+			///because coredata slow to ride
 			
+			
+			[self performSelector:@selector(fetchToTable) withObject:nil afterDelay:1];
+
 		}
-		 */
-		//[netra reloadData];
 		
-		//[self insertIntoArrayScope];
-        //NSMutableArray *dataPass=[[NSMutableArray alloc]init];
-		//[dataPass addObject:@"mitra"];
-		//[[NSNotificationCenter defaultCenter] postNotificationName:@"hideButton" object:dataPass];
-		//[self.sidePanelController showCenterPanel:YES];
-		//[dataPass removeAllObjects];
+		
 		
         // do something with return data
     }failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -207,6 +243,13 @@
     [operation start];
 	
 }
+-(void)fetchToTable{
+
+	coreData=[NSMutableArray arrayWithArray:[Mitra MR_findAllSortedBy:@"date" ascending:YES]];
+	NSLog(@"coredata-->%d",coreData.count);
+	[customerTable reloadData];
+}
+
 -(void)setTotalInvestmen:(float)investments{
 	NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
 	[numberFormatter setGroupingSeparator:@","];
