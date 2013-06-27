@@ -87,10 +87,10 @@
 		D09CD14417735551000CD39D /* netraHasilInvestasiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD14317735551000CD39D /* netraHasilInvestasiViewController.m */; };
 		D0A3CAFD177C90E600B884EA /* TJSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3CAFC177C90E600B884EA /* TJSpinner.m */; };
 		D0A3CB00177C945B00B884EA /* DetailCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3CAFF177C945A00B884EA /* DetailCustomer.m */; };
+		D0A3CB02177CA40900B884EA /* card@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0A3CB01177CA40900B884EA /* card@2x.png */; };
 		D0D41C1E177B734D00362F13 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C1D177B734D00362F13 /* common.m */; };
 		D0D41C25177B781D00362F13 /* customerPortfolio.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C24177B781D00362F13 /* customerPortfolio.m */; };
 		D0D41C27177C1BA300362F13 /* searchbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D41C26177C1BA300362F13 /* searchbar@2x.png */; };
-		D0D41C2B177C23D500362F13 /* netraMX.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C2A177C23D500362F13 /* netraMX.m */; };
 		D0D41C2F177C25BE00362F13 /* PAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C2D177C25BE00362F13 /* PAN.xcdatamodeld */; };
 		D0D41C33177C260900362F13 /* Mitra.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C32177C260900362F13 /* Mitra.m */; };
 		D0D41C37177C269F00362F13 /* customer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C36177C269F00362F13 /* customer.m */; };
@@ -241,13 +241,12 @@
 		D0A3CAFC177C90E600B884EA /* TJSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSpinner.m; sourceTree = "<group>"; };
 		D0A3CAFE177C945A00B884EA /* DetailCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCustomer.h; sourceTree = "<group>"; };
 		D0A3CAFF177C945A00B884EA /* DetailCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCustomer.m; sourceTree = "<group>"; };
+		D0A3CB01177CA40900B884EA /* card@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card@2x.png"; sourceTree = "<group>"; };
 		D0D41C1C177B734D00362F13 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		D0D41C1D177B734D00362F13 /* common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
 		D0D41C23177B781D00362F13 /* customerPortfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customerPortfolio.h; sourceTree = "<group>"; };
 		D0D41C24177B781D00362F13 /* customerPortfolio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customerPortfolio.m; sourceTree = "<group>"; };
 		D0D41C26177C1BA300362F13 /* searchbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbar@2x.png"; sourceTree = "<group>"; };
-		D0D41C29177C23D500362F13 /* netraMX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraMX.h; sourceTree = "<group>"; };
-		D0D41C2A177C23D500362F13 /* netraMX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraMX.m; sourceTree = "<group>"; };
 		D0D41C2E177C25BE00362F13 /* mitra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mitra.xcdatamodel; sourceTree = "<group>"; };
 		D0D41C31177C260900362F13 /* Mitra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mitra.h; sourceTree = "<group>"; };
 		D0D41C32177C260900362F13 /* Mitra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mitra.m; sourceTree = "<group>"; };
@@ -401,7 +400,6 @@
 				D0D41C34177C269F00362F13 /* customerPortfolio */,
 				D0D41C30177C25EF00362F13 /* mitraSearch */,
 				D0D41C2C177C25BE00362F13 /* coredata */,
-				D0D41C28177C23D500362F13 /* customer */,
 				D09CD1101771919C000CD39D /* tradingObj */,
 				D09CD10C17719187000CD39D /* newsObj */,
 			);
@@ -606,6 +604,7 @@
 				D09CD12317721AB0000CD39D /* 5@2x.png */,
 				D09CD12417721AB0000CD39D /* down@2x.png */,
 				D09CD12517721AB0000CD39D /* up@2x.png */,
+				D0A3CB01177CA40900B884EA /* card@2x.png */,
 				D075C33E17736BDC00C775CB /* login_mitra@2x.png */,
 				D08801E117742D9000D8311A /* login@2x.png */,
 				D08801E317742EE900D8311A /* login_push@2x.png */,
@@ -702,15 +701,6 @@
 				D0A3CAFF177C945A00B884EA /* DetailCustomer.m */,
 			);
 			path = customerPortfolio;
-			sourceTree = "<group>";
-		};
-		D0D41C28177C23D500362F13 /* customer */ = {
-			isa = PBXGroup;
-			children = (
-				D0D41C29177C23D500362F13 /* netraMX.h */,
-				D0D41C2A177C23D500362F13 /* netraMX.m */,
-			);
-			path = customer;
 			sourceTree = "<group>";
 		};
 		D0D41C2C177C25BE00362F13 /* coredata */ = {
@@ -811,6 +801,7 @@
 				D08801E217742D9000D8311A /* login@2x.png in Resources */,
 				D08801E417742EE900D8311A /* login_push@2x.png in Resources */,
 				D0D41C27177C1BA300362F13 /* searchbar@2x.png in Resources */,
+				D0A3CB02177CA40900B884EA /* card@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,7 +868,6 @@
 				D088023A1774B55400D8311A /* MagicalRecord.m in Sources */,
 				D0D41C1E177B734D00362F13 /* common.m in Sources */,
 				D0D41C25177B781D00362F13 /* customerPortfolio.m in Sources */,
-				D0D41C2B177C23D500362F13 /* netraMX.m in Sources */,
 				D0D41C2F177C25BE00362F13 /* PAN.xcdatamodeld in Sources */,
 				D0D41C33177C260900362F13 /* Mitra.m in Sources */,
 				D0D41C37177C269F00362F13 /* customer.m in Sources */,

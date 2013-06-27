@@ -126,10 +126,16 @@ bool isFiltered=false;
     }
     return self;
 }
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
 	detail=[[DetailCustomer alloc]init];
 	//detail.Status=@"Login Nasabah";
+	if(!isFiltered){
+		customer  *object_draw=[netrax objectAtIndex:indexPath.row];
+		detail.CIF=object_draw.CustomerNo;
+	
+	}
+
 	[self presentPopupViewController:detail animationType:MJPopupViewAnimationSlideTopBottom];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -253,8 +259,8 @@ bool isFiltered=false;
 					nasabahData.LastTransDate = [NSString stringWithFormat:@"%@", object_draw.LastTransDate];
 				}
 				nasabahData.fund=[NSString stringWithFormat:@"%@", object_draw.Fund];
-				nasabahData.totalAmountUSD=[NSString stringWithFormat:@"%@", object_draw.TotalAmountNonUSD];
-				nasabahData.totalAmountNonUSD=[NSString stringWithFormat:@"%@", object_draw.TotalAmountUSD];
+				nasabahData.totalAmountUSD=[NSString stringWithFormat:@"%@", object_draw.TotalAmountUSD];
+				nasabahData.totalAmountNonUSD=[NSString stringWithFormat:@"%@", object_draw.TotalAmountNonUSD];
 				
 				
 				

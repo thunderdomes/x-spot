@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailCustomer : UIViewController
+{
+	UILabel *Name;
+	UILabel *Money;
+	UILabel *CIFx;
+	UILabel *LastTrans;
+	
+}
+@property(nonatomic,strong) NSString *CIF;
+
 
 @end
