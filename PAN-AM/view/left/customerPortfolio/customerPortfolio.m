@@ -58,17 +58,78 @@
 		investment_atas.textAlignment=NSTextAlignmentCenter;
 		investment_atas.textColor=[UIColor colorWithRed:0 green:0.431 blue:0.514 alpha:1.0];
 		investment_atas.text=@"Total Investasi";
+
+		investment_bawah=[[UILabel alloc]initWithFrame:CGRectMake(0, investment.frame.size.height-30, nasabah.frame.size.width, 30)];
+		investment_bawah.backgroundColor=[UIColor clearColor];
+		investment_bawah.font=[UIFont fontWithName:@"AvenirNext-Medium" size:13];
+		investment_bawah.textAlignment=NSTextAlignmentCenter;
+		investment_bawah.textColor=[UIColor darkGrayColor];
+		investment_bawah.text=@"(Dalam Rupiah)";
 		
-		[self.view addSubview:wrapper];
-		[wrapper addSubview:nasabah];
-		[wrapper addSubview:investment];
+		wrapper_atas=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 120)];
+		wrapper_atas.backgroundColor=[UIColor clearColor];
+		
+		customer =[[UITableView alloc]initWithFrame:CGRectMake(0, 50, 320, self.view.frame.size.height-88)];
+		customer.delegate=self;
+		customer.dataSource=self;
+		
+		searchbarContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+		searchbarContainer.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"searchbar"]];
+		paddingView = [[[UIView alloc] initWithFrame:CGRectMake(40, 0, 5, 20)] autorelease];
+		
+		
+		searchForm=[[UITextField alloc]initWithFrame:CGRectMake(30, 7, 280, 30)];
+		searchForm.backgroundColor=[UIColor clearColor];
+		searchForm.layer.sublayerTransform = CATransform3DMakeTranslation(5, 3, 0);
+		searchForm.leftViewMode = UITextFieldViewModeAlways;
+		searchForm.leftView = paddingView;
+		searchForm.placeholder=@"Cari Nasabah / CIF";
+		//searchForm.delegate=self;
+		searchForm.clearButtonMode = UITextFieldViewModeWhileEditing;
+		searchForm.autocorrectionType=UITextAutocorrectionTypeNo;
+		searchForm.leftViewMode = UITextFieldViewModeAlways;
+		searchForm.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+		[searchForm setFont:[UIFont fontWithName:@"OpenSans-Semibold" size:16]];
+		searchForm.textColor=[UIColor colorWithRed:0.275 green:0.275 blue:0.275 alpha:1] ;
+		searchForm.returnKeyType=UIReturnKeyDone;
+		
+		[searchbarContainer addSubview:searchForm];
+		[self.view addSubview:searchbarContainer];
+		[self.view addSubview:customer];
+		[wrapper_atas addSubview:nasabah];
+		[wrapper_atas addSubview:investment];
 		[nasabah addSubview:nasabah_atas];
 		[nasabah addSubview:nasabah_total];
 		[investment addSubview:investment_atas];
 		[investment addSubview:investment_total];
-		//[self.view addSubview:customer];
+		[investment addSubview:investment_bawah];
+		[customer setTableHeaderView:wrapper_atas];
     }
     return self;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+	return  50;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 10;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	
+    static NSString *CellIdentifier = @"CountryCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+	cell.textLabel.text=@"A";
+    return cell;
 }
 
 - (void)viewDidLoad
