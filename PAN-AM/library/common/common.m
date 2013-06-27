@@ -11,6 +11,8 @@
 @implementation common
 @synthesize sessionString;
 static common *sharedObject;
+NSString *newsUrl = @"http://www.panin-am.co.id:800/jsonviewnews.aspx";
+NSString *tradeUrl=@"http://panin-am.co.id:800/json.aspx";
 + (common*)sharedInstance
 {
     if (sharedObject == nil) {

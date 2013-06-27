@@ -16,12 +16,14 @@
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
 #import "AFNetworking.h"
-#import "netraGlobal.h"
 #import "netraNewsObject.h"
 #import "netraTrading.h"
 #import "UIViewController+MJPopupViewController.h"
 #import "netraGLobalLoginViewController.h"
 #import "CoreData+MagicalRecord.h"
 #import "common.h"
+#import "Mitra.h"
+#import "customer.h"
+
 
 #endif

@@ -20,7 +20,6 @@
     if (self) {
         // Custom initialization
 		self.view.backgroundColor=[UIColor whiteColor];
-		customer=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 		wrapper=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 		wrapper.backgroundColor=[UIColor colorWithRed:0.976 green:0.976 blue:0.976 alpha:1];
 		
@@ -69,9 +68,9 @@
 		wrapper_atas=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 120)];
 		wrapper_atas.backgroundColor=[UIColor clearColor];
 		
-		customer =[[UITableView alloc]initWithFrame:CGRectMake(0, 50, 320, self.view.frame.size.height-88)];
-		customer.delegate=self;
-		customer.dataSource=self;
+		customerTable =[[UITableView alloc]initWithFrame:CGRectMake(0, 50, 320, self.view.frame.size.height-88)];
+		customerTable.delegate=self;
+		customerTable.dataSource=self;
 		
 		searchbarContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
 		searchbarContainer.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"searchbar"]];
@@ -95,7 +94,7 @@
 		
 		[searchbarContainer addSubview:searchForm];
 		[self.view addSubview:searchbarContainer];
-		[self.view addSubview:customer];
+		[self.view addSubview:customerTable];
 		[wrapper_atas addSubview:nasabah];
 		[wrapper_atas addSubview:investment];
 		[nasabah addSubview:nasabah_atas];
@@ -103,7 +102,7 @@
 		[investment addSubview:investment_atas];
 		[investment addSubview:investment_total];
 		[investment addSubview:investment_bawah];
-		[customer setTableHeaderView:wrapper_atas];
+		[customerTable setTableHeaderView:wrapper_atas];
     }
     return self;
 }
@@ -167,13 +166,13 @@
 			total_investment=total_investment+[[[[responseObject objectForKey:@"ListCustomerPortfolio"]objectAtIndex:i]objectForKey:@"TotalAmountNonUSD"]floatValue];
 		}
 		[self setTotalInvestmen:total_investment];
-        /*
+	
 		for(id objectData in [responseObject objectForKey:@"ListCustomerPortfolio"]){
 			
-			netraMX *objectDatax=[[netraMX alloc] initWithDictionary:objectData];
-			[netrax addObject:objectDatax];
+			customer *objectDatax=[[customer alloc] initWithDictionary:objectData];
+			
 		}
-		
+		/*
 		if([[responseObject objectForKey:@"ListCustomerPortfolio"] count] ==netrax.count){
 			[self insertIntoArrayScope];
 			NSMutableArray *dataPass=[[NSMutableArray alloc]init];

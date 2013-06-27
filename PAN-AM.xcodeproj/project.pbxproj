@@ -68,7 +68,6 @@
 		D08802391774B55400D8311A /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D088021C1774B55400D8311A /* MagicalRecord+ShorthandSupport.m */; };
 		D088023A1774B55400D8311A /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D088021E1774B55400D8311A /* MagicalRecord.m */; };
 		D088023C1774B6A300D8311A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D088023B1774B6A300D8311A /* CoreData.framework */; };
-		D09CD10817715718000CD39D /* netraGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10717715718000CD39D /* netraGlobal.m */; };
 		D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD10E17719187000CD39D /* netraNewsObject.m */; };
 		D09CD113177191A9000CD39D /* netraTrading.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD112177191A9000CD39D /* netraTrading.m */; };
 		D09CD1161771B3FA000CD39D /* newsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09CD1151771B3FA000CD39D /* newsCell.m */; };
@@ -89,6 +88,10 @@
 		D0D41C1E177B734D00362F13 /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C1D177B734D00362F13 /* common.m */; };
 		D0D41C25177B781D00362F13 /* customerPortfolio.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C24177B781D00362F13 /* customerPortfolio.m */; };
 		D0D41C27177C1BA300362F13 /* searchbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D41C26177C1BA300362F13 /* searchbar@2x.png */; };
+		D0D41C2B177C23D500362F13 /* netraMX.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C2A177C23D500362F13 /* netraMX.m */; };
+		D0D41C2F177C25BE00362F13 /* PAN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C2D177C25BE00362F13 /* PAN.xcdatamodeld */; };
+		D0D41C33177C260900362F13 /* Mitra.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C32177C260900362F13 /* Mitra.m */; };
+		D0D41C37177C269F00362F13 /* customer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D41C36177C269F00362F13 /* customer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -205,8 +208,6 @@
 		D088021F1774B55400D8311A /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		D08802201774B55400D8311A /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		D088023B1774B6A300D8311A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D09CD10617715718000CD39D /* netraGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = netraGlobal.h; path = netraObject/netraGlobal.h; sourceTree = "<group>"; };
-		D09CD10717715718000CD39D /* netraGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = netraGlobal.m; path = netraObject/netraGlobal.m; sourceTree = "<group>"; };
 		D09CD10D17719187000CD39D /* netraNewsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraNewsObject.h; sourceTree = "<group>"; };
 		D09CD10E17719187000CD39D /* netraNewsObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraNewsObject.m; sourceTree = "<group>"; };
 		D09CD111177191A9000CD39D /* netraTrading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraTrading.h; sourceTree = "<group>"; };
@@ -238,6 +239,13 @@
 		D0D41C23177B781D00362F13 /* customerPortfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customerPortfolio.h; sourceTree = "<group>"; };
 		D0D41C24177B781D00362F13 /* customerPortfolio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customerPortfolio.m; sourceTree = "<group>"; };
 		D0D41C26177C1BA300362F13 /* searchbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbar@2x.png"; sourceTree = "<group>"; };
+		D0D41C29177C23D500362F13 /* netraMX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netraMX.h; sourceTree = "<group>"; };
+		D0D41C2A177C23D500362F13 /* netraMX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = netraMX.m; sourceTree = "<group>"; };
+		D0D41C2E177C25BE00362F13 /* mitra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mitra.xcdatamodel; sourceTree = "<group>"; };
+		D0D41C31177C260900362F13 /* Mitra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mitra.h; sourceTree = "<group>"; };
+		D0D41C32177C260900362F13 /* Mitra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mitra.m; sourceTree = "<group>"; };
+		D0D41C35177C269F00362F13 /* customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customer.h; sourceTree = "<group>"; };
+		D0D41C36177C269F00362F13 /* customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,10 +388,12 @@
 		D04252421770B847000C348B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				D0D41C34177C269F00362F13 /* customerPortfolio */,
+				D0D41C30177C25EF00362F13 /* mitraSearch */,
+				D0D41C2C177C25BE00362F13 /* coredata */,
+				D0D41C28177C23D500362F13 /* customer */,
 				D09CD1101771919C000CD39D /* tradingObj */,
 				D09CD10C17719187000CD39D /* newsObj */,
-				D09CD10617715718000CD39D /* netraGlobal.h */,
-				D09CD10717715718000CD39D /* netraGlobal.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -671,6 +681,41 @@
 			path = customerPortfolio;
 			sourceTree = "<group>";
 		};
+		D0D41C28177C23D500362F13 /* customer */ = {
+			isa = PBXGroup;
+			children = (
+				D0D41C29177C23D500362F13 /* netraMX.h */,
+				D0D41C2A177C23D500362F13 /* netraMX.m */,
+			);
+			path = customer;
+			sourceTree = "<group>";
+		};
+		D0D41C2C177C25BE00362F13 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				D0D41C2D177C25BE00362F13 /* PAN.xcdatamodeld */,
+			);
+			path = coredata;
+			sourceTree = "<group>";
+		};
+		D0D41C30177C25EF00362F13 /* mitraSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D0D41C31177C260900362F13 /* Mitra.h */,
+				D0D41C32177C260900362F13 /* Mitra.m */,
+			);
+			path = mitraSearch;
+			sourceTree = "<group>";
+		};
+		D0D41C34177C269F00362F13 /* customerPortfolio */ = {
+			isa = PBXGroup;
+			children = (
+				D0D41C35177C269F00362F13 /* customer.h */,
+				D0D41C36177C269F00362F13 /* customer.m */,
+			);
+			path = customerPortfolio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -771,7 +816,6 @@
 				D042526C1770B9B8000C348B /* UIImageView+AFNetworking.m in Sources */,
 				D04252721770BC81000C348B /* netraViewControllerRight.m in Sources */,
 				D04252751770BDDF000C348B /* netraLeftViewController.m in Sources */,
-				D09CD10817715718000CD39D /* netraGlobal.m in Sources */,
 				D09CD10F17719187000CD39D /* netraNewsObject.m in Sources */,
 				D09CD113177191A9000CD39D /* netraTrading.m in Sources */,
 				D09CD1161771B3FA000CD39D /* newsCell.m in Sources */,
@@ -810,6 +854,10 @@
 				D088023A1774B55400D8311A /* MagicalRecord.m in Sources */,
 				D0D41C1E177B734D00362F13 /* common.m in Sources */,
 				D0D41C25177B781D00362F13 /* customerPortfolio.m in Sources */,
+				D0D41C2B177C23D500362F13 /* netraMX.m in Sources */,
+				D0D41C2F177C25BE00362F13 /* PAN.xcdatamodeld in Sources */,
+				D0D41C33177C260900362F13 /* Mitra.m in Sources */,
+				D0D41C37177C269F00362F13 /* customer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -925,6 +973,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0D41C2D177C25BE00362F13 /* PAN.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0D41C2E177C25BE00362F13 /* mitra.xcdatamodel */,
+			);
+			currentVersion = D0D41C2E177C25BE00362F13 /* mitra.xcdatamodel */;
+			path = PAN.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D04252121770B7DD000C348B /* Project object */;
 }

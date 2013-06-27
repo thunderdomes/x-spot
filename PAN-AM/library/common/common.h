@@ -13,7 +13,8 @@
     //   - Declare as usual.  The alloc/sharedIntance.
     NSString *sessionString;
 }
-
+extern NSString *newsUrl;
+extern NSString *tradeUrl;
 // Properties as usual
 @property (nonatomic, retain) NSString *sessionString;
 

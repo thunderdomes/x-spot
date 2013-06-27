@@ -10,7 +10,7 @@
 
 @interface customerPortfolio : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
-	UITableView *customer;
+	UITableView *customerTable;
 	NSMutableArray *fetchData;
 	NSMutableArray *filteredData;
 	UIView *wrapper;
