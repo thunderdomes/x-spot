@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DetailCustomer.h"
 @interface customerPortfolio : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
 	UITableView *customerTable;
@@ -29,5 +29,7 @@
 	UIView *investment;
 	UITextField *searchForm;
 	float total_investment;
+	TJSpinner *spinner;
+	DetailCustomer *detail;
 }
 @end

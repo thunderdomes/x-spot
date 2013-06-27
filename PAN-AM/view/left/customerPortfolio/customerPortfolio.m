@@ -8,10 +8,11 @@
 
 #import "customerPortfolio.h"
 #import "customerCell.h"
+
 @interface customerPortfolio ()
 
 @end
-	bool isFiltered=false;
+bool isFiltered=false;
 @implementation customerPortfolio
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -25,7 +26,7 @@
 		self.view.backgroundColor=[UIColor whiteColor];
 		wrapper=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 		wrapper.backgroundColor=[UIColor colorWithRed:0.976 green:0.976 blue:0.976 alpha:1];
-		
+		wrapper.hidden=YES;
 		nasabah=[[UIView alloc]initWithFrame:CGRectMake(0, 0, (self.view.frame.size.width/2)-0.5f, 120)];
 		nasabah.backgroundColor=[UIColor colorWithRed:0.918 green:0.918 blue:0.918 alpha:1.0];
 		
@@ -44,6 +45,18 @@
 		nasabah_total.textAlignment=NSTextAlignmentCenter;
 		nasabah_total.textColor=[UIColor colorWithRed:0.482 green:0.482 blue:0.482 alpha:1];
 		
+		
+		spinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeActivityIndicator];
+        spinner.hidesWhenStopped = YES;
+        [spinner setColor:[UIColor colorWithRed:0 green:0.467 blue:0.541 alpha:1]];
+        [spinner setInnerRadius:10];
+        [spinner setOuterRadius:20];
+        [spinner setStrokeWidth:8];
+		[spinner setCenter:CGPointMake(160.0,180.0)];
+        [spinner setNumberOfStrokes:8];
+        [spinner setPatternLineCap:kCGLineCapButt];
+        [spinner setPatternStyle:TJActivityIndicatorPatternStyleBox];
+		
 		investment_total=[[UILabel alloc]initWithFrame:CGRectMake(0, 22, nasabah.frame.size.width, 80)];
 		investment_total.backgroundColor=[UIColor clearColor];
 		investment_total.font=[UIFont fontWithName:@"HelveticaNeue" size:18];
@@ -59,7 +72,7 @@
 		investment_atas.textAlignment=NSTextAlignmentCenter;
 		investment_atas.textColor=[UIColor colorWithRed:0 green:0.431 blue:0.514 alpha:1.0];
 		investment_atas.text=@"Total Investasi";
-
+		
 		investment_bawah=[[UILabel alloc]initWithFrame:CGRectMake(0, investment.frame.size.height-30, nasabah.frame.size.width, 30)];
 		investment_bawah.backgroundColor=[UIColor clearColor];
 		investment_bawah.font=[UIFont fontWithName:@"AvenirNext-Medium" size:13];
@@ -72,6 +85,7 @@
 		
 		customerTable =[[UITableView alloc]initWithFrame:CGRectMake(0, 50, 320, self.view.frame.size.height-88)];
 		customerTable.delegate=self;
+		customerTable.backgroundColor=[UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1.0];
 		customerTable.dataSource=self;
 		
 		searchbarContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
@@ -107,10 +121,17 @@
 		[investment addSubview:investment_total];
 		[investment addSubview:investment_bawah];
 		[customerTable setTableHeaderView:wrapper_atas];
+		[self.view addSubview:spinner];
+			[self fetchData];
     }
     return self;
 }
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
 
+	detail=[[DetailCustomer alloc]init];
+	//detail.Status=@"Login Nasabah";
+	[self presentPopupViewController:detail animationType:MJPopupViewAnimationSlideTopBottom];
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -124,7 +145,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+	
     static NSString *CellIdentifier = @"CountryCell";
     
     customerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -149,10 +170,11 @@
         
         NSString *ar = [NSString stringWithFormat:@"%@", object_draw.TotalAmountNonUSD];
         CGFloat myNumber = (CGFloat)[ar floatValue];
-
+		
 		cell.nama.text=object_draw.CustomerName;
 		NSLog(@"ar----->%@",ar);
 		cell.balance.text=[NSString stringWithFormat:@"Rp %@",[numberFormatter stringFromNumber:[NSNumber numberWithFloat:myNumber]]];
+		cell.selectionStyle=UITableViewCellSelectionStyleNone;
 		//cell.detailTextLabel.text=object_draw.Fund;
 		
 	}
@@ -160,7 +182,7 @@
 		NSLog(@"dataKosong");
 	}
 	
-
+	
     return cell;
 }
 
@@ -178,12 +200,12 @@
 -(void)viewWillAppear:(BOOL)animated{
 	
 	[super viewWillAppear:YES];
-	[self fetchData];
+
 	[self initNavBar];
 	
 }
 -(void)fetchData{
-    
+    [spinner startAnimating];
 	AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
 	[httpClient setParameterEncoding:AFFormURLParameterEncoding];
 	NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST"
@@ -201,13 +223,13 @@
 			total_investment=total_investment+[[[[responseObject objectForKey:@"ListCustomerPortfolio"]objectAtIndex:i]objectForKey:@"TotalAmountNonUSD"]floatValue];
 		}
 		[self setTotalInvestmen:total_investment];
-	
+		
 		for(id objectData in [responseObject objectForKey:@"ListCustomerPortfolio"]){
 			
 			customer *objectDatax=[[customer alloc] initWithDictionary:objectData];
 			[netrax addObject:objectDatax];
 		}
-	///lakukan insert ke Coredata
+		///lakukan insert ke Coredata
 		if([[responseObject objectForKey:@"ListCustomerPortfolio"] count] ==netrax.count){
 			NSManagedObjectContext *localContext = [NSManagedObjectContext MR_contextForCurrentThread];
 			Mitra *nasabahData;
@@ -242,7 +264,7 @@
 			
 			
 			[self performSelector:@selector(fetchToTable) withObject:nil afterDelay:1];
-
+			
 		}
 		
 		
@@ -252,20 +274,23 @@
         // code for failed request goes here
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
 		if(error){
+			[spinner stopAnimating];
 			NSLog(@"error-->%@",error);
+			[wrapper setHidden:YES];
 		}
         // do something on failure
     }];
     
-   // self.filteredArray = [NSMutableArray arrayWithCapacity:netrax.count];
+	// self.filteredArray = [NSMutableArray arrayWithCapacity:netrax.count];
 	
     [operation start];
 	
 }
 -(void)fetchToTable{
-
+	[spinner stopAnimating];
 	coreData=[NSMutableArray arrayWithArray:[Mitra MR_findAllSortedBy:@"date" ascending:YES]];
 	NSLog(@"coredata-->%d",coreData.count);
+	[wrapper setHidden:NO];
 	[customerTable reloadData];
 }
 

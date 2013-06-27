@@ -149,8 +149,9 @@
 	cell.indentationLevel=[[[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"level"]integerValue];
 	NSLog(@"level->%d",[[[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"level"]integerValue]);
 	if([[[self.arForTable objectAtIndex:indexPath.row] objectForKey:@"level"]integerValue]>0){
-		cell.textLabel.textColor=[UIColor redColor];
+		cell.textLabel.textColor=[UIColor whiteColor];
 	}
+	
 	UIView *selectionColor = [[UIView alloc] init];
 	selectionColor.backgroundColor =[UIColor colorWithRed:0 green:0.486 blue:0.557 alpha:1] ;
     cell.selectedBackgroundView = selectionColor;
