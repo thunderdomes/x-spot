@@ -131,6 +131,12 @@
     if (cell == nil) {
         cell = [[[customerCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
+	if(indexPath.row % 2==0){
+		cell.contentView.backgroundColor=[UIColor colorWithRed:0.961 green:0.961 blue:0.961 alpha:1];
+	}
+	else{
+		cell.contentView.backgroundColor=[UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1];
+	}
 	if(!isFiltered){
 		customer  *object_draw=[netrax objectAtIndex:indexPath.row];
 		NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
