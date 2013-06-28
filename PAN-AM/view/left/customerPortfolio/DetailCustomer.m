@@ -32,7 +32,7 @@
 		Money =[[UILabel alloc]initWithFrame:CGRectMake(10, 175, self.view.frame.size.width-20, 30)];
 		Money.textAlignment=NSTextAlignmentCenter;
 		Money.font=[UIFont fontWithName:@"HelveticaNeue-Medium" size:24];
-		Money.textColor=[UIColor blackColor];
+		Money.textColor=[UIColor colorWithRed:0.231 green:0.314 blue:0.329 alpha:1];
 		Money.backgroundColor=[UIColor clearColor];
 		
 		CIFx =[[UILabel alloc]initWithFrame:CGRectMake(10, 115, self.view.frame.size.width-20, 30)];
