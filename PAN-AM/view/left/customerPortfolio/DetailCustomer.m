@@ -20,7 +20,7 @@
     if (self) {
         // Custom initialization
 		self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"card"]];
-		self.view.frame=CGRectMake(0, 0, 280, 280);
+		self.view.frame=CGRectMake(0, 0, 280, 220);
 		self.view.layer.cornerRadius = 5;
 		self.view.layer.masksToBounds = YES;
 		
@@ -29,15 +29,22 @@
 		Name.font=[UIFont fontWithName:@"HelveticaNeue" size:13];
 		Name.textColor=[UIColor darkGrayColor];
 		
-		Money =[[UILabel alloc]initWithFrame:CGRectMake(10, 100, self.view.frame.size.width-20, 30)];
+		Money =[[UILabel alloc]initWithFrame:CGRectMake(10, 175, self.view.frame.size.width-20, 30)];
 		Money.textAlignment=NSTextAlignmentCenter;
 		Money.font=[UIFont fontWithName:@"HelveticaNeue-Medium" size:24];
 		Money.textColor=[UIColor blackColor];
 		Money.backgroundColor=[UIColor clearColor];
+		
+		CIFx =[[UILabel alloc]initWithFrame:CGRectMake(10, 115, self.view.frame.size.width-20, 30)];
+		CIFx.textAlignment=NSTextAlignmentCenter;
+		CIFx.font=[UIFont fontWithName:@"HelveticaNeue-Medium" size:24];
+		CIFx.textColor=[UIColor blackColor];
+		CIFx.backgroundColor=[UIColor clearColor];
 
 		
 		
 		[self.view addSubview:Name];
+		[self.view addSubview:CIFx];
 		[self.view addSubview:Money];
 		
 		
@@ -60,7 +67,7 @@
 	
 	NSString *ar = [NSString stringWithFormat:@"%@", dataxxxxx.totalAmountNonUSD];
 	CGFloat myNumber = (CGFloat)[ar floatValue];
-
+	CIFx.text=[NSString stringWithFormat:@"%@", dataxxxxx.customerNo];
 	Money.text=[NSString stringWithFormat:@"Rp %@",[numberFormatter stringFromNumber:[NSNumber numberWithFloat:myNumber]]];;
 
 
