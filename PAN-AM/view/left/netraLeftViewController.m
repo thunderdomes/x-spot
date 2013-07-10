@@ -278,6 +278,11 @@
 	}
 	else if([centerWindow isEqualToString:@"Logout"]){
 		[self setMenu:nil];
+		[dataPass addObject:@"netraViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+		
+		[self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
 		
 	}
 
