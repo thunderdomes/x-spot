@@ -125,6 +125,16 @@
 		26F05B4C17918BF1001C2601 /* COF_Entrepreneur1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4B17918BF1001C2601 /* COF_Entrepreneur1.xib */; };
 		26F05B4E17918DC5001C2601 /* COF_Entrepreneur2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4D17918DC5001C2601 /* COF_Entrepreneur2.xib */; };
 		26F05B5017918F89001C2601 /* COF_Entrepreneur3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4F17918F89001C2601 /* COF_Entrepreneur3.xib */; };
+		26F05B52179190F8001C2601 /* COF_Entrepreneur4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B51179190F8001C2601 /* COF_Entrepreneur4.xib */; };
+		26F05B54179192BC001C2601 /* pam-iphone-cycleoflife-bab2-page6-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B53179192BC001C2601 /* pam-iphone-cycleoflife-bab2-page6-172x149.png */; };
+		26F05B56179192F4001C2601 /* COF_Entrepreneur5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B55179192F4001C2601 /* COF_Entrepreneur5.xib */; };
+		26F05B581791960C001C2601 /* COF_Hajj.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B571791960C001C2601 /* COF_Hajj.xib */; };
+		26F05B5A1791970C001C2601 /* COF_Hajj1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B591791970C001C2601 /* COF_Hajj1.xib */; };
+		26F05B5C179197BF001C2601 /* COF_Hajj2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B5B179197BF001C2601 /* COF_Hajj2.xib */; };
+		26F05B5E17919830001C2601 /* COF_Hajj3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B5D17919830001C2601 /* COF_Hajj3.xib */; };
+		26F05B60179198CC001C2601 /* COF_Hajj4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B5F179198CC001C2601 /* COF_Hajj4.xib */; };
+		26F05B6217919940001C2601 /* COF_Hajj5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6117919940001C2601 /* COF_Hajj5.xib */; };
+		26F05B6417919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6317919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png */; };
 		D042521E1770B7DD000C348B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042521D1770B7DD000C348B /* UIKit.framework */; };
 		D04252201770B7DD000C348B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042521F1770B7DD000C348B /* Foundation.framework */; };
 		D04252221770B7DD000C348B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04252211770B7DD000C348B /* CoreGraphics.framework */; };
@@ -395,6 +405,16 @@
 		26F05B4B17918BF1001C2601 /* COF_Entrepreneur1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur1.xib; sourceTree = "<group>"; };
 		26F05B4D17918DC5001C2601 /* COF_Entrepreneur2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur2.xib; sourceTree = "<group>"; };
 		26F05B4F17918F89001C2601 /* COF_Entrepreneur3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur3.xib; sourceTree = "<group>"; };
+		26F05B51179190F8001C2601 /* COF_Entrepreneur4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur4.xib; sourceTree = "<group>"; };
+		26F05B53179192BC001C2601 /* pam-iphone-cycleoflife-bab2-page6-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab2-page6-172x149.png"; sourceTree = "<group>"; };
+		26F05B55179192F4001C2601 /* COF_Entrepreneur5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur5.xib; sourceTree = "<group>"; };
+		26F05B571791960C001C2601 /* COF_Hajj.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj.xib; sourceTree = "<group>"; };
+		26F05B591791970C001C2601 /* COF_Hajj1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj1.xib; sourceTree = "<group>"; };
+		26F05B5B179197BF001C2601 /* COF_Hajj2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj2.xib; sourceTree = "<group>"; };
+		26F05B5D17919830001C2601 /* COF_Hajj3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj3.xib; sourceTree = "<group>"; };
+		26F05B5F179198CC001C2601 /* COF_Hajj4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj4.xib; sourceTree = "<group>"; };
+		26F05B6117919940001C2601 /* COF_Hajj5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj5.xib; sourceTree = "<group>"; };
+		26F05B6317919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab9-page6-172x149.png"; sourceTree = "<group>"; };
 		D042521A1770B7DD000C348B /* PAN-AM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PAN-AM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D042521D1770B7DD000C348B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D042521F1770B7DD000C348B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -649,6 +669,8 @@
 				26F05B4B17918BF1001C2601 /* COF_Entrepreneur1.xib */,
 				26F05B4D17918DC5001C2601 /* COF_Entrepreneur2.xib */,
 				26F05B4F17918F89001C2601 /* COF_Entrepreneur3.xib */,
+				26F05B51179190F8001C2601 /* COF_Entrepreneur4.xib */,
+				26F05B55179192F4001C2601 /* COF_Entrepreneur5.xib */,
 				26600105178ED69200CF6451 /* COFContainerEntrepreneur.h */,
 				26600106178ED69200CF6451 /* COFContainerEntrepreneur.m */,
 				26600108178ED69200CF6451 /* SubClassEntrepreneur.h */,
@@ -662,6 +684,12 @@
 			children = (
 				2660010C178ED69200CF6451 /* COF_Hajj.h */,
 				2660010D178ED69200CF6451 /* COF_Hajj.m */,
+				26F05B571791960C001C2601 /* COF_Hajj.xib */,
+				26F05B591791970C001C2601 /* COF_Hajj1.xib */,
+				26F05B5B179197BF001C2601 /* COF_Hajj2.xib */,
+				26F05B5D17919830001C2601 /* COF_Hajj3.xib */,
+				26F05B5F179198CC001C2601 /* COF_Hajj4.xib */,
+				26F05B6117919940001C2601 /* COF_Hajj5.xib */,
 				26600114178ED69200CF6451 /* COFContainerHajj.h */,
 				26600115178ED69200CF6451 /* COFContainerHajj.m */,
 				26600117178ED69200CF6451 /* SubClassHajj.h */,
@@ -888,6 +916,8 @@
 				26F05B10179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-01-44x8.png */,
 				26F05B11179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-02-44x8.png */,
 				26F05B12179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-03-44x8.png */,
+				26F05B53179192BC001C2601 /* pam-iphone-cycleoflife-bab2-page6-172x149.png */,
+				26F05B6317919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png */,
 				26F05B09179104A9001C2601 /* pam-iphone-cycleoflife-page2-cekkalendar-169x29.png */,
 				26F05B4717911530001C2601 /* pam-iphone-cycleoflife-bab7-page9-285x149.png */,
 			);
@@ -1475,6 +1505,16 @@
 				26F05B4C17918BF1001C2601 /* COF_Entrepreneur1.xib in Resources */,
 				26F05B4E17918DC5001C2601 /* COF_Entrepreneur2.xib in Resources */,
 				26F05B5017918F89001C2601 /* COF_Entrepreneur3.xib in Resources */,
+				26F05B52179190F8001C2601 /* COF_Entrepreneur4.xib in Resources */,
+				26F05B54179192BC001C2601 /* pam-iphone-cycleoflife-bab2-page6-172x149.png in Resources */,
+				26F05B56179192F4001C2601 /* COF_Entrepreneur5.xib in Resources */,
+				26F05B581791960C001C2601 /* COF_Hajj.xib in Resources */,
+				26F05B5A1791970C001C2601 /* COF_Hajj1.xib in Resources */,
+				26F05B5C179197BF001C2601 /* COF_Hajj2.xib in Resources */,
+				26F05B5E17919830001C2601 /* COF_Hajj3.xib in Resources */,
+				26F05B60179198CC001C2601 /* COF_Hajj4.xib in Resources */,
+				26F05B6217919940001C2601 /* COF_Hajj5.xib in Resources */,
+				26F05B6417919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
