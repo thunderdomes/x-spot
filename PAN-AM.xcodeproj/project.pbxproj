@@ -25,7 +25,6 @@
 		266000F1178ED61E00CF6451 /* ProductUSD.m in Sources */ = {isa = PBXBuildFile; fileRef = 266000D8178ED61E00CF6451 /* ProductUSD.m */; };
 		266000F3178ED61E00CF6451 /* ProductUtamaPlus2.m in Sources */ = {isa = PBXBuildFile; fileRef = 266000DB178ED61E00CF6451 /* ProductUtamaPlus2.m */; };
 		266001A4178ED69200CF6451 /* COFCoverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 266000F6178ED69200CF6451 /* COFCoverMenu.m */; };
-		266001A7178ED69200CF6451 /* COFMarriage.m in Sources */ = {isa = PBXBuildFile; fileRef = 266000FA178ED69200CF6451 /* COFMarriage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		266001A9178ED69200CF6451 /* COF_Entrepreneur.m in Sources */ = {isa = PBXBuildFile; fileRef = 266000FE178ED69200CF6451 /* COF_Entrepreneur.m */; };
 		266001B0178ED69200CF6451 /* COFContainerEntrepreneur.m in Sources */ = {isa = PBXBuildFile; fileRef = 26600106178ED69200CF6451 /* COFContainerEntrepreneur.m */; };
 		266001B2178ED69200CF6451 /* SubClassEntrepreneur.m in Sources */ = {isa = PBXBuildFile; fileRef = 26600109178ED69200CF6451 /* SubClassEntrepreneur.m */; };
@@ -80,8 +79,52 @@
 		26F05AED17902EDE001C2601 /* pam-iphone5-320x568-21.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AEC17902EDE001C2601 /* pam-iphone5-320x568-21.png */; };
 		26F05AEF17902F38001C2601 /* pam-iphone5-320x568-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AEE17902F38001C2601 /* pam-iphone5-320x568-20.png */; };
 		26F05AF117903002001C2601 /* pam-iphone-produk-01-320x245.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AF017903002001C2601 /* pam-iphone-produk-01-320x245.png */; };
-		26F05AF31790309B001C2601 /* pam-iphone-produk-subbutton-320x38.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AF21790309B001C2601 /* pam-iphone-produk-subbutton-320x38.png */; };
 		26F05AF517903463001C2601 /* pam-iphone-produk-03-320x291.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AF417903463001C2601 /* pam-iphone-produk-03-320x291.png */; };
+		26F05AF71790F923001C2601 /* pam-iphone-produk-subbutton-320x37.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AF61790F923001C2601 /* pam-iphone-produk-subbutton-320x37.png */; };
+		26F05AF91790FA28001C2601 /* COFCoverMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AF81790FA28001C2601 /* COFCoverMenu.xib */; };
+		26F05AFC1790FA5F001C2601 /* pam-iphone-cycleoflife-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AFB1790FA5F001C2601 /* pam-iphone-cycleoflife-bg.png */; };
+		26F05AFE1790FAF4001C2601 /* pam-iphone-cycleoflife-scroll-177x1265.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AFD1790FAF4001C2601 /* pam-iphone-cycleoflife-scroll-177x1265.png */; };
+		26F05B011790FB97001C2601 /* pam-iphone-cycleoflife-button-01-136x19.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AFF1790FB97001C2601 /* pam-iphone-cycleoflife-button-01-136x19.png */; };
+		26F05B021790FB97001C2601 /* pam-iphone-cycleoflife-button-02-136x19.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B001790FB97001C2601 /* pam-iphone-cycleoflife-button-02-136x19.png */; };
+		26F05B041790FC4E001C2601 /* COF_Married1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B031790FC4E001C2601 /* COF_Married1.xib */; };
+		26F05B061790FCA9001C2601 /* pam-iphone-cycleoflife-bg-299x456.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B051790FCA9001C2601 /* pam-iphone-cycleoflife-bg-299x456.png */; };
+		26F05B081790FF21001C2601 /* pam-iphone5-bg-01-320x568.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B071790FF21001C2601 /* pam-iphone5-bg-01-320x568.png */; };
+		26F05B0A179104A9001C2601 /* pam-iphone-cycleoflife-page2-cekkalendar-169x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B09179104A9001C2601 /* pam-iphone-cycleoflife-page2-cekkalendar-169x29.png */; };
+		26F05B0C17910514001C2601 /* COF_Married.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B0B17910514001C2601 /* COF_Married.xib */; };
+		26F05B13179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-01-44x8.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B0D179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-01-44x8.png */; };
+		26F05B14179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-02-44x8.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B0E179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-02-44x8.png */; };
+		26F05B15179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-03-44x8.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B0F179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-03-44x8.png */; };
+		26F05B16179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-01-44x8.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B10179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-01-44x8.png */; };
+		26F05B17179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-02-44x8.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B11179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-02-44x8.png */; };
+		26F05B18179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-03-44x8.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B12179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-03-44x8.png */; };
+		26F05B1A17910864001C2601 /* COF_Married2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B1917910864001C2601 /* COF_Married2.xib */; };
+		26F05B1C179109F9001C2601 /* COF_Married3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B1B179109F9001C2601 /* COF_Married3.xib */; };
+		26F05B1E17910C57001C2601 /* COF_Married5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B1D17910C57001C2601 /* COF_Married5.xib */; };
+		26F05B2017910CFC001C2601 /* COF_Married4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B1F17910CFC001C2601 /* COF_Married4.xib */; };
+		26F05B2217910D1D001C2601 /* pam-iphone-cycleoflife-bab5-page6-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B2117910D1D001C2601 /* pam-iphone-cycleoflife-bab5-page6-172x149.png */; };
+		26F05B2417910E2D001C2601 /* COFContainerMarried.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B2317910E2D001C2601 /* COFContainerMarried.xib */; };
+		26F05B2617911010001C2601 /* COF_ContainerPendidikan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B2517911010001C2601 /* COF_ContainerPendidikan.xib */; };
+		26F05B2817911052001C2601 /* COF_Pendidikan.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B2717911052001C2601 /* COF_Pendidikan.xib */; };
+		26F05B2A179110BB001C2601 /* COF_Pendidikan2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B29179110BB001C2601 /* COF_Pendidikan2.xib */; };
+		26F05B2C17911115001C2601 /* COF_Pendidikan3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B2B17911115001C2601 /* COF_Pendidikan3.xib */; };
+		26F05B2E17911176001C2601 /* COF_Pendidikan4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B2D17911176001C2601 /* COF_Pendidikan4.xib */; };
+		26F05B30179111D7001C2601 /* COF_Pendidikan5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B2F179111D7001C2601 /* COF_Pendidikan5.xib */; };
+		26F05B3217911256001C2601 /* COF_Pendidikan6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B3117911255001C2601 /* COF_Pendidikan6.xib */; };
+		26F05B34179112E3001C2601 /* COF_Pendidikan7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B33179112E3001C2601 /* COF_Pendidikan7.xib */; };
+		26F05B371791131B001C2601 /* COF_Pendidikan8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B351791131B001C2601 /* COF_Pendidikan8.xib */; };
+		26F05B381791131B001C2601 /* COF_Pendidikan9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B361791131B001C2601 /* COF_Pendidikan9.xib */; };
+		26F05B3B17911353001C2601 /* COF_Pendidikan10.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B3917911352001C2601 /* COF_Pendidikan10.xib */; };
+		26F05B3C17911353001C2601 /* COF_Pendidikan11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B3A17911352001C2601 /* COF_Pendidikan11.xib */; };
+		26F05B3F17911392001C2601 /* COF_Pendidikan12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B3D17911391001C2601 /* COF_Pendidikan12.xib */; };
+		26F05B4017911392001C2601 /* COF_Pendidikan13.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B3E17911392001C2601 /* COF_Pendidikan13.xib */; };
+		26F05B43179113C4001C2601 /* COF_Pendidikan14.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B41179113C2001C2601 /* COF_Pendidikan14.xib */; };
+		26F05B44179113C4001C2601 /* COF_Pendidikan15.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B42179113C3001C2601 /* COF_Pendidikan15.xib */; };
+		26F05B46179114F7001C2601 /* COF_Pendidikan16.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B45179114F6001C2601 /* COF_Pendidikan16.xib */; };
+		26F05B4817911530001C2601 /* pam-iphone-cycleoflife-bab7-page9-285x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4717911530001C2601 /* pam-iphone-cycleoflife-bab7-page9-285x149.png */; };
+		26F05B4A17918B1F001C2601 /* COF_Entrepreneur.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4917918B1F001C2601 /* COF_Entrepreneur.xib */; };
+		26F05B4C17918BF1001C2601 /* COF_Entrepreneur1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4B17918BF1001C2601 /* COF_Entrepreneur1.xib */; };
+		26F05B4E17918DC5001C2601 /* COF_Entrepreneur2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4D17918DC5001C2601 /* COF_Entrepreneur2.xib */; };
+		26F05B5017918F89001C2601 /* COF_Entrepreneur3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B4F17918F89001C2601 /* COF_Entrepreneur3.xib */; };
 		D042521E1770B7DD000C348B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042521D1770B7DD000C348B /* UIKit.framework */; };
 		D04252201770B7DD000C348B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042521F1770B7DD000C348B /* Foundation.framework */; };
 		D04252221770B7DD000C348B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04252211770B7DD000C348B /* CoreGraphics.framework */; };
@@ -205,8 +248,6 @@
 		266000DB178ED61E00CF6451 /* ProductUtamaPlus2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductUtamaPlus2.m; sourceTree = "<group>"; };
 		266000F5178ED69200CF6451 /* COFCoverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COFCoverMenu.h; sourceTree = "<group>"; };
 		266000F6178ED69200CF6451 /* COFCoverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COFCoverMenu.m; sourceTree = "<group>"; };
-		266000F9178ED69200CF6451 /* COFMarriage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COFMarriage.h; sourceTree = "<group>"; };
-		266000FA178ED69200CF6451 /* COFMarriage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COFMarriage.m; sourceTree = "<group>"; };
 		266000FD178ED69200CF6451 /* COF_Entrepreneur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COF_Entrepreneur.h; sourceTree = "<group>"; };
 		266000FE178ED69200CF6451 /* COF_Entrepreneur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COF_Entrepreneur.m; sourceTree = "<group>"; };
 		26600105178ED69200CF6451 /* COFContainerEntrepreneur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COFContainerEntrepreneur.h; sourceTree = "<group>"; };
@@ -308,8 +349,52 @@
 		26F05AEC17902EDE001C2601 /* pam-iphone5-320x568-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone5-320x568-21.png"; sourceTree = "<group>"; };
 		26F05AEE17902F38001C2601 /* pam-iphone5-320x568-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone5-320x568-20.png"; sourceTree = "<group>"; };
 		26F05AF017903002001C2601 /* pam-iphone-produk-01-320x245.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-produk-01-320x245.png"; sourceTree = "<group>"; };
-		26F05AF21790309B001C2601 /* pam-iphone-produk-subbutton-320x38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-produk-subbutton-320x38.png"; sourceTree = "<group>"; };
 		26F05AF417903463001C2601 /* pam-iphone-produk-03-320x291.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-produk-03-320x291.png"; sourceTree = "<group>"; };
+		26F05AF61790F923001C2601 /* pam-iphone-produk-subbutton-320x37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-produk-subbutton-320x37.png"; sourceTree = "<group>"; };
+		26F05AF81790FA28001C2601 /* COFCoverMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFCoverMenu.xib; sourceTree = "<group>"; };
+		26F05AFB1790FA5F001C2601 /* pam-iphone-cycleoflife-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bg.png"; sourceTree = "<group>"; };
+		26F05AFD1790FAF4001C2601 /* pam-iphone-cycleoflife-scroll-177x1265.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-scroll-177x1265.png"; sourceTree = "<group>"; };
+		26F05AFF1790FB97001C2601 /* pam-iphone-cycleoflife-button-01-136x19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-button-01-136x19.png"; sourceTree = "<group>"; };
+		26F05B001790FB97001C2601 /* pam-iphone-cycleoflife-button-02-136x19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-button-02-136x19.png"; sourceTree = "<group>"; };
+		26F05B031790FC4E001C2601 /* COF_Married1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Married1.xib; sourceTree = "<group>"; };
+		26F05B051790FCA9001C2601 /* pam-iphone-cycleoflife-bg-299x456.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bg-299x456.png"; sourceTree = "<group>"; };
+		26F05B071790FF21001C2601 /* pam-iphone5-bg-01-320x568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone5-bg-01-320x568.png"; sourceTree = "<group>"; };
+		26F05B09179104A9001C2601 /* pam-iphone-cycleoflife-page2-cekkalendar-169x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-page2-cekkalendar-169x29.png"; sourceTree = "<group>"; };
+		26F05B0B17910514001C2601 /* COF_Married.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Married.xib; sourceTree = "<group>"; };
+		26F05B0D179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-01-44x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-page1-button-off-01-44x8.png"; sourceTree = "<group>"; };
+		26F05B0E179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-02-44x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-page1-button-off-02-44x8.png"; sourceTree = "<group>"; };
+		26F05B0F179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-03-44x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-page1-button-off-03-44x8.png"; sourceTree = "<group>"; };
+		26F05B10179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-01-44x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-page1-button-on-01-44x8.png"; sourceTree = "<group>"; };
+		26F05B11179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-02-44x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-page1-button-on-02-44x8.png"; sourceTree = "<group>"; };
+		26F05B12179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-03-44x8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-page1-button-on-03-44x8.png"; sourceTree = "<group>"; };
+		26F05B1917910864001C2601 /* COF_Married2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Married2.xib; sourceTree = "<group>"; };
+		26F05B1B179109F9001C2601 /* COF_Married3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Married3.xib; sourceTree = "<group>"; };
+		26F05B1D17910C57001C2601 /* COF_Married5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Married5.xib; sourceTree = "<group>"; };
+		26F05B1F17910CFC001C2601 /* COF_Married4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Married4.xib; sourceTree = "<group>"; };
+		26F05B2117910D1D001C2601 /* pam-iphone-cycleoflife-bab5-page6-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab5-page6-172x149.png"; sourceTree = "<group>"; };
+		26F05B2317910E2D001C2601 /* COFContainerMarried.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFContainerMarried.xib; sourceTree = "<group>"; };
+		26F05B2517911010001C2601 /* COF_ContainerPendidikan.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_ContainerPendidikan.xib; sourceTree = "<group>"; };
+		26F05B2717911052001C2601 /* COF_Pendidikan.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan.xib; sourceTree = "<group>"; };
+		26F05B29179110BB001C2601 /* COF_Pendidikan2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan2.xib; sourceTree = "<group>"; };
+		26F05B2B17911115001C2601 /* COF_Pendidikan3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan3.xib; sourceTree = "<group>"; };
+		26F05B2D17911176001C2601 /* COF_Pendidikan4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan4.xib; sourceTree = "<group>"; };
+		26F05B2F179111D7001C2601 /* COF_Pendidikan5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan5.xib; sourceTree = "<group>"; };
+		26F05B3117911255001C2601 /* COF_Pendidikan6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan6.xib; sourceTree = "<group>"; };
+		26F05B33179112E3001C2601 /* COF_Pendidikan7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan7.xib; sourceTree = "<group>"; };
+		26F05B351791131B001C2601 /* COF_Pendidikan8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan8.xib; sourceTree = "<group>"; };
+		26F05B361791131B001C2601 /* COF_Pendidikan9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan9.xib; sourceTree = "<group>"; };
+		26F05B3917911352001C2601 /* COF_Pendidikan10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan10.xib; sourceTree = "<group>"; };
+		26F05B3A17911352001C2601 /* COF_Pendidikan11.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan11.xib; sourceTree = "<group>"; };
+		26F05B3D17911391001C2601 /* COF_Pendidikan12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan12.xib; sourceTree = "<group>"; };
+		26F05B3E17911392001C2601 /* COF_Pendidikan13.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan13.xib; sourceTree = "<group>"; };
+		26F05B41179113C2001C2601 /* COF_Pendidikan14.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan14.xib; sourceTree = "<group>"; };
+		26F05B42179113C3001C2601 /* COF_Pendidikan15.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan15.xib; sourceTree = "<group>"; };
+		26F05B45179114F6001C2601 /* COF_Pendidikan16.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pendidikan16.xib; sourceTree = "<group>"; };
+		26F05B4717911530001C2601 /* pam-iphone-cycleoflife-bab7-page9-285x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab7-page9-285x149.png"; sourceTree = "<group>"; };
+		26F05B4917918B1F001C2601 /* COF_Entrepreneur.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur.xib; sourceTree = "<group>"; };
+		26F05B4B17918BF1001C2601 /* COF_Entrepreneur1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur1.xib; sourceTree = "<group>"; };
+		26F05B4D17918DC5001C2601 /* COF_Entrepreneur2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur2.xib; sourceTree = "<group>"; };
+		26F05B4F17918F89001C2601 /* COF_Entrepreneur3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Entrepreneur3.xib; sourceTree = "<group>"; };
 		D042521A1770B7DD000C348B /* PAN-AM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PAN-AM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D042521D1770B7DD000C348B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D042521F1770B7DD000C348B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -560,6 +645,10 @@
 			children = (
 				266000FD178ED69200CF6451 /* COF_Entrepreneur.h */,
 				266000FE178ED69200CF6451 /* COF_Entrepreneur.m */,
+				26F05B4917918B1F001C2601 /* COF_Entrepreneur.xib */,
+				26F05B4B17918BF1001C2601 /* COF_Entrepreneur1.xib */,
+				26F05B4D17918DC5001C2601 /* COF_Entrepreneur2.xib */,
+				26F05B4F17918F89001C2601 /* COF_Entrepreneur3.xib */,
 				26600105178ED69200CF6451 /* COFContainerEntrepreneur.h */,
 				26600106178ED69200CF6451 /* COFContainerEntrepreneur.m */,
 				26600108178ED69200CF6451 /* SubClassEntrepreneur.h */,
@@ -612,8 +701,15 @@
 			children = (
 				2660013E178ED69200CF6451 /* COF_Married.h */,
 				2660013F178ED69200CF6451 /* COF_Married.m */,
+				26F05B0B17910514001C2601 /* COF_Married.xib */,
+				26F05B031790FC4E001C2601 /* COF_Married1.xib */,
+				26F05B1917910864001C2601 /* COF_Married2.xib */,
+				26F05B1B179109F9001C2601 /* COF_Married3.xib */,
+				26F05B1F17910CFC001C2601 /* COF_Married4.xib */,
+				26F05B1D17910C57001C2601 /* COF_Married5.xib */,
 				26600146178ED69200CF6451 /* COFContainerMarried.h */,
 				26600147178ED69200CF6451 /* COFContainerMarried.m */,
+				26F05B2317910E2D001C2601 /* COFContainerMarried.xib */,
 				26600149178ED69200CF6451 /* SubClassMarried.h */,
 				2660014A178ED69200CF6451 /* SubClassMarried.m */,
 			);
@@ -625,8 +721,25 @@
 			children = (
 				2660014D178ED69200CF6451 /* COF_ContainerPendidikan.h */,
 				2660014E178ED69200CF6451 /* COF_ContainerPendidikan.m */,
+				26F05B2517911010001C2601 /* COF_ContainerPendidikan.xib */,
 				26600150178ED69200CF6451 /* COF_Pendidikan.h */,
 				26600151178ED69200CF6451 /* COF_Pendidikan.m */,
+				26F05B2717911052001C2601 /* COF_Pendidikan.xib */,
+				26F05B29179110BB001C2601 /* COF_Pendidikan2.xib */,
+				26F05B2B17911115001C2601 /* COF_Pendidikan3.xib */,
+				26F05B2D17911176001C2601 /* COF_Pendidikan4.xib */,
+				26F05B2F179111D7001C2601 /* COF_Pendidikan5.xib */,
+				26F05B3117911255001C2601 /* COF_Pendidikan6.xib */,
+				26F05B33179112E3001C2601 /* COF_Pendidikan7.xib */,
+				26F05B351791131B001C2601 /* COF_Pendidikan8.xib */,
+				26F05B361791131B001C2601 /* COF_Pendidikan9.xib */,
+				26F05B3917911352001C2601 /* COF_Pendidikan10.xib */,
+				26F05B3A17911352001C2601 /* COF_Pendidikan11.xib */,
+				26F05B3D17911391001C2601 /* COF_Pendidikan12.xib */,
+				26F05B3E17911392001C2601 /* COF_Pendidikan13.xib */,
+				26F05B41179113C2001C2601 /* COF_Pendidikan14.xib */,
+				26F05B42179113C3001C2601 /* COF_Pendidikan15.xib */,
+				26F05B45179114F6001C2601 /* COF_Pendidikan16.xib */,
 				26600162178ED69200CF6451 /* SubClassPendidikan.h */,
 				26600163178ED69200CF6451 /* SubClassPendidikan.m */,
 			);
@@ -752,11 +865,33 @@
 				26F05AEC17902EDE001C2601 /* pam-iphone5-320x568-21.png */,
 				26F05AEE17902F38001C2601 /* pam-iphone5-320x568-20.png */,
 				26F05AF017903002001C2601 /* pam-iphone-produk-01-320x245.png */,
-				26F05AF21790309B001C2601 /* pam-iphone-produk-subbutton-320x38.png */,
+				26F05AF61790F923001C2601 /* pam-iphone-produk-subbutton-320x37.png */,
 				26F05AF417903463001C2601 /* pam-iphone-produk-03-320x291.png */,
 				26F05AEA17902E9A001C2601 /* pam-iphone-produk-325x165.png */,
 			);
 			name = product;
+			sourceTree = "<group>";
+		};
+		26F05AFA1790FA56001C2601 /* cycle */ = {
+			isa = PBXGroup;
+			children = (
+				26F05AFD1790FAF4001C2601 /* pam-iphone-cycleoflife-scroll-177x1265.png */,
+				26F05AFB1790FA5F001C2601 /* pam-iphone-cycleoflife-bg.png */,
+				26F05AFF1790FB97001C2601 /* pam-iphone-cycleoflife-button-01-136x19.png */,
+				26F05B001790FB97001C2601 /* pam-iphone-cycleoflife-button-02-136x19.png */,
+				26F05B071790FF21001C2601 /* pam-iphone5-bg-01-320x568.png */,
+				26F05B2117910D1D001C2601 /* pam-iphone-cycleoflife-bab5-page6-172x149.png */,
+				26F05B051790FCA9001C2601 /* pam-iphone-cycleoflife-bg-299x456.png */,
+				26F05B0D179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-01-44x8.png */,
+				26F05B0E179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-02-44x8.png */,
+				26F05B0F179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-03-44x8.png */,
+				26F05B10179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-01-44x8.png */,
+				26F05B11179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-02-44x8.png */,
+				26F05B12179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-03-44x8.png */,
+				26F05B09179104A9001C2601 /* pam-iphone-cycleoflife-page2-cekkalendar-169x29.png */,
+				26F05B4717911530001C2601 /* pam-iphone-cycleoflife-bab7-page9-285x149.png */,
+			);
+			name = cycle;
 			sourceTree = "<group>";
 		};
 		D04252111770B7DD000C348B = {
@@ -1095,6 +1230,7 @@
 		D09CD1171771D72E000CD39D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				26F05AFA1790FA56001C2601 /* cycle */,
 				26F05AE917902E8F001C2601 /* product */,
 				D09CD11A1771D97E000CD39D /* left@2x.png */,
 				D09CD12317721AB0000CD39D /* 5@2x.png */,
@@ -1122,8 +1258,7 @@
 			children = (
 				266000F5178ED69200CF6451 /* COFCoverMenu.h */,
 				266000F6178ED69200CF6451 /* COFCoverMenu.m */,
-				266000F9178ED69200CF6451 /* COFMarriage.h */,
-				266000FA178ED69200CF6451 /* COFMarriage.m */,
+				26F05AF81790FA28001C2601 /* COFCoverMenu.xib */,
 				266000FC178ED69200CF6451 /* Entrepreneur */,
 				2660010B178ED69200CF6451 /* HajjPlanner */,
 				2660011A178ED69200CF6451 /* Holiday */,
@@ -1294,8 +1429,52 @@
 				26F05AED17902EDE001C2601 /* pam-iphone5-320x568-21.png in Resources */,
 				26F05AEF17902F38001C2601 /* pam-iphone5-320x568-20.png in Resources */,
 				26F05AF117903002001C2601 /* pam-iphone-produk-01-320x245.png in Resources */,
-				26F05AF31790309B001C2601 /* pam-iphone-produk-subbutton-320x38.png in Resources */,
 				26F05AF517903463001C2601 /* pam-iphone-produk-03-320x291.png in Resources */,
+				26F05AF71790F923001C2601 /* pam-iphone-produk-subbutton-320x37.png in Resources */,
+				26F05AF91790FA28001C2601 /* COFCoverMenu.xib in Resources */,
+				26F05AFC1790FA5F001C2601 /* pam-iphone-cycleoflife-bg.png in Resources */,
+				26F05AFE1790FAF4001C2601 /* pam-iphone-cycleoflife-scroll-177x1265.png in Resources */,
+				26F05B011790FB97001C2601 /* pam-iphone-cycleoflife-button-01-136x19.png in Resources */,
+				26F05B021790FB97001C2601 /* pam-iphone-cycleoflife-button-02-136x19.png in Resources */,
+				26F05B041790FC4E001C2601 /* COF_Married1.xib in Resources */,
+				26F05B061790FCA9001C2601 /* pam-iphone-cycleoflife-bg-299x456.png in Resources */,
+				26F05B081790FF21001C2601 /* pam-iphone5-bg-01-320x568.png in Resources */,
+				26F05B0A179104A9001C2601 /* pam-iphone-cycleoflife-page2-cekkalendar-169x29.png in Resources */,
+				26F05B0C17910514001C2601 /* COF_Married.xib in Resources */,
+				26F05B13179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-01-44x8.png in Resources */,
+				26F05B14179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-02-44x8.png in Resources */,
+				26F05B15179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-off-03-44x8.png in Resources */,
+				26F05B16179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-01-44x8.png in Resources */,
+				26F05B17179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-02-44x8.png in Resources */,
+				26F05B18179106F9001C2601 /* pam-iphone-cycleoflife-page1-button-on-03-44x8.png in Resources */,
+				26F05B1A17910864001C2601 /* COF_Married2.xib in Resources */,
+				26F05B1C179109F9001C2601 /* COF_Married3.xib in Resources */,
+				26F05B1E17910C57001C2601 /* COF_Married5.xib in Resources */,
+				26F05B2017910CFC001C2601 /* COF_Married4.xib in Resources */,
+				26F05B2217910D1D001C2601 /* pam-iphone-cycleoflife-bab5-page6-172x149.png in Resources */,
+				26F05B2417910E2D001C2601 /* COFContainerMarried.xib in Resources */,
+				26F05B2617911010001C2601 /* COF_ContainerPendidikan.xib in Resources */,
+				26F05B2817911052001C2601 /* COF_Pendidikan.xib in Resources */,
+				26F05B2A179110BB001C2601 /* COF_Pendidikan2.xib in Resources */,
+				26F05B2C17911115001C2601 /* COF_Pendidikan3.xib in Resources */,
+				26F05B2E17911176001C2601 /* COF_Pendidikan4.xib in Resources */,
+				26F05B30179111D7001C2601 /* COF_Pendidikan5.xib in Resources */,
+				26F05B3217911256001C2601 /* COF_Pendidikan6.xib in Resources */,
+				26F05B34179112E3001C2601 /* COF_Pendidikan7.xib in Resources */,
+				26F05B371791131B001C2601 /* COF_Pendidikan8.xib in Resources */,
+				26F05B381791131B001C2601 /* COF_Pendidikan9.xib in Resources */,
+				26F05B3B17911353001C2601 /* COF_Pendidikan10.xib in Resources */,
+				26F05B3C17911353001C2601 /* COF_Pendidikan11.xib in Resources */,
+				26F05B3F17911392001C2601 /* COF_Pendidikan12.xib in Resources */,
+				26F05B4017911392001C2601 /* COF_Pendidikan13.xib in Resources */,
+				26F05B43179113C4001C2601 /* COF_Pendidikan14.xib in Resources */,
+				26F05B44179113C4001C2601 /* COF_Pendidikan15.xib in Resources */,
+				26F05B46179114F7001C2601 /* COF_Pendidikan16.xib in Resources */,
+				26F05B4817911530001C2601 /* pam-iphone-cycleoflife-bab7-page9-285x149.png in Resources */,
+				26F05B4A17918B1F001C2601 /* COF_Entrepreneur.xib in Resources */,
+				26F05B4C17918BF1001C2601 /* COF_Entrepreneur1.xib in Resources */,
+				26F05B4E17918DC5001C2601 /* COF_Entrepreneur2.xib in Resources */,
+				26F05B5017918F89001C2601 /* COF_Entrepreneur3.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1382,7 +1561,6 @@
 				266000F1178ED61E00CF6451 /* ProductUSD.m in Sources */,
 				266000F3178ED61E00CF6451 /* ProductUtamaPlus2.m in Sources */,
 				266001A4178ED69200CF6451 /* COFCoverMenu.m in Sources */,
-				266001A7178ED69200CF6451 /* COFMarriage.m in Sources */,
 				266001A9178ED69200CF6451 /* COF_Entrepreneur.m in Sources */,
 				266001B0178ED69200CF6451 /* COFContainerEntrepreneur.m in Sources */,
 				266001B2178ED69200CF6451 /* SubClassEntrepreneur.m in Sources */,

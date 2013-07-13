@@ -230,61 +230,7 @@
 		
 		
 	}
-	/////passing calculator
-	
-	else if([centerWindow isEqualToString:@"Berita"]){
-		[dataPass addObject:@"netraViewController"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-		
-	}
-	else if([centerWindow isEqualToString:@"Hasil Investasi"]){
-		[dataPass addObject:@"netraHasilInvestasiViewController"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-		
-	}
-	else if([centerWindow isEqualToString:@"Hasil Investasi Berkala"]){
-		[dataPass addObject:@"netraBerkalaViewController"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-		
-	}
-	else if([centerWindow isEqualToString:@"Kebutuhan Investasi"]){
-		[dataPass addObject:@"netraKebutuhanViewController"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-		
-	}
-	else if([centerWindow isEqualToString:@"Customer Portfolio"]){
-		[dataPass addObject:@"customerPortfolio"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-		
-	}
-	else if([centerWindow isEqualToString:@"Logout"]){
-		[self setMenu:nil];
-		[dataPass addObject:@"netraViewController"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-	}
+
 
 }
 -(void)miniMizeThisRows:(NSArray*)ar{
