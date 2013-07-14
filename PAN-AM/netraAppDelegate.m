@@ -13,6 +13,23 @@
 //#import "netraBerkalaViewController.h"
 //#import "netraHasilInvestasiViewController.h"
 //#import "netraKebutuhanViewController.h"
+#import "ProductPrima.h"
+#import "ProductMaksima.h"
+#import "ProductSyariah.h"
+#import "ProductBersamaPlus.h"
+#import "ProductBersama.h"
+#import "ProductUnggulan.h"
+#import "ProductSyariahBerimbang.h"
+#import "ProductUSD.h"
+#import "ProductPrioritas.h"
+#import "ProductUtamaPlus2.h"
+#import "ProductGebyarIndonesia2.h"
+#import "ProductDanaLikuid.h"
+
+#import "KalkulatorHasilInvestasiBerkala.h"
+#import "KalkulatorHasilInvestasi.h"
+#import "KalkulatorInvestasiBerkala.h"
+#import "KalkulatorKebutuhanInvestasi.h"
 @implementation netraAppDelegate
 
 - (void)dealloc
@@ -50,6 +67,54 @@
 	
 	else if([[dict objectAtIndex:0] isEqualToString:self.lastController]){
 		
+	}
+	else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Maksima -"]){
+		self.viewController.centerPanel = [[ProductMaksima alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Prima -"]){
+		self.viewController.centerPanel = [[ProductPrima alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Syariah Saham -"]){
+		self.viewController.centerPanel = [[ProductSyariah alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Bersama Plus -"]){
+		self.viewController.centerPanel = [[ProductBersamaPlus alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Bersama -"]){
+		self.viewController.centerPanel = [[ProductBersama alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Unggulan -"]){
+		self.viewController.centerPanel = [[ProductUnggulan alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Syariah Berimbang -"]){
+		self.viewController.centerPanel = [[ProductSyariahBerimbang alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana USD -"]){
+		self.viewController.centerPanel = [[ProductUSD alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Prioritas -"]){
+		self.viewController.centerPanel = [[ProductPrioritas alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Utama Plus 2 -"]){
+		self.viewController.centerPanel = [[ProductUtamaPlus2 alloc]init];
+        
+	}else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Gebyar Indonesia II -"]){
+		self.viewController.centerPanel = [[ProductGebyarIndonesia2 alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Likuid -"]){
+		self.viewController.centerPanel = [[ProductDanaLikuid alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Hasil Investasi -"]){
+		self.viewController.centerPanel = [[KalkulatorHasilInvestasiBerkala alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Kebutuhan Investasi -"]){
+		self.viewController.centerPanel = [[KalkulatorKebutuhanInvestasi alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Hasil Investasi Berkala -"]){
+		self.viewController.centerPanel = [[KalkulatorHasilInvestasi alloc]init];
+	}
+    else if([[dict objectAtIndex:0] isEqualToString:@"- Kebutuhan Investasi Berkala -"]){
+		self.viewController.centerPanel = [[KalkulatorInvestasiBerkala alloc]init];
 	}
 	else{
 		

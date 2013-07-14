@@ -55,7 +55,7 @@
 					<object class="IBUILabel" id="12168973">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{19, 120}, {283, 24}}</string>
+						<string key="NSFrame">{{47, 120}, {226, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="374929109"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -64,7 +64,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">09 | Perencanaan Perjalanan Ibadah</string>
+						<string key="IBUIText">03 | Perencanaan Kendaraan</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">2</int>
 							<bytes key="NSRGB">MC4wNzA1ODgyMzg1NCAwLjUxMzcyNTUxOTIgMC41NjQ3MDU5MDgzAA</bytes>
@@ -88,7 +88,7 @@
 					<object class="IBUILabel" id="374929109">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{19, 193}, {283, 24}}</string>
+						<string key="NSFrame">{{47, 193}, {226, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="1012356781"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -97,7 +97,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Tanggal Beribadah</string>
+						<string key="IBUIText">Tanggal dana dibutuhkan</string>
 						<nil key="IBUITextColor"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>

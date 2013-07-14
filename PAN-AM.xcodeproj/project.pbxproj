@@ -74,6 +74,52 @@
 		2660025E178EDAF400CF6451 /* HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 26600259178EDAF400CF6451 /* HUD.m */; };
 		2660025F178EDAF400CF6451 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660025B178EDAF400CF6451 /* MBProgressHUD.m */; };
 		26600263178EDBA000CF6451 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 26600262178EDBA000CF6451 /* Reachability.m */; };
+		26CA3E6F17920C4E008A6102 /* COFHoliday8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E6E17920C4E008A6102 /* COFHoliday8.xib */; };
+		26CA3E7117920F7D008A6102 /* pam-iphone-cycleoflife-bab1-page8-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E7017920F7D008A6102 /* pam-iphone-cycleoflife-bab1-page8-172x149.png */; };
+		26CA3E75179210EA008A6102 /* COF_Vehicle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E74179210EA008A6102 /* COF_Vehicle.xib */; };
+		26CA3E7917921296008A6102 /* COF_Vehicle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E7817921296008A6102 /* COF_Vehicle2.xib */; };
+		26CA3E7B179212DA008A6102 /* COF_Vehicle3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E7A179212DA008A6102 /* COF_Vehicle3.xib */; };
+		26CA3E7D179213BD008A6102 /* COF_Vehicle4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E7C179213BD008A6102 /* COF_Vehicle4.xib */; };
+		26CA3E7F179214FC008A6102 /* COF_Vehicle5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E7E179214FC008A6102 /* COF_Vehicle5.xib */; };
+		26CA3E8117921577008A6102 /* COF_Vehicle6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E8017921577008A6102 /* COF_Vehicle6.xib */; };
+		26CA3E83179215D8008A6102 /* COF_Vehicle7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E82179215D8008A6102 /* COF_Vehicle7.xib */; };
+		26CA3E851792169C008A6102 /* COF_Vehicle8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E841792169B008A6102 /* COF_Vehicle8.xib */; };
+		26CA3E8717921725008A6102 /* pam-iphone-cycleoflife-bab3-page8-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E8617921725008A6102 /* pam-iphone-cycleoflife-bab3-page8-172x149.png */; };
+		26CA3E99179248C1008A6102 /* COFRumah.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E98179248C1008A6102 /* COFRumah.xib */; };
+		26CA3E9B179249AF008A6102 /* COFRumah2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E9A179249AF008A6102 /* COFRumah2.xib */; };
+		26CA3E9D17924A40008A6102 /* COFRumah3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E9C17924A40008A6102 /* COFRumah3.xib */; };
+		26CA3E9F17924B72008A6102 /* COFRumah4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3E9E17924B72008A6102 /* COFRumah4.xib */; };
+		26CA3EA117924CDA008A6102 /* COFRumah5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EA017924CDA008A6102 /* COFRumah5.xib */; };
+		26CA3EA317924D99008A6102 /* COFRumah6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EA217924D98008A6102 /* COFRumah6.xib */; };
+		26CA3EA517924EC4008A6102 /* COFRumah7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EA417924EC4008A6102 /* COFRumah7.xib */; };
+		26CA3EA717924F47008A6102 /* COFRumah8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EA617924F47008A6102 /* COFRumah8.xib */; };
+		26CA3EA9179250BC008A6102 /* pam-iphone-cycleoflife-bab6-page8-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EA8179250BC008A6102 /* pam-iphone-cycleoflife-bab6-page8-172x149.png */; };
+		26CA3EAB17925232008A6102 /* COF_Pensiun.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EAA17925232008A6102 /* COF_Pensiun.xib */; };
+		26CA3EAD1792536A008A6102 /* COF_Pensiun1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EAC1792536A008A6102 /* COF_Pensiun1.xib */; };
+		26CA3EAF1792544D008A6102 /* COF_Pensiun2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EAE1792544D008A6102 /* COF_Pensiun2.xib */; };
+		26CA3EB11792555C008A6102 /* COF_Pensiun3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EB01792555C008A6102 /* COF_Pensiun3.xib */; };
+		26CA3EB317925621008A6102 /* COF_Pensiun4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EB217925621008A6102 /* COF_Pensiun4.xib */; };
+		26CA3EB5179256A9008A6102 /* COF_Pensiun5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EB4179256A9008A6102 /* COF_Pensiun5.xib */; };
+		26CA3EB717925785008A6102 /* COF_Pensiun6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EB617925785008A6102 /* COF_Pensiun6.xib */; };
+		26CA3EB9179257E4008A6102 /* pam-iphone-cycleoflife-bab8-page7-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EB8179257E4008A6102 /* pam-iphone-cycleoflife-bab8-page7-172x149.png */; };
+		26CA3EBB17925905008A6102 /* COF_Personal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EBA17925905008A6102 /* COF_Personal.xib */; };
+		26CA3EBD17925A11008A6102 /* COF_Personal1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EBC17925A11008A6102 /* COF_Personal1.xib */; };
+		26CA3EBF17925A9F008A6102 /* COF_Personal2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EBE17925A9F008A6102 /* COF_Personal2.xib */; };
+		26CA3EC117925B5B008A6102 /* COF_Personal3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EC017925B5B008A6102 /* COF_Personal3.xib */; };
+		26CA3EC317925D82008A6102 /* COF_Personal4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EC217925D81008A6102 /* COF_Personal4.xib */; };
+		26CA3EC5179267C2008A6102 /* COF_PostDegree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EC4179267C2008A6102 /* COF_PostDegree.xib */; };
+		26CA3EC71792685C008A6102 /* COF_PostDegree2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EC61792685C008A6102 /* COF_PostDegree2.xib */; };
+		26CA3EC917926903008A6102 /* COF_PostDegree3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EC817926903008A6102 /* COF_PostDegree3.xib */; };
+		26CA3ECB1792698E008A6102 /* COF_PostDegree4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ECA1792698E008A6102 /* COF_PostDegree4.xib */; };
+		26CA3ECD17926A82008A6102 /* COF_PostDegree5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ECC17926A82008A6102 /* COF_PostDegree5.xib */; };
+		26CA3ECF17926BFE008A6102 /* COF_PostDegree6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ECE17926BFE008A6102 /* COF_PostDegree6.xib */; };
+		26CA3ED117926CBD008A6102 /* COF_PostDegree7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ED017926CBD008A6102 /* COF_PostDegree7.xib */; };
+		26CA3ED317926D0E008A6102 /* pam-iphone-cycleoflife-bab4-page7-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ED217926D0E008A6102 /* pam-iphone-cycleoflife-bab4-page7-172x149.png */; };
+		26CA3ED51792807E008A6102 /* KalkulatorHasilInvestasiBerkala.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ED41792807E008A6102 /* KalkulatorHasilInvestasiBerkala.xib */; };
+		26CA3ED8179284BE008A6102 /* pam-iphone-investor-kalkulatorbg-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ED7179284BE008A6102 /* pam-iphone-investor-kalkulatorbg-03.png */; };
+		26CA3EDA17928F9C008A6102 /* KalkulatorHasilInvestasi.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3ED917928F9C008A6102 /* KalkulatorHasilInvestasi.xib */; };
+		26CA3EDC1792912E008A6102 /* pam-iphone-investor-kalkulatorbg-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EDB1792912E008A6102 /* pam-iphone-investor-kalkulatorbg-01.png */; };
+		26CA3EDE179294B5008A6102 /* KalkulatorInvestasiBerkala.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CA3EDD179294B1008A6102 /* KalkulatorInvestasiBerkala.xib */; };
 		26F05AE8179029BF001C2601 /* ProductBersama.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AE7179029BF001C2601 /* ProductBersama.xib */; };
 		26F05AEB17902E9A001C2601 /* pam-iphone-produk-325x165.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AEA17902E9A001C2601 /* pam-iphone-produk-325x165.png */; };
 		26F05AED17902EDE001C2601 /* pam-iphone5-320x568-21.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05AEC17902EDE001C2601 /* pam-iphone5-320x568-21.png */; };
@@ -132,9 +178,16 @@
 		26F05B5A1791970C001C2601 /* COF_Hajj1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B591791970C001C2601 /* COF_Hajj1.xib */; };
 		26F05B5C179197BF001C2601 /* COF_Hajj2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B5B179197BF001C2601 /* COF_Hajj2.xib */; };
 		26F05B5E17919830001C2601 /* COF_Hajj3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B5D17919830001C2601 /* COF_Hajj3.xib */; };
-		26F05B60179198CC001C2601 /* COF_Hajj4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B5F179198CC001C2601 /* COF_Hajj4.xib */; };
-		26F05B6217919940001C2601 /* COF_Hajj5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6117919940001C2601 /* COF_Hajj5.xib */; };
+		26F05B60179198CC001C2601 /* COF_Hajj5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B5F179198CC001C2601 /* COF_Hajj5.xib */; };
+		26F05B6217919940001C2601 /* COF_Hajj4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6117919940001C2601 /* COF_Hajj4.xib */; };
 		26F05B6417919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6317919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png */; };
+		26F05B661791AAAB001C2601 /* COFHoliday.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B651791AAAB001C2601 /* COFHoliday.xib */; };
+		26F05B681791AC5F001C2601 /* COFHoliday2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B671791AC5F001C2601 /* COFHoliday2.xib */; };
+		26F05B6A1791ADB3001C2601 /* COFHoliday3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B691791ADB3001C2601 /* COFHoliday3.xib */; };
+		26F05B6C1791AF05001C2601 /* COFHoliday4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6B1791AF05001C2601 /* COFHoliday4.xib */; };
+		26F05B6E179207EA001C2601 /* COFHoliday5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6D179207EA001C2601 /* COFHoliday5.xib */; };
+		26F05B70179208C5001C2601 /* COFHoliday7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B6F179208C4001C2601 /* COFHoliday7.xib */; };
+		26F05B721792090E001C2601 /* COFHoliday6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26F05B711792090E001C2601 /* COFHoliday6.xib */; };
 		D042521E1770B7DD000C348B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042521D1770B7DD000C348B /* UIKit.framework */; };
 		D04252201770B7DD000C348B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D042521F1770B7DD000C348B /* Foundation.framework */; };
 		D04252221770B7DD000C348B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04252211770B7DD000C348B /* CoreGraphics.framework */; };
@@ -354,6 +407,52 @@
 		2660025B178EDAF400CF6451 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		26600261178EDBA000CF6451 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		26600262178EDBA000CF6451 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		26CA3E6E17920C4E008A6102 /* COFHoliday8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday8.xib; sourceTree = "<group>"; };
+		26CA3E7017920F7D008A6102 /* pam-iphone-cycleoflife-bab1-page8-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab1-page8-172x149.png"; sourceTree = "<group>"; };
+		26CA3E74179210EA008A6102 /* COF_Vehicle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle.xib; sourceTree = "<group>"; };
+		26CA3E7817921296008A6102 /* COF_Vehicle2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle2.xib; sourceTree = "<group>"; };
+		26CA3E7A179212DA008A6102 /* COF_Vehicle3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle3.xib; sourceTree = "<group>"; };
+		26CA3E7C179213BD008A6102 /* COF_Vehicle4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle4.xib; sourceTree = "<group>"; };
+		26CA3E7E179214FC008A6102 /* COF_Vehicle5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle5.xib; sourceTree = "<group>"; };
+		26CA3E8017921577008A6102 /* COF_Vehicle6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle6.xib; sourceTree = "<group>"; };
+		26CA3E82179215D8008A6102 /* COF_Vehicle7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle7.xib; sourceTree = "<group>"; };
+		26CA3E841792169B008A6102 /* COF_Vehicle8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Vehicle8.xib; sourceTree = "<group>"; };
+		26CA3E8617921725008A6102 /* pam-iphone-cycleoflife-bab3-page8-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab3-page8-172x149.png"; sourceTree = "<group>"; };
+		26CA3E98179248C1008A6102 /* COFRumah.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah.xib; sourceTree = "<group>"; };
+		26CA3E9A179249AF008A6102 /* COFRumah2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah2.xib; sourceTree = "<group>"; };
+		26CA3E9C17924A40008A6102 /* COFRumah3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah3.xib; sourceTree = "<group>"; };
+		26CA3E9E17924B72008A6102 /* COFRumah4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah4.xib; sourceTree = "<group>"; };
+		26CA3EA017924CDA008A6102 /* COFRumah5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah5.xib; sourceTree = "<group>"; };
+		26CA3EA217924D98008A6102 /* COFRumah6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah6.xib; sourceTree = "<group>"; };
+		26CA3EA417924EC4008A6102 /* COFRumah7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah7.xib; sourceTree = "<group>"; };
+		26CA3EA617924F47008A6102 /* COFRumah8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFRumah8.xib; sourceTree = "<group>"; };
+		26CA3EA8179250BC008A6102 /* pam-iphone-cycleoflife-bab6-page8-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab6-page8-172x149.png"; sourceTree = "<group>"; };
+		26CA3EAA17925232008A6102 /* COF_Pensiun.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pensiun.xib; sourceTree = "<group>"; };
+		26CA3EAC1792536A008A6102 /* COF_Pensiun1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pensiun1.xib; sourceTree = "<group>"; };
+		26CA3EAE1792544D008A6102 /* COF_Pensiun2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pensiun2.xib; sourceTree = "<group>"; };
+		26CA3EB01792555C008A6102 /* COF_Pensiun3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pensiun3.xib; sourceTree = "<group>"; };
+		26CA3EB217925621008A6102 /* COF_Pensiun4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pensiun4.xib; sourceTree = "<group>"; };
+		26CA3EB4179256A9008A6102 /* COF_Pensiun5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pensiun5.xib; sourceTree = "<group>"; };
+		26CA3EB617925785008A6102 /* COF_Pensiun6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Pensiun6.xib; sourceTree = "<group>"; };
+		26CA3EB8179257E4008A6102 /* pam-iphone-cycleoflife-bab8-page7-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab8-page7-172x149.png"; sourceTree = "<group>"; };
+		26CA3EBA17925905008A6102 /* COF_Personal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Personal.xib; sourceTree = "<group>"; };
+		26CA3EBC17925A11008A6102 /* COF_Personal1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Personal1.xib; sourceTree = "<group>"; };
+		26CA3EBE17925A9F008A6102 /* COF_Personal2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Personal2.xib; sourceTree = "<group>"; };
+		26CA3EC017925B5B008A6102 /* COF_Personal3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Personal3.xib; sourceTree = "<group>"; };
+		26CA3EC217925D81008A6102 /* COF_Personal4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Personal4.xib; sourceTree = "<group>"; };
+		26CA3EC4179267C2008A6102 /* COF_PostDegree.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_PostDegree.xib; sourceTree = "<group>"; };
+		26CA3EC61792685C008A6102 /* COF_PostDegree2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_PostDegree2.xib; sourceTree = "<group>"; };
+		26CA3EC817926903008A6102 /* COF_PostDegree3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_PostDegree3.xib; sourceTree = "<group>"; };
+		26CA3ECA1792698E008A6102 /* COF_PostDegree4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_PostDegree4.xib; sourceTree = "<group>"; };
+		26CA3ECC17926A82008A6102 /* COF_PostDegree5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_PostDegree5.xib; sourceTree = "<group>"; };
+		26CA3ECE17926BFE008A6102 /* COF_PostDegree6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_PostDegree6.xib; sourceTree = "<group>"; };
+		26CA3ED017926CBD008A6102 /* COF_PostDegree7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_PostDegree7.xib; sourceTree = "<group>"; };
+		26CA3ED217926D0E008A6102 /* pam-iphone-cycleoflife-bab4-page7-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab4-page7-172x149.png"; sourceTree = "<group>"; };
+		26CA3ED41792807E008A6102 /* KalkulatorHasilInvestasiBerkala.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KalkulatorHasilInvestasiBerkala.xib; sourceTree = "<group>"; };
+		26CA3ED7179284BE008A6102 /* pam-iphone-investor-kalkulatorbg-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-investor-kalkulatorbg-03.png"; sourceTree = "<group>"; };
+		26CA3ED917928F9C008A6102 /* KalkulatorHasilInvestasi.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KalkulatorHasilInvestasi.xib; sourceTree = "<group>"; };
+		26CA3EDB1792912E008A6102 /* pam-iphone-investor-kalkulatorbg-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-investor-kalkulatorbg-01.png"; sourceTree = "<group>"; };
+		26CA3EDD179294B1008A6102 /* KalkulatorInvestasiBerkala.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KalkulatorInvestasiBerkala.xib; sourceTree = "<group>"; };
 		26F05AE7179029BF001C2601 /* ProductBersama.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductBersama.xib; sourceTree = "<group>"; };
 		26F05AEA17902E9A001C2601 /* pam-iphone-produk-325x165.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-produk-325x165.png"; sourceTree = "<group>"; };
 		26F05AEC17902EDE001C2601 /* pam-iphone5-320x568-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone5-320x568-21.png"; sourceTree = "<group>"; };
@@ -412,9 +511,16 @@
 		26F05B591791970C001C2601 /* COF_Hajj1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj1.xib; sourceTree = "<group>"; };
 		26F05B5B179197BF001C2601 /* COF_Hajj2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj2.xib; sourceTree = "<group>"; };
 		26F05B5D17919830001C2601 /* COF_Hajj3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj3.xib; sourceTree = "<group>"; };
-		26F05B5F179198CC001C2601 /* COF_Hajj4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj4.xib; sourceTree = "<group>"; };
-		26F05B6117919940001C2601 /* COF_Hajj5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj5.xib; sourceTree = "<group>"; };
+		26F05B5F179198CC001C2601 /* COF_Hajj5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj5.xib; sourceTree = "<group>"; };
+		26F05B6117919940001C2601 /* COF_Hajj4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COF_Hajj4.xib; sourceTree = "<group>"; };
 		26F05B6317919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pam-iphone-cycleoflife-bab9-page6-172x149.png"; sourceTree = "<group>"; };
+		26F05B651791AAAB001C2601 /* COFHoliday.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday.xib; sourceTree = "<group>"; };
+		26F05B671791AC5F001C2601 /* COFHoliday2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday2.xib; sourceTree = "<group>"; };
+		26F05B691791ADB3001C2601 /* COFHoliday3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday3.xib; sourceTree = "<group>"; };
+		26F05B6B1791AF05001C2601 /* COFHoliday4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday4.xib; sourceTree = "<group>"; };
+		26F05B6D179207EA001C2601 /* COFHoliday5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday5.xib; sourceTree = "<group>"; };
+		26F05B6F179208C4001C2601 /* COFHoliday7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday7.xib; sourceTree = "<group>"; };
+		26F05B711792090E001C2601 /* COFHoliday6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COFHoliday6.xib; sourceTree = "<group>"; };
 		D042521A1770B7DD000C348B /* PAN-AM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PAN-AM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D042521D1770B7DD000C348B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D042521F1770B7DD000C348B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -603,6 +709,7 @@
 			children = (
 				266000AD178ED4C100CF6451 /* KalkulatorInvestasiBerkala.h */,
 				266000AE178ED4C100CF6451 /* KalkulatorInvestasiBerkala.m */,
+				26CA3EDD179294B1008A6102 /* KalkulatorInvestasiBerkala.xib */,
 			);
 			name = KalkulatorInvestasiBerkala;
 			path = "PAN-AM/view/left/KalkulatorInvestasiBerkala";
@@ -613,6 +720,7 @@
 			children = (
 				266000B1178ED4EB00CF6451 /* KalkulatorHasilInvestasi.h */,
 				266000B2178ED4EB00CF6451 /* KalkulatorHasilInvestasi.m */,
+				26CA3ED917928F9C008A6102 /* KalkulatorHasilInvestasi.xib */,
 			);
 			name = KalkulatorHasilInvestasi;
 			path = "PAN-AM/view/left/KalkulatorHasilInvestasi";
@@ -623,6 +731,7 @@
 			children = (
 				266000B5178ED50E00CF6451 /* KalkulatorHasilInvestasiBerkala.h */,
 				266000B6178ED50E00CF6451 /* KalkulatorHasilInvestasiBerkala.m */,
+				26CA3ED41792807E008A6102 /* KalkulatorHasilInvestasiBerkala.xib */,
 			);
 			name = KalkulatorHasilInvestasiBerkala;
 			path = "PAN-AM/view/left/KalkulatorHasilInvestasiBerkala";
@@ -688,8 +797,8 @@
 				26F05B591791970C001C2601 /* COF_Hajj1.xib */,
 				26F05B5B179197BF001C2601 /* COF_Hajj2.xib */,
 				26F05B5D17919830001C2601 /* COF_Hajj3.xib */,
-				26F05B5F179198CC001C2601 /* COF_Hajj4.xib */,
-				26F05B6117919940001C2601 /* COF_Hajj5.xib */,
+				26F05B5F179198CC001C2601 /* COF_Hajj5.xib */,
+				26F05B6117919940001C2601 /* COF_Hajj4.xib */,
 				26600114178ED69200CF6451 /* COFContainerHajj.h */,
 				26600115178ED69200CF6451 /* COFContainerHajj.m */,
 				26600117178ED69200CF6451 /* SubClassHajj.h */,
@@ -705,6 +814,14 @@
 				26600124178ED69200CF6451 /* COFContainerHoliday.m */,
 				26600126178ED69200CF6451 /* COFHoliday.h */,
 				26600127178ED69200CF6451 /* COFHoliday.m */,
+				26F05B651791AAAB001C2601 /* COFHoliday.xib */,
+				26F05B671791AC5F001C2601 /* COFHoliday2.xib */,
+				26F05B691791ADB3001C2601 /* COFHoliday3.xib */,
+				26F05B6B1791AF05001C2601 /* COFHoliday4.xib */,
+				26F05B6D179207EA001C2601 /* COFHoliday5.xib */,
+				26F05B711792090E001C2601 /* COFHoliday6.xib */,
+				26F05B6F179208C4001C2601 /* COFHoliday7.xib */,
+				26CA3E6E17920C4E008A6102 /* COFHoliday8.xib */,
 				26600128178ED69200CF6451 /* SubClassHoliday.h */,
 				26600129178ED69200CF6451 /* SubClassHoliday.m */,
 			);
@@ -718,6 +835,14 @@
 				26600135178ED69200CF6451 /* COFContainer.m */,
 				26600137178ED69200CF6451 /* COFKendaraan.h */,
 				26600138178ED69200CF6451 /* COFKendaraan.m */,
+				26CA3E7817921296008A6102 /* COF_Vehicle2.xib */,
+				26CA3E74179210EA008A6102 /* COF_Vehicle.xib */,
+				26CA3E7A179212DA008A6102 /* COF_Vehicle3.xib */,
+				26CA3E7C179213BD008A6102 /* COF_Vehicle4.xib */,
+				26CA3E7E179214FC008A6102 /* COF_Vehicle5.xib */,
+				26CA3E8017921577008A6102 /* COF_Vehicle6.xib */,
+				26CA3E82179215D8008A6102 /* COF_Vehicle7.xib */,
+				26CA3E841792169B008A6102 /* COF_Vehicle8.xib */,
 				2660013A178ED69200CF6451 /* SubClassKendaraan.h */,
 				2660013B178ED69200CF6451 /* SubClassKendaraan.m */,
 			);
@@ -779,6 +904,13 @@
 			children = (
 				26600166178ED69200CF6451 /* COF_Pensiun.h */,
 				26600167178ED69200CF6451 /* COF_Pensiun.m */,
+				26CA3EAA17925232008A6102 /* COF_Pensiun.xib */,
+				26CA3EAC1792536A008A6102 /* COF_Pensiun1.xib */,
+				26CA3EAE1792544D008A6102 /* COF_Pensiun2.xib */,
+				26CA3EB01792555C008A6102 /* COF_Pensiun3.xib */,
+				26CA3EB217925621008A6102 /* COF_Pensiun4.xib */,
+				26CA3EB4179256A9008A6102 /* COF_Pensiun5.xib */,
+				26CA3EB617925785008A6102 /* COF_Pensiun6.xib */,
 				2660016F178ED69200CF6451 /* COFContainerPensiun.h */,
 				26600170178ED69200CF6451 /* COFContainerPensiun.m */,
 				26600172178ED69200CF6451 /* SubClassPensiun.h */,
@@ -792,6 +924,11 @@
 			children = (
 				26600176178ED69200CF6451 /* COF_Personal.h */,
 				26600177178ED69200CF6451 /* COF_Personal.m */,
+				26CA3EBA17925905008A6102 /* COF_Personal.xib */,
+				26CA3EBC17925A11008A6102 /* COF_Personal1.xib */,
+				26CA3EBE17925A9F008A6102 /* COF_Personal2.xib */,
+				26CA3EC017925B5B008A6102 /* COF_Personal3.xib */,
+				26CA3EC217925D81008A6102 /* COF_Personal4.xib */,
 				2660017D178ED69200CF6451 /* COFContainerPersonal.h */,
 				2660017E178ED69200CF6451 /* COFContainerPersonal.m */,
 				26600180178ED69200CF6451 /* SubClassPersonal.h */,
@@ -805,6 +942,13 @@
 			children = (
 				26600184178ED69200CF6451 /* COF_PostDegree.h */,
 				26600185178ED69200CF6451 /* COF_PostDegree.m */,
+				26CA3EC4179267C2008A6102 /* COF_PostDegree.xib */,
+				26CA3EC61792685C008A6102 /* COF_PostDegree2.xib */,
+				26CA3EC817926903008A6102 /* COF_PostDegree3.xib */,
+				26CA3ECA1792698E008A6102 /* COF_PostDegree4.xib */,
+				26CA3ECC17926A82008A6102 /* COF_PostDegree5.xib */,
+				26CA3ECE17926BFE008A6102 /* COF_PostDegree6.xib */,
+				26CA3ED017926CBD008A6102 /* COF_PostDegree7.xib */,
 				2660018D178ED69200CF6451 /* COFContainerPostDegree.h */,
 				2660018E178ED69200CF6451 /* COFContainerPostDegree.m */,
 				26600190178ED69200CF6451 /* SubClassPostDegree.h */,
@@ -820,6 +964,14 @@
 				2660019D178ED69200CF6451 /* COFContainerRumah.m */,
 				2660019F178ED69200CF6451 /* COFRumah.h */,
 				266001A0178ED69200CF6451 /* COFRumah.m */,
+				26CA3E98179248C1008A6102 /* COFRumah.xib */,
+				26CA3E9A179249AF008A6102 /* COFRumah2.xib */,
+				26CA3E9C17924A40008A6102 /* COFRumah3.xib */,
+				26CA3E9E17924B72008A6102 /* COFRumah4.xib */,
+				26CA3EA017924CDA008A6102 /* COFRumah5.xib */,
+				26CA3EA217924D98008A6102 /* COFRumah6.xib */,
+				26CA3EA417924EC4008A6102 /* COFRumah7.xib */,
+				26CA3EA617924F47008A6102 /* COFRumah8.xib */,
 				266001A1178ED69200CF6451 /* SubClassRumah.h */,
 				266001A2178ED69200CF6451 /* SubClassRumah.m */,
 			);
@@ -887,6 +1039,15 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		26CA3ED617928463008A6102 /* kalkulator */ = {
+			isa = PBXGroup;
+			children = (
+				26CA3EDB1792912E008A6102 /* pam-iphone-investor-kalkulatorbg-01.png */,
+				26CA3ED7179284BE008A6102 /* pam-iphone-investor-kalkulatorbg-03.png */,
+			);
+			name = kalkulator;
+			sourceTree = "<group>";
+		};
 		26F05AE917902E8F001C2601 /* product */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,6 +1080,11 @@
 				26F05B53179192BC001C2601 /* pam-iphone-cycleoflife-bab2-page6-172x149.png */,
 				26F05B6317919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png */,
 				26F05B09179104A9001C2601 /* pam-iphone-cycleoflife-page2-cekkalendar-169x29.png */,
+				26CA3E7017920F7D008A6102 /* pam-iphone-cycleoflife-bab1-page8-172x149.png */,
+				26CA3E8617921725008A6102 /* pam-iphone-cycleoflife-bab3-page8-172x149.png */,
+				26CA3EA8179250BC008A6102 /* pam-iphone-cycleoflife-bab6-page8-172x149.png */,
+				26CA3ED217926D0E008A6102 /* pam-iphone-cycleoflife-bab4-page7-172x149.png */,
+				26CA3EB8179257E4008A6102 /* pam-iphone-cycleoflife-bab8-page7-172x149.png */,
 				26F05B4717911530001C2601 /* pam-iphone-cycleoflife-bab7-page9-285x149.png */,
 			);
 			name = cycle;
@@ -1260,6 +1426,7 @@
 		D09CD1171771D72E000CD39D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				26CA3ED617928463008A6102 /* kalkulator */,
 				26F05AFA1790FA56001C2601 /* cycle */,
 				26F05AE917902E8F001C2601 /* product */,
 				D09CD11A1771D97E000CD39D /* left@2x.png */,
@@ -1512,9 +1679,62 @@
 				26F05B5A1791970C001C2601 /* COF_Hajj1.xib in Resources */,
 				26F05B5C179197BF001C2601 /* COF_Hajj2.xib in Resources */,
 				26F05B5E17919830001C2601 /* COF_Hajj3.xib in Resources */,
-				26F05B60179198CC001C2601 /* COF_Hajj4.xib in Resources */,
-				26F05B6217919940001C2601 /* COF_Hajj5.xib in Resources */,
+				26F05B60179198CC001C2601 /* COF_Hajj5.xib in Resources */,
+				26F05B6217919940001C2601 /* COF_Hajj4.xib in Resources */,
 				26F05B6417919988001C2601 /* pam-iphone-cycleoflife-bab9-page6-172x149.png in Resources */,
+				26F05B661791AAAB001C2601 /* COFHoliday.xib in Resources */,
+				26F05B681791AC5F001C2601 /* COFHoliday2.xib in Resources */,
+				26F05B6A1791ADB3001C2601 /* COFHoliday3.xib in Resources */,
+				26F05B6C1791AF05001C2601 /* COFHoliday4.xib in Resources */,
+				26F05B6E179207EA001C2601 /* COFHoliday5.xib in Resources */,
+				26F05B70179208C5001C2601 /* COFHoliday7.xib in Resources */,
+				26F05B721792090E001C2601 /* COFHoliday6.xib in Resources */,
+				26CA3E6F17920C4E008A6102 /* COFHoliday8.xib in Resources */,
+				26CA3E7117920F7D008A6102 /* pam-iphone-cycleoflife-bab1-page8-172x149.png in Resources */,
+				26CA3E75179210EA008A6102 /* COF_Vehicle.xib in Resources */,
+				26CA3E7917921296008A6102 /* COF_Vehicle2.xib in Resources */,
+				26CA3E7B179212DA008A6102 /* COF_Vehicle3.xib in Resources */,
+				26CA3E7D179213BD008A6102 /* COF_Vehicle4.xib in Resources */,
+				26CA3E7F179214FC008A6102 /* COF_Vehicle5.xib in Resources */,
+				26CA3E8117921577008A6102 /* COF_Vehicle6.xib in Resources */,
+				26CA3E83179215D8008A6102 /* COF_Vehicle7.xib in Resources */,
+				26CA3E851792169C008A6102 /* COF_Vehicle8.xib in Resources */,
+				26CA3E8717921725008A6102 /* pam-iphone-cycleoflife-bab3-page8-172x149.png in Resources */,
+				26CA3E99179248C1008A6102 /* COFRumah.xib in Resources */,
+				26CA3E9B179249AF008A6102 /* COFRumah2.xib in Resources */,
+				26CA3E9D17924A40008A6102 /* COFRumah3.xib in Resources */,
+				26CA3E9F17924B72008A6102 /* COFRumah4.xib in Resources */,
+				26CA3EA117924CDA008A6102 /* COFRumah5.xib in Resources */,
+				26CA3EA317924D99008A6102 /* COFRumah6.xib in Resources */,
+				26CA3EA517924EC4008A6102 /* COFRumah7.xib in Resources */,
+				26CA3EA717924F47008A6102 /* COFRumah8.xib in Resources */,
+				26CA3EA9179250BC008A6102 /* pam-iphone-cycleoflife-bab6-page8-172x149.png in Resources */,
+				26CA3EAB17925232008A6102 /* COF_Pensiun.xib in Resources */,
+				26CA3EAD1792536A008A6102 /* COF_Pensiun1.xib in Resources */,
+				26CA3EAF1792544D008A6102 /* COF_Pensiun2.xib in Resources */,
+				26CA3EB11792555C008A6102 /* COF_Pensiun3.xib in Resources */,
+				26CA3EB317925621008A6102 /* COF_Pensiun4.xib in Resources */,
+				26CA3EB5179256A9008A6102 /* COF_Pensiun5.xib in Resources */,
+				26CA3EB717925785008A6102 /* COF_Pensiun6.xib in Resources */,
+				26CA3EB9179257E4008A6102 /* pam-iphone-cycleoflife-bab8-page7-172x149.png in Resources */,
+				26CA3EBB17925905008A6102 /* COF_Personal.xib in Resources */,
+				26CA3EBD17925A11008A6102 /* COF_Personal1.xib in Resources */,
+				26CA3EBF17925A9F008A6102 /* COF_Personal2.xib in Resources */,
+				26CA3EC117925B5B008A6102 /* COF_Personal3.xib in Resources */,
+				26CA3EC317925D82008A6102 /* COF_Personal4.xib in Resources */,
+				26CA3EC5179267C2008A6102 /* COF_PostDegree.xib in Resources */,
+				26CA3EC71792685C008A6102 /* COF_PostDegree2.xib in Resources */,
+				26CA3EC917926903008A6102 /* COF_PostDegree3.xib in Resources */,
+				26CA3ECB1792698E008A6102 /* COF_PostDegree4.xib in Resources */,
+				26CA3ECD17926A82008A6102 /* COF_PostDegree5.xib in Resources */,
+				26CA3ECF17926BFE008A6102 /* COF_PostDegree6.xib in Resources */,
+				26CA3ED117926CBD008A6102 /* COF_PostDegree7.xib in Resources */,
+				26CA3ED317926D0E008A6102 /* pam-iphone-cycleoflife-bab4-page7-172x149.png in Resources */,
+				26CA3ED51792807E008A6102 /* KalkulatorHasilInvestasiBerkala.xib in Resources */,
+				26CA3ED8179284BE008A6102 /* pam-iphone-investor-kalkulatorbg-03.png in Resources */,
+				26CA3EDA17928F9C008A6102 /* KalkulatorHasilInvestasi.xib in Resources */,
+				26CA3EDC1792912E008A6102 /* pam-iphone-investor-kalkulatorbg-01.png in Resources */,
+				26CA3EDE179294B5008A6102 /* KalkulatorInvestasiBerkala.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
