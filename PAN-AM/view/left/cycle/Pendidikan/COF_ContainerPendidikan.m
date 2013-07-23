@@ -30,7 +30,7 @@
             {
                 VIEW_WIDTH = 320;
                 VIEW_HEIGHT = 480;
-                PAGE_COUNT = 3;
+                PAGE_COUNT = 16;
                 
             }
             if(result.height == 568)
@@ -38,7 +38,7 @@
                 // iPhone 5
                 VIEW_WIDTH = 320;
                 VIEW_HEIGHT = 568;
-                PAGE_COUNT = 3;
+                PAGE_COUNT = 16;
                 
             }
         }
@@ -252,13 +252,52 @@
         {
             switch (index+1) {
                 case 1:
-                 //   self.Form = [[Chapter_4 alloc] initWithNibName:@"Chapter_4_iphone4" bundle:nil] ;
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan" bundle:nil] ;
                     break;
                 case 2:
-                  //  self.Form = [[Chapter_4_1 alloc] initWithNibName:@"Chapter_4_1_iphone4" bundle:nil] ;
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan2" bundle:nil] ;
                     break;
                 case 3:
-                    //self.Form = [[Chapter_4_2 alloc] initWithNibName:@"Chapter_4_2_iphone4" bundle:nil];
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan3" bundle:nil];
+                    break;
+                case 4:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan4" bundle:nil];
+                    break;
+                case 5:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan5" bundle:nil];
+                    break;
+                case 6:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan6" bundle:nil];
+                    break;
+                case 7:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan7" bundle:nil];
+                    break;
+                case 8:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan8" bundle:nil];
+                    break;
+                case 9:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan9" bundle:nil] ;
+                    break;
+                case 10:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan10" bundle:nil] ;
+                    break;
+                case 11:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan11" bundle:nil];
+                    break;
+                case 12:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan12" bundle:nil];
+                    break;
+                case 13:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan13" bundle:nil];
+                    break;
+                case 14:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan14" bundle:nil];
+                    break;
+                case 15:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan15" bundle:nil];
+                    break;
+                case 16:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan16" bundle:nil];
                     break;
                     
                 default:
@@ -272,13 +311,52 @@
         {
             switch (index+1) {
                 case 1:
-                 //   self.Form = [[Chapter_4 alloc] initWithNibName:@"Chapter_4_iphone5" bundle:nil] ;
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan" bundle:nil] ;
                     break;
                 case 2:
-                   // self.Form = [[Chapter_4_1 alloc] initWithNibName:@"Chapter_4_1_iphone5" bundle:nil] ;
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan2" bundle:nil] ;
                     break;
                 case 3:
-                    //self.Form = [[Chapter_4_2 alloc] initWithNibName:@"Chapter_4_2_iphone5" bundle:nil];
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan3" bundle:nil];
+                    break;
+                case 4:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan4" bundle:nil];
+                    break;
+                case 5:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan5" bundle:nil];
+                    break;
+                case 6:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan6" bundle:nil];
+                    break;
+                case 7:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan7" bundle:nil];
+                    break;
+                case 8:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan8" bundle:nil];
+                    break;
+                case 9:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan9" bundle:nil] ;
+                    break;
+                case 10:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan10" bundle:nil] ;
+                    break;
+                case 11:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan11" bundle:nil];
+                    break;
+                case 12:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan12" bundle:nil];
+                    break;
+                case 13:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan13" bundle:nil];
+                    break;
+                case 14:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan14" bundle:nil];
+                    break;
+                case 15:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan15" bundle:nil];
+                    break;
+                case 16:
+                    self.Form = [[COF_Pendidikan alloc] initWithNibName:@"COF_Pendidikan16" bundle:nil];
                     break;
                     
                 default:

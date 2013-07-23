@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KalkulatorHasilInvestasi : UIViewController{
+@interface KalkulatorHasilInvestasi : UIViewController<UITextFieldDelegate>{
 
     IBOutlet UILabel *labelTingkatInflasi;
     IBOutlet UITextField *teksNilaiInvestasi;

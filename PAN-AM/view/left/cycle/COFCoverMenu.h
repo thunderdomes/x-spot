@@ -12,4 +12,7 @@
 
 @property (nonatomic, strong) IBOutlet UIViewController *subv;
 
+@property(nonatomic,strong) IBOutlet UIScrollView *txtscroll;
+
+
 @end

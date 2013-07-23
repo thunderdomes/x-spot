@@ -51,22 +51,9 @@
 	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationFade];
 }
 -(void)setMenu:(NSString*)object{
-	if(object==nil){
+	if([object isEqualToString:@"mitra"]){
 		[self.arForTable removeAllObjects];
-		NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
-		self.arrayOriginal=[dTmp valueForKey:@"biasa"];
-		pam_login_mitra.hidden=NO;
-		pam_login_Nasabah.hidden=NO;
-		self.arForTable=[[NSMutableArray alloc] init];
-		[self.arForTable addObjectsFromArray:self.arrayOriginal];
-		netraTable.frame=CGRectMake(0, 0, 320, self.view.frame.size.height-180);
-		[netraTable reloadData];
-
-		
-	}
-	else if([object isEqualToString:@"mitra"]){
-		[self.arForTable removeAllObjects];
-		[self setCenter:@"Customer Portfolio"];
+		//[self setCenter:@"Customer Portfolio"];
 		NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
 		self.arrayOriginal=[dTmp valueForKey:object];
 		pam_login_mitra.hidden=YES;
@@ -76,6 +63,32 @@
 		netraTable.frame=CGRectMake(0, 0, 320, self.view.frame.size.height);
 		[netraTable reloadData];
 	}
+	
+	else if([object isEqualToString:@"nasabah"]){
+		[self.arForTable removeAllObjects];
+		NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
+		self.arrayOriginal=[dTmp valueForKey:@"nasabah"];
+		pam_login_mitra.hidden=YES;
+		pam_login_Nasabah.hidden=YES;
+		self.arForTable=[[NSMutableArray alloc] init];
+		[self.arForTable addObjectsFromArray:self.arrayOriginal];
+		netraTable.frame=CGRectMake(0, 0, 320, self.view.frame.size.height);
+		[netraTable reloadData];
+		
+		
+	}
+else{
+	[self.arForTable removeAllObjects];
+	NSDictionary *dTmp= [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"leftWindow" ofType:@"plist"]];
+	self.arrayOriginal=[dTmp valueForKey:@"biasa"];
+	pam_login_mitra.hidden=NO;
+	pam_login_Nasabah.hidden=NO;
+	self.arForTable=[[NSMutableArray alloc] init];
+	[self.arForTable addObjectsFromArray:self.arrayOriginal];
+	netraTable.frame=CGRectMake(0, 0, 320, self.view.frame.size.height-180);
+	[netraTable reloadData];
+
+}
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
 {
@@ -91,6 +104,184 @@
 	loginWindow=[[netraGLobalLoginViewController alloc]init];
 	loginWindow.Status=@"Login Mitra";
 	[self presentPopupViewController:loginWindow animationType:MJPopupViewAnimationSlideBottomBottom];
+}
+-(void)setCenter:(NSString *)center{
+	//[self setCenter:center];
+    if([center isEqualToString:@"- Panin Dana Maksima -"]){
+		[dataPass addObject:@"ProductMaksima"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Prima -"]){
+		[dataPass addObject:@"ProductPrima"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Syariah Saham -"]){
+		[dataPass addObject:@"ProductSyariah"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Bersama Plus -"]){
+		[dataPass addObject:@"ProductBersamaPlus"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Bersama -"]){
+		[dataPass addObject:@"ProductBersama"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Unggulan -"]){
+		[dataPass addObject:@"ProductUnggulan"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Marketing Selling Fee"]){
+		[dataPass addObject:@"feeMarkettingViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Syariah Berimbang -"]){
+		[dataPass addObject:@"ProductSyariahBerimbang"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana USD -"]){
+		[dataPass addObject:@"ProductUSD"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Prioritas -"]){
+		[dataPass addObject:@"ProductPrioritas"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Utama Plus 2 -"]){
+		[dataPass addObject:@"ProductUtamaPlus2"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Cycle Of Life"]){
+		[dataPass addObject:@"COFCoverMenu"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Gebyar Indonesia II -"]){
+		[dataPass addObject:@"ProductGebyarIndonesia2"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Panin Dana Likuid -"]){
+		[dataPass addObject:@"ProductDanaLikuid"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Hasil Investasi -"]){
+		[dataPass addObject:@"KalkulatorHasilInvestasi"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Hasil Investasi Berkala -"]){
+		[dataPass addObject:@"KalkulatorHasilInvestasiBerkala"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Kebutuhan Investasi -"]){
+		[dataPass addObject:@"KalkulatorKebutuhanInvestasi"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    else if([center isEqualToString:@"- Kebutuhan Investasi Berkala -"]){
+		[dataPass addObject:@"KalkulatorInvestasiBerkala"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Home"]){
+		[dataPass addObject:@"netraViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Informasi Nasabah"]){
+		[dataPass addObject:@"NasabahViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Logout"]){
+		[self setMenu:Nil];
+		[dataPass addObject:@"netraViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Customer Portfolio"]){
+        
+		[dataPass addObject:@"customerPortfolio"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Marketing Selling Fee"]){
+        
+		[dataPass addObject:@"MarketingSellingFee"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Cek Saldo"]){
+        
+		[dataPass addObject:@"csViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+
+    else if([center isEqualToString:@"Top Up Online"]){
+        
+		[dataPass addObject:@"Top Up Online"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"History Transaksi"]){
+        
+		[dataPass addObject:@"history"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+	else if([center isEqualToString:@"Program Auto Debet"]){
+        
+		[dataPass addObject:@"AutodebetViewController"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
+        [self.sidePanelController showCenterPanel:YES];
+		[dataPass removeAllObjects];
+    }
+    
+	
+	
+	
+
 }
 - (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
 {
@@ -215,24 +406,9 @@
 		}
 	}
 	[self setCenter:cell.textLabel.text];
-	
-	
-	
+		
 }
--(void)setCenter:(NSString*)centerWindow{
-	
-	if([centerWindow isEqualToString:@"Home"]){
-		[dataPass addObject:@"netraViewController"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:@"dealNotification" object:dataPass];
-		
-		[self.sidePanelController showCenterPanel:YES];
-		[dataPass removeAllObjects];
-		
-		
-	}
 
-
-}
 -(void)miniMizeThisRows:(NSArray*)ar{
 	for(NSDictionary *dInner in ar ) {
 		NSUInteger indexToRemove=[self.arForTable indexOfObjectIdenticalTo:dInner];
@@ -264,6 +440,7 @@
 	NSMutableArray *dict = (NSMutableArray*)notification.object;
 	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
 	[self setMenu:[dict objectAtIndex:0]];
+	[self setCenter:@"Home"];
 	[loginWindow release];
 }
 -(void)dealloc{

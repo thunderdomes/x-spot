@@ -397,10 +397,48 @@
 					<string>Informasi Nasabah</string>
 					<key>level</key>
 					<string>1</string>
-					<key>controller</key>
-					<string>mokletdevServiceController</string>
 					<key>tag</key>
 					<string>11</string>
+				</dict>
+				<dict>
+					<key>tag</key>
+					<string>13</string>
+					<key>name</key>
+					<string>Cek Saldo</string>
+					<key>level</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>tag</key>
+					<string>13</string>
+					<key>name</key>
+					<string>History Transaksi</string>
+					<key>level</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>tag</key>
+					<string>13</string>
+					<key>name</key>
+					<string>Fund Fact Sheet</string>
+					<key>level</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>tag</key>
+					<string>13</string>
+					<key>name</key>
+					<string>Unduh Formulir</string>
+					<key>level</key>
+					<string>1</string>
+				</dict>
+				<dict>
+					<key>tag</key>
+					<string>13</string>
+					<key>name</key>
+					<string>Program Auto Debet</string>
+					<key>level</key>
+					<string>1</string>
 				</dict>
 				<dict>
 					<key>tag</key>

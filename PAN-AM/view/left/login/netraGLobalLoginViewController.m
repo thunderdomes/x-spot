@@ -7,6 +7,7 @@
 //
 
 #import "netraGLobalLoginViewController.h"
+#import "netraAppDelegate.h"
 
 @interface netraGLobalLoginViewController ()
 
@@ -143,8 +144,39 @@
 	[AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
 	AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id responseObject) {
 		NSLog(@"responseObject-->%@",responseObject);
+		if([[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"SessionID"]!= [NSNull null]){
+			
+			[datapass addObject:@"nasabah"];
+			[common setSessionId:[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"SessionID"]];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"AfterLogin" object:datapass];
+            
+            netraAppDelegate *appDelegate = (netraAppDelegate *)[[UIApplication sharedApplication] delegate];
+            appDelegate.nasabahText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"customerName"]];
+            appDelegate.CIFText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"customerNo"]];
+            appDelegate.tgl_lahirText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"birthdate"]];
+            appDelegate.alamatText1 = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"Address1"]];
+            appDelegate.alamatText2 = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"Address2"]];
+            appDelegate.teleponText1 = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"PhoneNo1"]];
+            appDelegate.teleponText2 = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"PhoneNo2"]];
+            appDelegate.emailText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"email"]];
+            appDelegate.expiredText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"IDExpireDate"]];
+            appDelegate.mktkdText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingNo"]];
+            appDelegate.namaText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingName"]];
+            appDelegate.mktContactext = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingNo"]];
+            appDelegate.mktEmailText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingEmail"]];
+
+            
+            NSLog(@"app deleagate text:%@",appDelegate.CIFText);
+			
+			[self.sidePanelController showCenterPanel:YES];
+			[datapass removeAllObjects];
+		}
+		else{
+			[self error];
+		}
 	} failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         // code for failed request goes here
+		
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
 		if(error){
 			NSLog(@"error-->%@",error);
@@ -171,7 +203,7 @@
 		if([[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]!= [NSNull null]){
 		
 		[datapass addObject:@"mitra"];
-			[common setSessionId:[[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]];
+		[common setSessionId:[[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"AfterLogin" object:datapass];
 		
 		[self.sidePanelController showCenterPanel:YES];

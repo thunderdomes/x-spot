@@ -29,7 +29,7 @@
             {
                 VIEW_WIDTH = 320;
                 VIEW_HEIGHT = 480;
-                PAGE_COUNT = 3;
+                PAGE_COUNT = 8;
                 
             }
             if(result.height == 568)
@@ -37,7 +37,7 @@
                 // iPhone 5
                 VIEW_WIDTH = 320;
                 VIEW_HEIGHT = 568;
-                PAGE_COUNT = 3;
+                PAGE_COUNT = 8;
                 
             }
         }
@@ -251,15 +251,29 @@
         {
             switch (index+1) {
                 case 1:
-                    //   self.Form = [[Chapter_4 alloc] initWithNibName:@"Chapter_4_iphone4" bundle:nil] ;
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday" bundle:nil] ;
                     break;
                 case 2:
-                    //  self.Form = [[Chapter_4_1 alloc] initWithNibName:@"Chapter_4_1_iphone4" bundle:nil] ;
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday2" bundle:nil] ;
                     break;
                 case 3:
-                    //self.Form = [[Chapter_4_2 alloc] initWithNibName:@"Chapter_4_2_iphone4" bundle:nil];
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday3" bundle:nil];
                     break;
-                    
+                case 4:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday4" bundle:nil];
+                    break;
+                case 5:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday5" bundle:nil];
+                    break;
+                case 6:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday6" bundle:nil];
+                    break;
+                case 7:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday7" bundle:nil];
+                    break;
+                case 8:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday8" bundle:nil];
+                    break;
                 default:
                     self.Form = nil;
                     break;
@@ -271,15 +285,29 @@
         {
             switch (index+1) {
                 case 1:
-                    //   self.Form = [[Chapter_4 alloc] initWithNibName:@"Chapter_4_iphone5" bundle:nil] ;
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday" bundle:nil] ;
                     break;
                 case 2:
-                    // self.Form = [[Chapter_4_1 alloc] initWithNibName:@"Chapter_4_1_iphone5" bundle:nil] ;
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday2" bundle:nil] ;
                     break;
                 case 3:
-                    //self.Form = [[Chapter_4_2 alloc] initWithNibName:@"Chapter_4_2_iphone5" bundle:nil];
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday3" bundle:nil];
                     break;
-                    
+                case 4:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday4" bundle:nil];
+                    break;
+                case 5:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday5" bundle:nil];
+                    break;
+                case 6:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday6" bundle:nil];
+                    break;
+                case 7:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday7" bundle:nil];
+                    break;
+                case 8:
+                    self.Form = [[COFHoliday alloc] initWithNibName:@"COF_Holiday8" bundle:nil];
+                    break;
                 default:
                     self.Form = nil;
                     break;

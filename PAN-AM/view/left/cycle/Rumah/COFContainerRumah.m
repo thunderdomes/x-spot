@@ -31,7 +31,7 @@
             {
                 VIEW_WIDTH = 320;
                 VIEW_HEIGHT = 480;
-                PAGE_COUNT = 3;
+                PAGE_COUNT = 8;
                 
             }
             if(result.height == 568)
@@ -39,7 +39,7 @@
                 // iPhone 5
                 VIEW_WIDTH = 320;
                 VIEW_HEIGHT = 568;
-                PAGE_COUNT = 3;
+                PAGE_COUNT = 8;
                 
             }
         }

@@ -25,9 +25,24 @@ NSString *tradeUrl=@"http://panin-am.co.id:800/json.aspx";
     common *shared = [common sharedInstance];
     return shared.sessionString;
 }
++(NSString *) dateStart {
+    // Ensure we are using the shared instance
+    common *shared = [common sharedInstance];
+    return shared.dateStart;
+}
++(NSString *) dateEnd {
+    // Ensure we are using the shared instance
+    common *shared = [common sharedInstance];
+    return shared.dateEnd;
+}
 +(void) setSessionId:(NSString *)session {
     // Ensure we are using the shared instance
     common *shared = [common sharedInstance];
     shared.sessionString = session;
+}
++(void)setStart:(NSString *)dateS dateE:(NSString *)end{
+common *shared = [common sharedInstance];
+	shared.dateStart=dateS;
+	shared.dateEnd=end;
 }
 @end

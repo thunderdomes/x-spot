@@ -203,13 +203,7 @@ bool isFiltered=false;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)viewWillAppear:(BOOL)animated{
-	
-	[super viewWillAppear:YES];
 
-	[self initNavBar];
-	
-}
 -(void)fetchData{
     [spinner startAnimating];
 	AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.panin-am.co.id:800/"]];
@@ -312,6 +306,13 @@ bool isFiltered=false;
 	NSString *ar = [NSString stringWithFormat:@"%f", investments];
 	CGFloat myNumber = (CGFloat)[ar floatValue];
 	[investment_total setText:[numberFormatter stringFromNumber:[NSNumber numberWithFloat:myNumber]]];
+}
+-(void)viewWillAppear:(BOOL)animated{
+	
+	[super viewWillAppear:YES];
+	
+	[self initNavBar];
+	
 }
 -(void)initNavBar{
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];

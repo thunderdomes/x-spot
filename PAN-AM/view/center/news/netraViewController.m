@@ -8,6 +8,7 @@
 
 #import "netraViewController.h"
 #import "newsCell.h"
+#import "SVModalWebViewController.h"
 @interface netraViewController ()
 
 @end
@@ -110,12 +111,12 @@
 	[self initNavBar];
 }
 -(void)initNavBar{
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
-	UIImage* image = [UIImage imageNamed:@"left"];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar1_"] forBarMetrics:UIBarMetricsDefault];
+	//UIImage* image = [UIImage imageNamed:@"left"];
 	CGRect frame = CGRectMake(-5, 0, 44, 44);
 	UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame];
-	[leftbutton setBackgroundImage:image forState:UIControlStateNormal];
-	//[leftbutton setBackgroundImage:[UIImage imageNamed:@"left-push"] forState:UIControlStateHighlighted];
+	//[leftbutton setBackgroundImage:image forState:UIControlStateNormal];
+	[leftbutton setBackgroundImage:[UIImage imageNamed:@"left_"] forState:UIControlStateNormal];
 	[leftbutton addTarget:self action:@selector(lefbuttonPush) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIView *leftbuttonView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
@@ -124,7 +125,7 @@
 	UIBarButtonItem* leftbarbutton = [[UIBarButtonItem alloc] initWithCustomView:leftbuttonView];
 	
 	
-	UIImage* image3 = [UIImage imageNamed:@"right"];
+	UIImage* image3 = [UIImage imageNamed:@"right_"];
 	CGRect frame3 = CGRectMake(5, 0, 44, 44);
 	UIButton *searchbutton = [[UIButton alloc] initWithFrame:frame3];
 	[searchbutton setBackgroundImage:image3 forState:UIControlStateNormal];
@@ -149,7 +150,6 @@
 	top_label.backgroundColor=[UIColor clearColor];
 	
 	UILabel *TitleBig=[[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 230, 44)] autorelease];
-	TitleBig.text=@"Berita Investasi";
 	TitleBig.textAlignment=NSTextAlignmentCenter;
 	TitleBig.backgroundColor=[UIColor clearColor];
 	[TitleBig setFont:[UIFont fontWithName:@"AvenirNext-DemiBold" size:19]];
@@ -168,7 +168,26 @@
 	//	[searchbar resignFirstResponder];
 	[self.sidePanelController showRightPanel:YES];
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	
+   
+        //
+        netraNewsObject  *object_draw=[netraMutableArray objectAtIndex:indexPath.row];
+		
+        
+        NSString *str = [object_draw.newsLink stringByReplacingOccurrencesOfString:@"&#47"
+																 withString:@"/"];
+        NSLog(@"str:%@",str);
+		
+        
+        NSString *newAddress = [[NSString alloc]initWithFormat:@"http://www.readability.com/m?url=%@",str];
+        
+        SVModalWebViewController *browser = [[SVModalWebViewController alloc] initWithAddress:newAddress];
+        [self presentModalViewController:browser animated:YES];
+		NSLog(@"link: %@",newAddress);
 
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

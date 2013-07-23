@@ -25,12 +25,16 @@
 #import "ProductUtamaPlus2.h"
 #import "ProductGebyarIndonesia2.h"
 #import "ProductDanaLikuid.h"
-
+#import "customerPortfolio.h"
 #import "KalkulatorHasilInvestasiBerkala.h"
 #import "KalkulatorHasilInvestasi.h"
 #import "KalkulatorInvestasiBerkala.h"
 #import "KalkulatorKebutuhanInvestasi.h"
+#import "NasabahViewController.h"
 @implementation netraAppDelegate
+
+
+@synthesize fvalueGlobalString,fvalueString,arrayCustodianID,custodianID,index,customerName,linkURL,namaRek,namaText,nasabahText,CIFText,tgl_lahirText,alamatText1,alamatText2,teleponText1,teleponText2,emailText,expiredText,mktkdText,mktContactext,mktEmailText;
 
 - (void)dealloc
 {
@@ -57,72 +61,25 @@
     return YES;
 }
 -(void)setCenter:(NSNotification *)notification{
-	
+
 	NSMutableArray *dict = (NSMutableArray*)notification.object;
+	
+	//self.mainViewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[[dict objectAtIndex:0] alloc] init]];
 	if(notification==nil){
 		//	self.mainViewController.centerPanel =nil;
-		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[netraViewController alloc] init]];;
-		self.lastController=@"netraViewController";
+		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[netraViewController alloc] init]];
+		//[self performSelector:@selector(dismiss) withObject:nil afterDelay:2];
+		self.lastController=@"mokletdevViewController";
 	}
-	
+	/*
 	else if([[dict objectAtIndex:0] isEqualToString:self.lastController]){
 		
 	}
-	else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Maksima -"]){
-		self.viewController.centerPanel = [[ProductMaksima alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Prima -"]){
-		self.viewController.centerPanel = [[ProductPrima alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Syariah Saham -"]){
-		self.viewController.centerPanel = [[ProductSyariah alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Bersama Plus -"]){
-		self.viewController.centerPanel = [[ProductBersamaPlus alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Bersama -"]){
-		self.viewController.centerPanel = [[ProductBersama alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Unggulan -"]){
-		self.viewController.centerPanel = [[ProductUnggulan alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Syariah Berimbang -"]){
-		self.viewController.centerPanel = [[ProductSyariahBerimbang alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana USD -"]){
-		self.viewController.centerPanel = [[ProductUSD alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Prioritas -"]){
-		self.viewController.centerPanel = [[ProductPrioritas alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Utama Plus 2 -"]){
-		self.viewController.centerPanel = [[ProductUtamaPlus2 alloc]init];
-        
-	}else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Gebyar Indonesia II -"]){
-		self.viewController.centerPanel = [[ProductGebyarIndonesia2 alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Panin Dana Likuid -"]){
-		self.viewController.centerPanel = [[ProductDanaLikuid alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Hasil Investasi -"]){
-		self.viewController.centerPanel = [[KalkulatorHasilInvestasiBerkala alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Kebutuhan Investasi -"]){
-		self.viewController.centerPanel = [[KalkulatorKebutuhanInvestasi alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Hasil Investasi Berkala -"]){
-		self.viewController.centerPanel = [[KalkulatorHasilInvestasi alloc]init];
-	}
-    else if([[dict objectAtIndex:0] isEqualToString:@"- Kebutuhan Investasi Berkala -"]){
-		self.viewController.centerPanel = [[KalkulatorInvestasiBerkala alloc]init];
-	}
+	 */
 	else{
-		
 		self.viewController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString([dict objectAtIndex:0]) alloc] init]];
 		self.lastController=[dict objectAtIndex:0];
-		
 	}
-
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {

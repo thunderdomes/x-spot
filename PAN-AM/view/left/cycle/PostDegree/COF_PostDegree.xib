@@ -43,6 +43,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{11, 47}, {299, 465}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="360875813"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -57,6 +58,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{8, 120}, {305, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="894990879"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -90,6 +92,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{8, 193}, {305, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="371985192"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -98,7 +101,10 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Pilih reksa dana sesuai profil resiko anda</string>
-						<nil key="IBUITextColor"/>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">2</int>
+							<bytes key="NSRGB">MC4wNzA1ODgyMzg1NCAwLjUxMzcyNTUxOTIgMC41NjQ3MDU5MDgzAA</bytes>
+						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUITextAlignment">1</int>
@@ -120,6 +126,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{89, 263}, {149, 38}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="640179683"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -147,8 +154,9 @@
 					<object class="IBUISlider" id="640179683">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{57, 324}, {207, 23}}</string>
+						<string key="NSFrame">{{57, 344}, {207, 23}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="609824646"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -160,8 +168,9 @@
 					<object class="IBUIImageView" id="609824646">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{28, 379}, {82, 15}}</string>
+						<string key="NSFrame">{{28, 399}, {82, 15}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="310718777"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -174,8 +183,9 @@
 					<object class="IBUIImageView" id="310718777">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{122, 379}, {82, 15}}</string>
+						<string key="NSFrame">{{122, 399}, {82, 15}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="942833327"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -188,8 +198,9 @@
 					<object class="IBUIImageView" id="942833327">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{218, 379}, {82, 15}}</string>
+						<string key="NSFrame">{{218, 399}, {82, 15}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -203,6 +214,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{79, 243}, {155, 61}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="808883852"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -230,14 +242,14 @@
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 				</array>
-				<string key="NSFrame">{{0, 20}, {320, 548}}</string>
+				<string key="NSFrameSize">{320, 568}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="734611706"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
 				</object>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
 					<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
 					<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
@@ -1251,7 +1263,191 @@
 			<nil key="sourceID"/>
 			<int key="maxID">134</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">COF_PostDegree</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">pickDate:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">pickDate:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">pickDate:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="Segment">UISegmentedControl</string>
+						<string key="accomodation">UITextField</string>
+						<string key="agresif">UIImageView</string>
+						<string key="konservatif">UIImageView</string>
+						<string key="labelInvestasiPerBulan">UILabel</string>
+						<string key="labelInvestasiSekarang">UILabel</string>
+						<string key="labelJumlahDanaDibutuhkan">UILabel</string>
+						<string key="labelJumlahOrang">UILabel</string>
+						<string key="labelOrang">UILabel</string>
+						<string key="labelTanggalDPDiperlukan">UILabel</string>
+						<string key="labelTingkatInflasi">UILabel</string>
+						<string key="labelTipeReksaDana">UILabel</string>
+						<string key="moderat">UIImageView</string>
+						<string key="moneyfull1">UIImageView</string>
+						<string key="moneyfull2">UIImageView</string>
+						<string key="moneyfull3">UIImageView</string>
+						<string key="moneyfull4">UIImageView</string>
+						<string key="moneyfull5">UIImageView</string>
+						<string key="moneyfull6">UIImageView</string>
+						<string key="others">UITextField</string>
+						<string key="pilihReksaDana">UILabel</string>
+						<string key="sliderBiaya">UISlider</string>
+						<string key="sliderBiayaAkomodasi">UISlider</string>
+						<string key="sliderBiayaSemester">UISlider</string>
+						<string key="sliderBiayaTransport">UISlider</string>
+						<string key="sliderJumlahSemester">UISlider</string>
+						<string key="sliderTingkatInflasi">UISlider</string>
+						<string key="tanggaldipilih">UILabel</string>
+						<string key="tanggaldipilih2">UILabel</string>
+						<string key="ticketFlight">UITextField</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="Segment">
+							<string key="name">Segment</string>
+							<string key="candidateClassName">UISegmentedControl</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="accomodation">
+							<string key="name">accomodation</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="agresif">
+							<string key="name">agresif</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="konservatif">
+							<string key="name">konservatif</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelInvestasiPerBulan">
+							<string key="name">labelInvestasiPerBulan</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelInvestasiSekarang">
+							<string key="name">labelInvestasiSekarang</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelJumlahDanaDibutuhkan">
+							<string key="name">labelJumlahDanaDibutuhkan</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelJumlahOrang">
+							<string key="name">labelJumlahOrang</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelOrang">
+							<string key="name">labelOrang</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelTanggalDPDiperlukan">
+							<string key="name">labelTanggalDPDiperlukan</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelTingkatInflasi">
+							<string key="name">labelTingkatInflasi</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="labelTipeReksaDana">
+							<string key="name">labelTipeReksaDana</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moderat">
+							<string key="name">moderat</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moneyfull1">
+							<string key="name">moneyfull1</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moneyfull2">
+							<string key="name">moneyfull2</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moneyfull3">
+							<string key="name">moneyfull3</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moneyfull4">
+							<string key="name">moneyfull4</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moneyfull5">
+							<string key="name">moneyfull5</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moneyfull6">
+							<string key="name">moneyfull6</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="others">
+							<string key="name">others</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="pilihReksaDana">
+							<string key="name">pilihReksaDana</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sliderBiaya">
+							<string key="name">sliderBiaya</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sliderBiayaAkomodasi">
+							<string key="name">sliderBiayaAkomodasi</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sliderBiayaSemester">
+							<string key="name">sliderBiayaSemester</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sliderBiayaTransport">
+							<string key="name">sliderBiayaTransport</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sliderJumlahSemester">
+							<string key="name">sliderJumlahSemester</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="sliderTingkatInflasi">
+							<string key="name">sliderTingkatInflasi</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tanggaldipilih">
+							<string key="name">tanggaldipilih</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tanggaldipilih2">
+							<string key="name">tanggaldipilih2</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="ticketFlight">
+							<string key="name">ticketFlight</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/COF_PostDegree.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSLayoutConstraint</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
