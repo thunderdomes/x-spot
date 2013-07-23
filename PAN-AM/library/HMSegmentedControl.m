@@ -70,7 +70,7 @@
     self.textColor = [UIColor blackColor];
     self.selectedTextColor = [UIColor blackColor];
     self.backgroundColor = [UIColor whiteColor];
-	self.selectionIndicatorBoxLayer.backgroundColor=[UIColor blackColor].CGColor;
+	self.selectionIndicatorBoxLayer.backgroundColor=[UIColor whiteColor].CGColor;
     self.opaque = NO;
     self.selectionIndicatorColor = [UIColor colorWithRed:52.0f/255.0f green:181.0f/255.0f blue:229.0f/255.0f alpha:1.0f];
     
