@@ -14,10 +14,11 @@
 	UIView *pilihCal2;
 	UIView *divider;
 	UIView *divider2;
-	UIButton *cari;
+	
 	UILabel *tanggal1;
 	UILabel *tanggal2;
 	calendarPic *calwins;
+	UIButton *cari;
 	
 }
 @property(strong,nonatomic) NSString *tanggal_1;

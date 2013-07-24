@@ -25,47 +25,61 @@
 		self.view.backgroundColor=[UIColor whiteColor];
 		
 		
-		self.segmentedControl4 = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, 200, 320, 50)];
+		self.segmentedControl4 = [[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
 		[self.segmentedControl4 setSectionTitles:@[@"Jumlah Transaksi", @"Periode Transaksi", @"Periode Tertentu"]];
 		[self.segmentedControl4 setSelectedSegmentIndex:1];
-		[self.segmentedControl4 setBackgroundColor:[UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1]];
+		[self.segmentedControl4 setBackgroundColor:[UIColor colorWithRed:0.302 green:0.643 blue:0.69 alpha:1]];
 		[self.segmentedControl4 setTextColor:[UIColor whiteColor]];
-		[self.segmentedControl4 setSelectedTextColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1]];
-		[self.segmentedControl4 setSelectionIndicatorColor:[UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:1]];
+		[self.segmentedControl4 setSelectedTextColor:[UIColor whiteColor]];
+		[self.segmentedControl4 setSelectionIndicatorColor:[UIColor colorWithRed:0.976 green:0.675 blue:0.09 alpha:1]];
 		[self.segmentedControl4 setSelectionStyle:HMSegmentedControlSelectionStyleBox];
 		[self.segmentedControl4 setSelectionLocation:HMSegmentedControlSelectionLocationUp];
 		[self.segmentedControl4 setTag:3];
 		
 		__weak typeof(self) weakSelf = self;
 		[self.segmentedControl4 setIndexChangeBlock:^(NSInteger index) {
-			[weakSelf.scrollView scrollRectToVisible:CGRectMake(320 * index, 0, 320, 200) animated:YES];
+			[weakSelf.scrollView scrollRectToVisible:CGRectMake(320 * index, 0, 320, 250) animated:YES];
 		}];
 		
 		[self.view addSubview:self.segmentedControl4];
 		
-		self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 250, 320, 210)];
-		[self.scrollView setBackgroundColor:[UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1]];
+		self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 50, 320, 250)];
+		[self.scrollView setBackgroundColor:[UIColor whiteColor]];
 		[self.scrollView setPagingEnabled:YES];
 		[self.scrollView setShowsHorizontalScrollIndicator:NO];
-		[self.scrollView setContentSize:CGSizeMake(960, 200)];
-		[self.scrollView scrollRectToVisible:CGRectMake(320, 0, 320, 200) animated:NO];
+		[self.scrollView setContentSize:CGSizeMake(960, self.view.frame.size.height-94)];
+		[self.scrollView scrollRectToVisible:CGRectMake(320, 0, 320, 250) animated:NO];
 		[self.scrollView setDelegate:self];
 		[self.view addSubview:self.scrollView];
 		
-		UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 210)];
-		[self setApperanceForLabel:label1];
-		[label1 setText:@"Worldwide"];
-		[self.scrollView addSubview:label1];
+		UIView *pertama=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 200)];
+		pertama.backgroundColor=[UIColor whiteColor];
+		UIView *kedua=[[UIView alloc]initWithFrame:CGRectMake(320, 0, 320, 200)];
+		UIView *ke3=[[UIView alloc]initWithFrame:CGRectMake(640, 0, 320, 200)];
 		
-		UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(320, 0, 320, 210)];
-		[self setApperanceForLabel:label2];
-		[label2 setText:@"Local"];
-		[self.scrollView addSubview:label2];
+		pilihjml=[[UILabel alloc]initWithFrame:CGRectMake(10, 0, 320, 50)];
+		pilihjml.text=@"Pilih Jumlah Transaksi";
+		pilihjml.font=[UIFont fontWithName:@"AvenirNext-Medium" size:13];
+		[pertama addSubview:pilihjml];
+		UIStepper* stepper = [[UIStepper alloc] init];
+		stepper.maximumValue=10;
+		stepper.frame = CGRectMake(220, 10, 100, 10);
+		[pertama addSubview: stepper];
 		
-		UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(640, 0, 320, 210)];
-		[self setApperanceForLabel:label3];
-		[label3 setText:@"Headlines"];
-		[self.scrollView addSubview:label3];
+		pilihPeriod=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+		pilihPeriod.text=@"Pilih Periode Transaksi";
+		[kedua addSubview:pilihPeriod];
+		[self.scrollView addSubview:pertama];
+		[self.scrollView addSubview:kedua];
+		cari=[UIButton buttonWithType:UIButtonTypeCustom];
+		[cari setFrame:CGRectMake(48.5, 180, 223, 44)];
+		[cari addTarget:self action:@selector(jumpP) forControlEvents:UIControlEventTouchUpInside];
+		[cari setBackgroundImage:[UIImage imageNamed:@"laporan"] forState:UIControlStateNormal];
+		[self.scrollView addSubview:cari];
+
+		
+		
+
     }
     return self;
 }
