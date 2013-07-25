@@ -27,11 +27,16 @@
 	UILabel *gDfundValue;
 	UILabel *gDmarketValue;
 	UILabel *gDainOrLostPercentage;
+	UILabel *gDsDgainOrLost;
 	
 	UILabel *gtDfundValue;
 	UILabel *gtDmarketValue;
-	UILabel *gtDainOrLostPercentage;
-	UILabel *gtDgainOrLost;
+	UILabel *gtSDainOrLostPercentage;
+	UILabel *gtsDgainOrLost;
+	
+	UIImageView *statusD;
+	UIImageView *statusGTD;
+	UIImageView *statsusGT;
 	
 	
 }

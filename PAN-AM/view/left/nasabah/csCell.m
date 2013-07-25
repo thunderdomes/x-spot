@@ -70,13 +70,20 @@
 		self.marketValue.backgroundColor=[UIColor clearColor];
         self.marketValue.textAlignment=NSTextAlignmentCenter;
 		
-		self.gainOrLost=[[UILabel alloc]initWithFrame:CGRectMake(204, 60, 90, 31)];
+		self.gainOrLost=[[UILabel alloc]initWithFrame:CGRectMake(204, 55, 90, 31)];
 		self.gainOrLost.textAlignment=NSTextAlignmentCenter;
 		self.gainOrLost.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
 		self.gainOrLost.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
 		self.gainOrLost.backgroundColor=[UIColor clearColor];
         self.gainOrLost.textAlignment=NSTextAlignmentCenter;
 		
+		self.gainOrLostPercentage=[[UILabel alloc]initWithFrame:CGRectMake(204, 70, 90, 31)];
+		self.gainOrLostPercentage.textAlignment=NSTextAlignmentCenter;
+		self.gainOrLostPercentage.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		self.gainOrLostPercentage.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		self.gainOrLostPercentage.backgroundColor=[UIColor clearColor];
+        self.gainOrLostPercentage.textAlignment=NSTextAlignmentCenter;
+
 		
 
 		[self.contentView addSubview:self.fundname];
@@ -86,6 +93,7 @@
 		[self.contentView addSubview:self.fundValue];
 		[self.contentView addSubview:self.marketValue];
 		[self.contentView addSubview:self.gainOrLost];
+		[self.contentView addSubview:self.gainOrLostPercentage];
     }
     return self;
 }

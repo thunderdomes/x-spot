@@ -50,7 +50,7 @@
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
 }
 -(void)initbar{
-	UIImage* image_ = [UIImage imageNamed:@"back"];
+	UIImage* image_ = [UIImage imageNamed:@"back_"];
 	CGRect frame_ = CGRectMake(-5, 0, 44, 44);
 	UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame_];
 	[leftbutton setBackgroundImage:image_ forState:UIControlStateNormal];
