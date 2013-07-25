@@ -12,5 +12,22 @@
 {
 	UITableView *detail;
 	NSMutableArray *data;
+	UILabel *gt_total_unit;
+	UILabel *gt_nilai_rata;
+	
+	UILabel * Dfundname;
+	UILabel * Dunit;
+	UILabel * DaverageNAv;
+	UILabel * DclosingNAV;
+	UILabel * DfundValue;
+	UILabel * DmarketValue;
+	UILabel * DgainOrLost;
+	UILabel * DgainOrLostPercentage;
+	
+	UILabel *gDfundValue;
+	UILabel *gDmarketValue;
+	UILabel * gDainOrLostPercentage;
+	
+	
 }
 @end

@@ -27,7 +27,7 @@
 		UIView *header=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
 		header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"cs_saldo"]];
 		//header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"nyahahah"]];
-		UIView *footer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 227)];
+		UIView *footer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 320, 227)];
 		footer.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"csfooter"]];
 		//header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"nyahahah"]];
 
@@ -36,8 +36,88 @@
 		detail.tableFooterView=footer;
 		
 		[self.view addSubview:detail];
+		Dfundname=[[UILabel alloc]initWithFrame:CGRectMake(0, 65, 320, 22)];
+		Dfundname.textAlignment=NSTextAlignmentCenter;
+		Dfundname.font=[UIFont fontWithName:@"Avenir-Medium" size:14];
+		Dfundname.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		Dfundname.backgroundColor=[UIColor clearColor];
 		
+		Dunit=[[UILabel alloc]initWithFrame:CGRectMake(0, 65+30, 90, 31)];
+		Dunit.textAlignment=NSTextAlignmentCenter;
+		Dunit.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		Dunit.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		Dunit.backgroundColor=[UIColor clearColor];
+        Dunit.textAlignment=NSTextAlignmentCenter;
+		
+		DaverageNAv=[[UILabel alloc]initWithFrame:CGRectMake(107, 65+30, 90, 31)];
+		DaverageNAv.textAlignment=NSTextAlignmentCenter;
+		DaverageNAv.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		DaverageNAv.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		DaverageNAv.backgroundColor=[UIColor clearColor];
+        DaverageNAv.textAlignment=NSTextAlignmentCenter;
+		
+		DclosingNAV=[[UILabel alloc]initWithFrame:CGRectMake(204, 65+30, 90, 31)];
+		DclosingNAV.textAlignment=NSTextAlignmentCenter;
+		DclosingNAV.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		DclosingNAV.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		DclosingNAV.backgroundColor=[UIColor clearColor];
+        DclosingNAV.textAlignment=NSTextAlignmentCenter;
+		
+		/////
+		DfundValue=[[UILabel alloc]initWithFrame:CGRectMake(0, 65+60, 90, 31)];
+		DfundValue.textAlignment=NSTextAlignmentCenter;
+		DfundValue.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		DfundValue.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		DfundValue.backgroundColor=[UIColor clearColor];
+        DfundValue.textAlignment=NSTextAlignmentCenter;
+		
+		gDfundValue=[[UILabel alloc]initWithFrame:CGRectMake(0, 65+130, 90, 31)];
+		gDfundValue.textAlignment=NSTextAlignmentCenter;
+		gDfundValue.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		gDfundValue.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		gDfundValue.backgroundColor=[UIColor clearColor];
+        gDfundValue.textAlignment=NSTextAlignmentCenter;
+		
+		DmarketValue=[[UILabel alloc]initWithFrame:CGRectMake(107, 65+60, 90, 31)];
+		DmarketValue.textAlignment=NSTextAlignmentCenter;
+		DmarketValue.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		DmarketValue.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		DmarketValue.backgroundColor=[UIColor clearColor];
+        DmarketValue.textAlignment=NSTextAlignmentCenter;
+		gDmarketValue=[[UILabel alloc]initWithFrame:CGRectMake(107, 65+130, 90, 31)];
+		gDmarketValue.textAlignment=NSTextAlignmentCenter;
+		gDmarketValue.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		gDmarketValue.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		gDmarketValue.backgroundColor=[UIColor clearColor];
+        gDmarketValue.textAlignment=NSTextAlignmentCenter;
+
+		
+		DgainOrLost=[[UILabel alloc]initWithFrame:CGRectMake(204, 65+60, 90, 31)];
+		DgainOrLost.textAlignment=NSTextAlignmentCenter;
+		DgainOrLost.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		DgainOrLost.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		DgainOrLost.backgroundColor=[UIColor clearColor];
+        DgainOrLost.textAlignment=NSTextAlignmentCenter;
 		data=[[NSMutableArray alloc]init];
+		
+		gDainOrLostPercentage=[[UILabel alloc]initWithFrame:CGRectMake(204, 65+130, 90, 31)];
+		gDainOrLostPercentage.textAlignment=NSTextAlignmentCenter;
+		gDainOrLostPercentage.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		gDainOrLostPercentage.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		gDainOrLostPercentage.backgroundColor=[UIColor clearColor];
+        gDainOrLostPercentage.textAlignment=NSTextAlignmentCenter;
+		data=[[NSMutableArray alloc]init];
+		
+		[footer addSubview:Dfundname];
+		[footer addSubview:Dunit];
+		[footer addSubview:DaverageNAv];
+		[footer addSubview:DclosingNAV];
+		[footer addSubview:DfundValue];
+		[footer addSubview:DmarketValue];
+		[footer addSubview:DgainOrLost];
+		[footer addSubview:gDfundValue];
+		[footer addSubview:gDmarketValue];
+		[footer addSubview:gDainOrLostPercentage];
 		
     }
     return self;
@@ -162,11 +242,52 @@
 		saldoMX *object_draw = [data objectAtIndex:i];
 		NSLog(@"object-->%@",object_draw.fundname);
 		if([object_draw.fundname isEqualToString:@"Panin Dana US Dollar"]){
-			[data removeObjectAtIndex:i];
-		} else {
-            //
+			NSNumberFormatter* decimalFormatter = [[NSNumberFormatter alloc] init];
+			[decimalFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
+			[decimalFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+			[decimalFormatter setMaximumFractionDigits:2];
+			[decimalFormatter setMinimumFractionDigits:0];
+			decimalFormatter.usesGroupingSeparator = YES;
+			decimalFormatter.groupingSeparator = @",";
+			[decimalFormatter setAlwaysShowsDecimalSeparator:NO];
 			
-        }
+			NSNumberFormatter*  numberFormatter = [[NSNumberFormatter alloc] init];
+			[numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+			[numberFormatter setMaximumFractionDigits:0];
+			[numberFormatter setMinimumFractionDigits:0];
+			[decimalFormatter setAlwaysShowsDecimalSeparator:NO];
+			[numberFormatter setCurrencySymbol:@""];
+			
+			
+			NSNumberFormatter*  percentFormatter = [[NSNumberFormatter alloc] init];
+			[percentFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+			[percentFormatter setCurrencySymbol:@""];
+			[percentFormatter setMaximumFractionDigits:2];
+			[percentFormatter setMinimumFractionDigits:0];
+			[percentFormatter setAlwaysShowsDecimalSeparator:YES];
+			Dfundname.text=object_draw.fundname;
+			Dunit.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.unit floatValue]]];
+			DaverageNAv.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.averageNAv floatValue]]];
+			DclosingNAV.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.closingNAV floatValue]]];
+			DfundValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.fundValue floatValue]]];
+			gDfundValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.fundValue floatValue]]];
+			DmarketValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.marketValue floatValue]]];
+			gDmarketValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.marketValue floatValue]]];
+			DgainOrLost.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.gainOrLostPercentage floatValue]]];
+			gDainOrLostPercentage.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.gainOrLostPercentage floatValue]]];
+			[data removeObjectAtIndex:i];
+		}
+		/*else {
+			Dfundname.text=object_draw.fundname;
+			Dunit.text=@"-";
+			DaverageNAv.text=@"-";
+			DclosingNAV.text=@"-";
+			DfundValue.text=@"-";
+			
+			DmarketValue.text=@"-";
+			DgainOrLost.text=@"-";
+			
+        }*/
 	}
 	[detail reloadData];
 
@@ -235,7 +356,7 @@
 	cell.fundValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.fundValue floatValue]]];
 	
 	cell.marketValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.marketValue floatValue]]];
-	cell.gainOrLost.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.gainOrLost floatValue]]];
+	cell.gainOrLost.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.gainOrLostPercentage floatValue]]];
 	
     return cell;
     
