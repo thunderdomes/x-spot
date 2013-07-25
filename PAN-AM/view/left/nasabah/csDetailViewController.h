@@ -26,7 +26,12 @@
 	
 	UILabel *gDfundValue;
 	UILabel *gDmarketValue;
-	UILabel * gDainOrLostPercentage;
+	UILabel *gDainOrLostPercentage;
+	
+	UILabel *gtDfundValue;
+	UILabel *gtDmarketValue;
+	UILabel *gtDainOrLostPercentage;
+	UILabel *gtDgainOrLost;
 	
 	
 }

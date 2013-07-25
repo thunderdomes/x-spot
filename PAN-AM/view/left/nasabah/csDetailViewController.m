@@ -108,6 +108,37 @@
         gDainOrLostPercentage.textAlignment=NSTextAlignmentCenter;
 		data=[[NSMutableArray alloc]init];
 		
+		gtDfundValue=[[UILabel alloc]initWithFrame:CGRectMake(0, 30, 90, 31)];
+		gtDfundValue.textAlignment=NSTextAlignmentCenter;
+		gtDfundValue.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		gtDfundValue.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		gtDfundValue.backgroundColor=[UIColor clearColor];
+        gtDfundValue.textAlignment=NSTextAlignmentCenter;
+
+		gtDmarketValue=[[UILabel alloc]initWithFrame:CGRectMake(107, 30, 90, 31)];
+		gtDmarketValue.textAlignment=NSTextAlignmentCenter;
+		gtDmarketValue.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		gtDmarketValue.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		gtDmarketValue.backgroundColor=[UIColor clearColor];
+        gtDmarketValue.textAlignment=NSTextAlignmentCenter;
+
+		gtDainOrLostPercentage=[[UILabel alloc]initWithFrame:CGRectMake(204, 5, 90, 31)];
+		gtDainOrLostPercentage.textAlignment=NSTextAlignmentCenter;
+		gtDainOrLostPercentage.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		gtDainOrLostPercentage.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		gtDainOrLostPercentage.backgroundColor=[UIColor clearColor];
+        gtDainOrLostPercentage.textAlignment=NSTextAlignmentCenter;
+		
+		gtDgainOrLost=[[UILabel alloc]initWithFrame:CGRectMake(204, 65+130, 15, 31)];
+		gtDgainOrLost.textAlignment=NSTextAlignmentCenter;
+		gtDgainOrLost.font=[UIFont fontWithName:@"Avenir-Medium" size:12];
+		gtDgainOrLost.textColor=[UIColor colorWithRed:0 green:0.561 blue:0.631 alpha:1];
+		gtDgainOrLost.backgroundColor=[UIColor clearColor];
+        gtDgainOrLost.textAlignment=NSTextAlignmentCenter;
+		
+		data=[[NSMutableArray alloc]init];
+	//	
+		
 		[footer addSubview:Dfundname];
 		[footer addSubview:Dunit];
 		[footer addSubview:DaverageNAv];
@@ -118,6 +149,11 @@
 		[footer addSubview:gDfundValue];
 		[footer addSubview:gDmarketValue];
 		[footer addSubview:gDainOrLostPercentage];
+		
+		[footer addSubview:gtDfundValue];
+		[footer addSubview:gtDmarketValue];
+		[footer addSubview:gtDgainOrLost];
+		[footer addSubview:gtDainOrLostPercentage];
 		
     }
     return self;
@@ -239,6 +275,7 @@
 }
 -(void)doDirty{
 	for (int i=0; i<data.count; i++) {
+		NSLog(@"data Count00=>%d",data.count);
 		saldoMX *object_draw = [data objectAtIndex:i];
 		NSLog(@"object-->%@",object_draw.fundname);
 		if([object_draw.fundname isEqualToString:@"Panin Dana US Dollar"]){
@@ -276,6 +313,7 @@
 			DgainOrLost.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.gainOrLostPercentage floatValue]]];
 			gDainOrLostPercentage.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:[object_draw.gainOrLostPercentage floatValue]]];
 			[data removeObjectAtIndex:i];
+			[self hitungGrandTotal];
 		}
 		/*else {
 			Dfundname.text=object_draw.fundname;
@@ -293,7 +331,50 @@
 
 
 }
+-(void)hitungGrandTotal{
+	NSNumberFormatter* decimalFormatter = [[NSNumberFormatter alloc] init];
+	[decimalFormatter setNumberStyle: NSNumberFormatterDecimalStyle];
+	[decimalFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
+	[decimalFormatter setMaximumFractionDigits:2];
+	[decimalFormatter setMinimumFractionDigits:0];
+	decimalFormatter.usesGroupingSeparator = YES;
+	decimalFormatter.groupingSeparator = @",";
+	[decimalFormatter setAlwaysShowsDecimalSeparator:NO];
+	
+	NSNumberFormatter*  numberFormatter = [[NSNumberFormatter alloc] init];
+	[numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+	[numberFormatter setMaximumFractionDigits:0];
+	[numberFormatter setMinimumFractionDigits:0];
+	[decimalFormatter setAlwaysShowsDecimalSeparator:NO];
+	[numberFormatter setCurrencySymbol:@""];
+	
+	
+	NSNumberFormatter*  percentFormatter = [[NSNumberFormatter alloc] init];
+	[percentFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+	[percentFormatter setCurrencySymbol:@""];
+	[percentFormatter setMaximumFractionDigits:2];
+	[percentFormatter setMinimumFractionDigits:0];
+	[percentFormatter setAlwaysShowsDecimalSeparator:YES];
+	float sum = 0;
+	float sum2=0;
+	float sum3=0;
+	float sum4=0;
+	for (int i=0; i<data.count; i++) {
+	
+		saldoMX *object_draw = [data objectAtIndex:i];
+		sum += [object_draw.fundValue floatValue];
+		sum2 += [object_draw.marketValue floatValue];
+		sum3 +=[object_draw.gainOrLostPercentage floatValue];
+		sum4 +=[object_draw.gainOrLost floatValue];
+			
 
+	}
+	gtDfundValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:sum]];
+	gtDmarketValue.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:sum2]];
+	gtDainOrLostPercentage.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:sum3]];
+	gtDgainOrLost.text=[decimalFormatter stringFromNumber:[NSNumber numberWithFloat:sum4]];
+
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return 96;
 }
