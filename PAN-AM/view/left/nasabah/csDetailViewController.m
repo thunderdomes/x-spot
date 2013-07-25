@@ -24,6 +24,17 @@
 		detail=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-44)];
 		detail.delegate=self;
 		detail.dataSource=self;
+		UIView *header=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
+		header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"cs_saldo"]];
+		//header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"nyahahah"]];
+		UIView *footer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 227)];
+		footer.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"csfooter"]];
+		//header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"nyahahah"]];
+
+
+		detail.tableHeaderView=header;
+		detail.tableFooterView=footer;
+		
 		[self.view addSubview:detail];
 		
 		data=[[NSMutableArray alloc]init];
@@ -161,16 +172,7 @@
 
 
 }
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *header=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
-	header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"cs_saldo"]];
-    //header.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"nyahahah"]];
-    
-    return header;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-	return 64;
-}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return 96;
 }

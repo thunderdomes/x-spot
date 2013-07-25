@@ -109,7 +109,7 @@
 }
 -(void)initNavBar{
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
-	UIImage* image = [UIImage imageNamed:@"left"];
+	UIImage* image = [UIImage imageNamed:@"left_"];
 	CGRect frame = CGRectMake(-5, 0, 44, 44);
 	UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame];
 	[leftbutton setBackgroundImage:image forState:UIControlStateNormal];
@@ -147,7 +147,6 @@
 	top_label.backgroundColor=[UIColor clearColor];
 	
 	UILabel *TitleBig=[[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 230, 44)] autorelease];
-	TitleBig.text=@"Marketing Selling Fee";
 	TitleBig.textAlignment=NSTextAlignmentCenter;
 	TitleBig.backgroundColor=[UIColor clearColor];
 	[TitleBig setFont:[UIFont fontWithName:@"AvenirNext-DemiBold" size:19]];

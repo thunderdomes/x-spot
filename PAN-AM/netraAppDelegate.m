@@ -34,7 +34,7 @@
 @implementation netraAppDelegate
 
 
-@synthesize fvalueGlobalString,fvalueString,arrayCustodianID,custodianID,index,customerName,linkURL,namaRek,namaText,nasabahText,CIFText,tgl_lahirText,alamatText1,alamatText2,teleponText1,teleponText2,emailText,expiredText,mktkdText,mktContactext,mktEmailText;
+@synthesize fvalueGlobalString,fvalueString,arrayCustodianID,custodianID,index,customerName,linkURL,namaRek,namaText,nasabahText,CIFText,tgl_lahirText,alamatText1,alamatText2,teleponText1,teleponText2,emailText,expiredText,mktkdText,mktContactext,mktEmailText,mktBranchText;
 
 - (void)dealloc
 {

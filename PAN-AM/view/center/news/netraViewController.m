@@ -111,12 +111,12 @@
 	[self initNavBar];
 }
 -(void)initNavBar{
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar1_"] forBarMetrics:UIBarMetricsDefault];
-	//UIImage* image = [UIImage imageNamed:@"left"];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+	UIImage* image = [UIImage imageNamed:@"left_"];
 	CGRect frame = CGRectMake(-5, 0, 44, 44);
 	UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame];
-	//[leftbutton setBackgroundImage:image forState:UIControlStateNormal];
-	[leftbutton setBackgroundImage:[UIImage imageNamed:@"left_"] forState:UIControlStateNormal];
+	[leftbutton setBackgroundImage:image forState:UIControlStateNormal];
+	//[leftbutton setBackgroundImage:[UIImage imageNamed:@"left-push"] forState:UIControlStateHighlighted];
 	[leftbutton addTarget:self action:@selector(lefbuttonPush) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIView *leftbuttonView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 44, 44)];
@@ -125,7 +125,7 @@
 	UIBarButtonItem* leftbarbutton = [[UIBarButtonItem alloc] initWithCustomView:leftbuttonView];
 	
 	
-	UIImage* image3 = [UIImage imageNamed:@"right_"];
+	UIImage* image3 = [UIImage imageNamed:@"right"];
 	CGRect frame3 = CGRectMake(5, 0, 44, 44);
 	UIButton *searchbutton = [[UIButton alloc] initWithFrame:frame3];
 	[searchbutton setBackgroundImage:image3 forState:UIControlStateNormal];
@@ -145,7 +145,7 @@
 	
 	[rightbarButton release];
 	[leftbarbutton release];
-
+	
 	UIView *top_label=[[[UIView alloc]initWithFrame:CGRectMake(45, 0, 230, 44)] autorelease];
 	top_label.backgroundColor=[UIColor clearColor];
 	

@@ -59,7 +59,7 @@
 	[self initNavBar];
 }
 -(void)initNavBar{
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar1_"] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
 	UIImage* image = [UIImage imageNamed:@"left_"];
 	CGRect frame = CGRectMake(-5, 0, 44, 44);
 	UIButton* leftbutton = [[UIButton alloc] initWithFrame:frame];
@@ -73,7 +73,7 @@
 	UIBarButtonItem* leftbarbutton = [[UIBarButtonItem alloc] initWithCustomView:leftbuttonView];
 	
 	
-	UIImage* image3 = [UIImage imageNamed:@"right_"];
+	UIImage* image3 = [UIImage imageNamed:@"right"];
 	CGRect frame3 = CGRectMake(5, 0, 44, 44);
 	UIButton *searchbutton = [[UIButton alloc] initWithFrame:frame3];
 	[searchbutton setBackgroundImage:image3 forState:UIControlStateNormal];
@@ -98,7 +98,6 @@
 	top_label.backgroundColor=[UIColor clearColor];
 	
 	UILabel *TitleBig=[[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 230, 44)] autorelease];
-	
 	TitleBig.textAlignment=NSTextAlignmentCenter;
 	TitleBig.backgroundColor=[UIColor clearColor];
 	[TitleBig setFont:[UIFont fontWithName:@"AvenirNext-DemiBold" size:19]];
@@ -108,7 +107,6 @@
 	[self.navigationController.navigationBar addSubview:top_label];
 	
 }
-
 -(void)lefbuttonPush{
 	//[searchbar resignFirstResponder];
 	[self.sidePanelController showLeftPanel:YES];

@@ -440,7 +440,7 @@ else{
 	NSMutableArray *dict = (NSMutableArray*)notification.object;
 	[self dismissPopupViewControllerWithanimationType:MJPopupViewAnimationSlideBottomBottom];
 	[self setMenu:[dict objectAtIndex:0]];
-	[self setCenter:@"Home"];
+	[self setCenter:[dict objectAtIndex:1]];
 	[loginWindow release];
 }
 -(void)dealloc{

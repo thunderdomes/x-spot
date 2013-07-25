@@ -40,5 +40,6 @@
 @property (strong, nonatomic) NSString *mktContactext;
 @property (strong, nonatomic) NSString *mktEmailText;
 @property (strong, nonatomic) NSString *namaText;
+@property (strong, nonatomic) NSString *mktBranchText;
 
 @end

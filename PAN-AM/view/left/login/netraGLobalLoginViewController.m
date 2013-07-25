@@ -130,6 +130,9 @@
 	}
 }
 -(void)loginNasabah{
+	if(username.text.length && password.text.length==0){
+		
+	}
 	NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
 							username.text, @"userName",
 							password.text, @"password",
@@ -147,6 +150,7 @@
 		if([[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"SessionID"]!= [NSNull null]){
 			
 			[datapass addObject:@"nasabah"];
+			[datapass addObject:@"Informasi Nasabah"];
 			[common setSessionId:[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"SessionID"]];
 			[[NSNotificationCenter defaultCenter] postNotificationName:@"AfterLogin" object:datapass];
             
@@ -162,8 +166,9 @@
             appDelegate.expiredText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"IDExpireDate"]];
             appDelegate.mktkdText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingNo"]];
             appDelegate.namaText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingName"]];
-            appDelegate.mktContactext = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingNo"]];
+            appDelegate.mktContactext = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingPhone"]];
             appDelegate.mktEmailText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingEmail"]];
+            appDelegate.mktBranchText = [NSString stringWithFormat:@"%@",[[responseObject objectForKey:@"CustomerDetail"]objectForKey:@"MarketingBranch"]];
 
             
             NSLog(@"app deleagate text:%@",appDelegate.CIFText);
@@ -176,10 +181,14 @@
 		}
 	} failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         // code for failed request goes here
-		
+		NSLog(@"response-->%d",response.statusCode);
+		if(response.statusCode==500){
+		[self error];
+		}
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+		
 		if(error){
-			NSLog(@"error-->%@",error);
+			[self error2];
 		}
         // do something on failure
     }];
@@ -203,6 +212,8 @@
 		if([[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]!= [NSNull null]){
 		
 		[datapass addObject:@"mitra"];
+			[datapass addObject:@"Cycle Of Life"];
+		
 		[common setSessionId:[[responseObject objectForKey:@"MarketingDetail"]objectForKey:@"SessionID"]];
 		[[NSNotificationCenter defaultCenter] postNotificationName:@"AfterLogin" object:datapass];
 		
@@ -216,9 +227,15 @@
 	} failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         // code for failed request goes here
         [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
-		if(error){
-			NSLog(@"error-->%@",error);
+		if(response.statusCode==500){
+			[self error];
 		}
+        [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+		
+		if(error){
+			[self error2];
+		}
+
         // do something on failure
     }];
 	[operation start];
@@ -233,5 +250,18 @@
 	[message release];
 	
 
+	
 }
+-(void)error2{
+	UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ERROR!"
+													  message:@"Tidak ada koneksi internet atau Server Sedang Error"
+													 delegate:nil
+											cancelButtonTitle:@"OK"
+											otherButtonTitles:nil];
+	[message show];
+	[message release];
+	
+	
+}
+
 @end
